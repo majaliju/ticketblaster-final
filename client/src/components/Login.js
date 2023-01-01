@@ -102,7 +102,7 @@ function Login({ onLogin }) {
             </div>
           ) : null}
 
-          {/* {errorsExist !== false ? (
+          {errorsExist !== false ? (
             <div className='shadow-lg alert alert-warning'>
               <div>
                 <svg
@@ -122,7 +122,7 @@ function Login({ onLogin }) {
                 ))}
               </div>
             </div>
-          ) : null} */}
+          ) : null}
 
           <h1 className='text-2xl font-bold text-center text-white sm:text-3xl'>
             LOGIN

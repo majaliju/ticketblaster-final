@@ -68,6 +68,6 @@ class UsersController < ApplicationController
   end
 
   def render_not_found_response(invalid)
-    render json: { error: invalid.message }, status: :not_found
+    render json: { error: invalid.record.errors.full_messages }, status: :not_found
   end
 end
