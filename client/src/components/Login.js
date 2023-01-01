@@ -102,7 +102,7 @@ function Login({ onLogin }) {
             </div>
           ) : null}
 
-          {errorsExist !== false ? (
+          {/* {errorsExist !== false ? (
             <div className='shadow-lg alert alert-warning'>
               <div>
                 <svg
@@ -122,10 +122,10 @@ function Login({ onLogin }) {
                 ))}
               </div>
             </div>
-          ) : null}
+          ) : null} */}
 
           <h1 className='text-2xl font-bold text-center text-white sm:text-3xl'>
-            CREATE A POST!
+            LOGIN
           </h1>
           <form
             onSubmit={handleSubmit}
@@ -139,7 +139,7 @@ function Login({ onLogin }) {
                 id='username'
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder='type your username here'
+                placeholder='first, type your username here'
                 className='w-full max-w-xl input input-bordered input-primary'
               />
             </div>
@@ -152,43 +152,31 @@ function Login({ onLogin }) {
                 id='password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder='type your password here'
+                placeholder='then, type your password and you can log in'
                 className='w-full max-w-xl input input-bordered input-primary'
               />
             </div>
             {submitted === false ? (
-              <div>
-                <div class='form-control mt-6'>
-                  <button class='btn btn-primary'>Login</button>
-                </div>
-                <label>
-                  <Link
-                    to='/signup'
-                    type='submit'
-                    class='btn btn-ghost w-full font-bold form-control text-secondary-content uppercase'>
-                    First time here? Sign up!
-                  </Link>
-                </label>
-              </div>
-            ) : (
-              <div className='alert alert-success shadow-lg'>
-                <div>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='stroke-current flex-shrink-0 h-6 w-6'
-                    fill='none'
-                    viewBox='0 0 24 24'>
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth='2'
-                      d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-                    />
-                  </svg>
-                  <span>Welcome! You're logged in!</span>
-                </div>
-              </div>
-            )}
+              username !== '' ? (
+                password !== '' ? (
+                  <div>
+                    <div class='form-control mt-6'>
+                      <button class='btn btn-primary'>Login</button>
+                    </div>
+                  </div>
+                ) : null
+              ) : null
+            ) : null}
+            <div>
+              <label>
+                <Link
+                  to='/signup'
+                  type='submit'
+                  class='btn btn-ghost w-full font-bold form-control text-secondary-content uppercase'>
+                  First time here? Sign up!
+                </Link>
+              </label>
+            </div>
           </form>
         </div>
       </div>
@@ -197,3 +185,37 @@ function Login({ onLogin }) {
 }
 
 export default Login;
+
+// {submitted === false ? (
+//   <div>
+//     <div class='form-control mt-6'>
+//       <button class='btn btn-primary'>Login</button>
+//     </div>
+//     <label>
+//       <Link
+//         to='/signup'
+//         type='submit'
+//         class='btn btn-ghost w-full font-bold form-control text-secondary-content uppercase'>
+//         First time here? Sign up!
+//       </Link>
+//     </label>
+//   </div>
+// ) : (
+//   <div className='alert alert-success shadow-lg'>
+//     <div>
+//       <svg
+//         xmlns='http://www.w3.org/2000/svg'
+//         className='stroke-current flex-shrink-0 h-6 w-6'
+//         fill='none'
+//         viewBox='0 0 24 24'>
+//         <path
+//           strokeLinecap='round'
+//           strokeLinejoin='round'
+//           strokeWidth='2'
+//           d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+//         />
+//       </svg>
+//       <span>Welcome! You're logged in!</span>
+//     </div>
+//   </div>
+// )}
