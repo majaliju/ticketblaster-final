@@ -55,3 +55,5 @@ gem 'faker'
 
 ## to validate emails in the user model
 gem 'email_validator'
+
+### test im so furious
