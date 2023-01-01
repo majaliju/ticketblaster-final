@@ -8,10 +8,9 @@ function Login({ onLogin }) {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  const [success, setSuccess] = useState('');
   const [errorArray, setErrorArray] = useState([]);
   const [errorsExist, setErrorsExist] = useState(false);
-  const [success, setSuccess] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
   // function checkError(response) {
@@ -43,7 +42,7 @@ function Login({ onLogin }) {
           onLogin(info);
           setErrorArray([]);
           setErrorsExist(false);
-          setSuccess('Your post has been created!');
+
           setSubmitted(true);
           navigate('/');
         });
@@ -80,9 +79,29 @@ function Login({ onLogin }) {
   // }
 
   return (
-    <div class='text-primary-content'>
-      <div class='hero min-h-screen bg-base-200'>
-        <div class='hero-content flex-col '>
+    <div>
+      <div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
+        <div className='max-w-lg mx-auto'>
+          {success !== '' ? (
+            <div className='shadow-lg alert alert-success'>
+              <div>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  className='flex-shrink-0 w-6 h-6 stroke-current'
+                  fill='none'
+                  viewBox='0 0 24 24'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                  />
+                </svg>
+                <span>{success}</span>
+              </div>
+            </div>
+          ) : null}
+
           {errorsExist !== false ? (
             <div className='shadow-lg alert alert-warning'>
               <div>
@@ -104,69 +123,73 @@ function Login({ onLogin }) {
               </div>
             </div>
           ) : null}
-          <div class='text-center lg:text-center'>
-            <h1 class='text-5xl font-bold'>LOGIN</h1>
-          </div>
-          <div class='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
-            <div class='card-body'>
-              <form onSubmit={handleSubmit}>
-                <div class='form-control'>
-                  <label class='label'>
-                    <span class='label-text uppercase'>username</span>
-                  </label>
-                  <input
-                    type='text'
-                    id='username'
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                  />
-                </div>
-                <div class='form-control'>
-                  <label class='label'>
-                    <span class='label-text uppercase'>password</span>
-                  </label>
-                  <input
-                    type='text'
-                    id='password'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </div>
-                {submitted === false ? (
-                  <div>
-                    <div class='form-control mt-6'>
-                      <button class='btn btn-primary'>Login</button>
-                    </div>
-                    <label>
-                      <button
-                        type='submit'
-                        class='btn btn-ghost font-bold form-control text-secondary-content uppercase'>
-                        <Link to='/signup'>First time here? Sign up!</Link>
-                      </button>
-                    </label>
-                  </div>
-                ) : (
-                  <div className='alert alert-success shadow-lg'>
-                    <div>
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        className='stroke-current flex-shrink-0 h-6 w-6'
-                        fill='none'
-                        viewBox='0 0 24 24'>
-                        <path
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          strokeWidth='2'
-                          d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-                        />
-                      </svg>
-                      <span>Welcome! You're logged in!</span>
-                    </div>
-                  </div>
-                )}
-              </form>
+
+          <h1 className='text-2xl font-bold text-center text-white sm:text-3xl'>
+            CREATE A POST!
+          </h1>
+          <form
+            onSubmit={handleSubmit}
+            className='p-8 mt-2 mb-0 space-y-4 rounded-lg shadow-2xl'>
+            <div class='form-control'>
+              <label class='label'>
+                <span class='label-text uppercase'>username</span>
+              </label>
+              <input
+                type='text'
+                id='username'
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder='type your username here'
+                className='w-full max-w-xl input input-bordered input-primary'
+              />
             </div>
-          </div>
+            <div class='form-control'>
+              <label class='label'>
+                <span class='label-text uppercase'>password</span>
+              </label>
+              <input
+                type='text'
+                id='password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder='type your password here'
+                className='w-full max-w-xl input input-bordered input-primary'
+              />
+            </div>
+            {submitted === false ? (
+              <div>
+                <div class='form-control mt-6'>
+                  <button class='btn btn-primary'>Login</button>
+                </div>
+                <label>
+                  <Link
+                    to='/signup'
+                    type='submit'
+                    class='btn btn-ghost w-full font-bold form-control text-secondary-content uppercase'>
+                    First time here? Sign up!
+                  </Link>
+                </label>
+              </div>
+            ) : (
+              <div className='alert alert-success shadow-lg'>
+                <div>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='stroke-current flex-shrink-0 h-6 w-6'
+                    fill='none'
+                    viewBox='0 0 24 24'>
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                    />
+                  </svg>
+                  <span>Welcome! You're logged in!</span>
+                </div>
+              </div>
+            )}
+          </form>
         </div>
       </div>
     </div>
