@@ -40,10 +40,12 @@ function Login({ onLogin }) {
       if (response.status >= 200 && response.status <= 299) {
         response.json().then((info) => {
           console.log('info: ', info);
+          onLogin(info);
           setErrorArray([]);
           setErrorsExist(false);
           setSuccess('Your post has been created!');
           setSubmitted(true);
+          navigate('/');
         });
       } else {
         response.json().then((e) => {
@@ -130,16 +132,38 @@ function Login({ onLogin }) {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
-                <div class='form-control mt-6'>
-                  <button class='btn btn-primary'>Login</button>
-                </div>
-                <label>
-                  <button
-                    type='submit'
-                    class='btn btn-ghost font-bold form-control text-secondary-content uppercase'>
-                    <Link to='/signup'>First time here? Sign up!</Link>
-                  </button>
-                </label>
+                {submitted === false ? (
+                  <div>
+                    <div class='form-control mt-6'>
+                      <button class='btn btn-primary'>Login</button>
+                    </div>
+                    <label>
+                      <button
+                        type='submit'
+                        class='btn btn-ghost font-bold form-control text-secondary-content uppercase'>
+                        <Link to='/signup'>First time here? Sign up!</Link>
+                      </button>
+                    </label>
+                  </div>
+                ) : (
+                  <div className='alert alert-success shadow-lg'>
+                    <div>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        className='stroke-current flex-shrink-0 h-6 w-6'
+                        fill='none'
+                        viewBox='0 0 24 24'>
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth='2'
+                          d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                        />
+                      </svg>
+                      <span>Welcome! You're logged in!</span>
+                    </div>
+                  </div>
+                )}
               </form>
             </div>
           </div>
@@ -150,26 +174,3 @@ function Login({ onLogin }) {
 }
 
 export default Login;
-
-// //* use the floating label in input -- it's really nice
-// <!--
-//   This component uses @tailwindcss/forms
-
-//   yarn add @tailwindcss/forms
-//   npm install @tailwindcss/forms
-
-//   plugins: [require('@tailwindcss/forms')]
-// -->
-
-// <label class="relative block p-3 border-2 border-gray-200 rounded-lg" for="name">
-//   <input
-//     class="w-full px-0 pt-3.5 pb-0 text-sm placeholder-transparent border-none focus:ring-0 peer"
-//     id="name"
-//     type="text"
-//     placeholder="Name"
-//   />
-
-//   <span class="absolute text-xs font-medium text-gray-500 transition-all left-3 peer-focus:text-xs peer-focus:top-3 peer-focus:translate-y-0 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm">
-//     Name
-//   </span>
-// </label>
