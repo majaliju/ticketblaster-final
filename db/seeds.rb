@@ -55,6 +55,7 @@ u32 = User.create({ username: "majboy", password: "123123123123",  email: Faker:
 
 puts "---------------------- Seeding each Artist, their concerts, and their posts..."
 
+##* POP GENRE
 
 #~ Adele
 puts "---------------------- Seeding Adele ..."
@@ -105,21 +106,22 @@ Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per t
 Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per ticket", for_sale: false, tickets: 2, user_id: u4.id, concert_id: alicia_keys_c1.id})
 
 
+#* HIP-HOP GENRE
+
 #~ Freddie Gibbs
 puts "---------------------- Seeding Freddie Gibbs ..."
 
+#~ Jay-Z
+puts "---------------------- Seeding Jay-Z ..."
+
+
+#* COUNTRY GENRE
 
 #~ Chris Stapleton
 puts "---------------------- Seeding Chris Stapleton ..."
 
 
-#~ Erykah Badu
-puts "---------------------- Seeding Erykah Badu ..."
-
-
-#~ Jay-Z
-puts "---------------------- Seeding Jay-Z ..."
-
+#* R&B GENRE
 
 #~ Brent Faiyaz
 puts "---------------------- Seeding Brent Faiyaz ..."
@@ -127,8 +129,21 @@ brent_faiyaz = Artist.create!({ name: "Brent Faiyaz", image: "https://i.imgur.co
 brent_faiyaz _c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Steel", image: "https://i.imgur.com/SmFrzTCm.jpg", artist_id: brent_faiyaz.id})
 Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u4.id, concert_id: brent_faiyaz_c1.id})
 
+#~ Erykah Badu
+puts "---------------------- Seeding Erykah Badu ..."
+
+#* JAZZ GENRE
+
+
 #~ Esperanza Spalding
 puts "---------------------- Seeding Esperanza Spalding..."
+
+
+#* ELECTRONIC GENRE
+
+
+
+
 
 
 
