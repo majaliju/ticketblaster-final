@@ -1,5 +1,10 @@
-### GOD HELP ME FOR NOW IT RUNS 
+### TICKETBLASTER
 
-## THIS IS BEFORE ANY MODELS OR MIGRATIONS, IM ******* SICK OF DOING THIS
+## gotta do a great readme; here we go 
 
-## ok lets go
+## WHAT IS THIS
+
+## WHAT'S IT RUNNING
+
+## HOW TO INSTALL
+
