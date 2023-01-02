@@ -43,11 +43,12 @@ function SignUp({ onLogin, users, setUsers }) {
       if (response.status >= 200 && response.status <= 299) {
         response.json().then((newUser) => {
           console.log('newUser: ', newUser);
-
+          onLogin(newUser);
           setErrorArray([]);
           setErrorsExist(false);
           setSuccess('Your post has been created!');
           setSubmitted(true);
+          navigate('/');
         });
       } else {
         response.json().then((e) => {
