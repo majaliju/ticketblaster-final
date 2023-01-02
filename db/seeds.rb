@@ -106,6 +106,8 @@ Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per t
 Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per ticket", for_sale: false, tickets: 2, user_id: u4.id, concert_id: alicia_keys_c1.id})
 
 
+#~ Ed Sheeran
+
 #* HIP-HOP GENRE
 
 #~ Freddie Gibbs
@@ -120,6 +122,11 @@ puts "---------------------- Seeding Jay-Z ..."
 #~ Chris Stapleton
 puts "---------------------- Seeding Chris Stapleton ..."
 
+#~ Sturgill Simpson
+puts "---------------------- Seeding Sturgill Simpson ..."
+
+
+
 
 #* R&B GENRE
 
@@ -131,6 +138,8 @@ Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale
 
 #~ Erykah Badu
 puts "---------------------- Seeding Erykah Badu ..."
+
+
 
 #* JAZZ GENRE
 
