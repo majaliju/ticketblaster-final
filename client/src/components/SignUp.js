@@ -63,8 +63,28 @@ function SignUp({ onLogin, users, setUsers }) {
 
   return (
     <div>
-      <div className='form-control'>
-        <form onSubmit={handleSubmit}>
+      <div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
+        <div className='max-w-lg mx-auto'>
+          {success !== '' ? (
+            <div className='shadow-lg alert alert-success'>
+              <div>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  className='flex-shrink-0 w-6 h-6 stroke-current'
+                  fill='none'
+                  viewBox='0 0 24 24'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                  />
+                </svg>
+                <span>{success}</span>
+              </div>
+            </div>
+          ) : null}
+
           {errorsExist !== false ? (
             <div className='shadow-lg alert alert-warning'>
               <div>
@@ -86,51 +106,84 @@ function SignUp({ onLogin, users, setUsers }) {
               </div>
             </div>
           ) : null}
-          <label className='input-group'>
-            <label className='username-entry'>
-              <span class='text uppercase font-extralight'>username</span>
+
+          <h1 className='text-2xl font-bold text-center text-white sm:text-3xl'>
+            LOGIN
+          </h1>
+          <form
+            onSubmit={handleSubmit}
+            className='p-8 mt-2 mb-0 space-y-4 rounded-lg shadow-2xl'>
+            <div class='form-control'>
+              <label class='label'>
+                <span class='label-text uppercase'>username</span>
+              </label>
               <input
                 type='text'
                 id='username'
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                placeholder='first, type your desired username here'
+                className='w-full max-w-xl input input-bordered input-primary'
               />
-            </label>
-            <label className='password-entry'>
-              <span class='text uppercase font-extralight'>password</span>
+            </div>
+            <div class='form-control'>
+              <label class='label'>
+                <span class='label-text uppercase'>password</span>
+              </label>
               <input
                 type='text'
                 id='password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                placeholder='then, type in a new password'
+                className='w-full max-w-xl input input-bordered input-primary'
               />
-            </label>
-            <label className='password-confirmation'>
-              <span class='text uppercase font-extralight'>
-                confirm password
-              </span>
+            </div>
+            <div class='form-control'>
+              <label class='label'>
+                <span class='label-text uppercase'>password confirmation</span>
+              </label>
               <input
                 type='text'
-                id='passwordConfirmation'
+                id='password'
                 value={passwordConfirmation}
                 onChange={(e) => setPasswordConfirmation(e.target.value)}
+                placeholder='then, type it in again to be sure'
+                className='w-full max-w-xl input input-bordered input-primary'
               />
-            </label>
-            <label className='email-entry'>
-              <span class='text uppercase font-extralight'>email</span>
+            </div>
+            <div class='form-control'>
+              <label class='label'>
+                <span class='label-text uppercase'>email</span>
+              </label>
               <input
                 type='text'
-                id='email'
+                id='password'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder='finally, type your email and hit signup!'
+                className='w-full max-w-xl input input-bordered input-primary'
               />
-            </label>
-          </label>
-          <br />
-          <button type='submit' class='btn btn-ghostfont-bold uppercase'>
-            Sign up
-          </button>
-        </form>
+            </div>
+            {submitted === false ? (
+              username !== '' ? (
+                password !== '' ? (
+                  passwordConfirmation !== '' ? (
+                    email !== '' ? (
+                      <div>
+                        <div class='form-control mt-6'>
+                          <button type='submit' class='btn btn-primary'>
+                            Sign Up!
+                          </button>
+                        </div>
+                      </div>
+                    ) : null
+                  ) : null
+                ) : null
+              ) : null
+            ) : null}
+          </form>
+        </div>
       </div>
     </div>
   );
