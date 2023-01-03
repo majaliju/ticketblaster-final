@@ -28,7 +28,6 @@ function CreateConcert({ artists, setConcerts, concerts }) {
     }).then((response) => {
       if (response.status >= 200 && response.status <= 299) {
         response.json().then((createdConcert) => {
-          console.log('createdConcert: ', createdConcert);
           setConcerts([...concerts, createdConcert]);
           setErrorArray([]);
           setErrorsExist(false);
@@ -38,7 +37,6 @@ function CreateConcert({ artists, setConcerts, concerts }) {
       } else {
         response.json().then((e) => {
           console.log('e. errors within bad response: ', e.errors);
-          // set the errorString to e.errors.join(*join with a comma*)
           setErrorsExist(true);
           setErrorArray(e.errors);
           console.log('errorArray state within bad response: ', errorArray);
