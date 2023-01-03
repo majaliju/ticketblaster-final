@@ -133,7 +133,7 @@ puts "---------------------- Seeding Sturgill Simpson ..."
 #~ Brent Faiyaz
 puts "---------------------- Seeding Brent Faiyaz ..."
 brent_faiyaz = Artist.create!({ name: "Brent Faiyaz", image: "https://i.imgur.com/fKlp2Qv.jpg", genre: "R&B"})
-brent_faiyaz _c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Steel", image: "https://i.imgur.com/SmFrzTCm.jpg", artist_id: brent_faiyaz.id})
+brent_faiyaz_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Steel", image: "https://i.imgur.com/SmFrzTCm.jpg", artist_id: brent_faiyaz.id})
 Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u4.id, concert_id: brent_faiyaz_c1.id})
 
 #~ Erykah Badu
