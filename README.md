@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">TICKETBLASTER </h1>
 <h3 align="center">Because We're All Sick of Ticketmaster's Monopoly </h3>  
-<br />
+
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 
@@ -12,7 +12,6 @@
 <p align="center">
   <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%">
 </p>
-
 
 <details open="open">
   <summary>Table of Contents</summary>
