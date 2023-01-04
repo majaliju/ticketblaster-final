@@ -18,7 +18,7 @@
   <ul>
     <li><a href="#what-is-this"> ➤What Is This?</a></li>
     <li><a href="#prerequisites"> ➤ Prerequisites</a></li>
-    <li><a href="#folder-structure"> ➤ Folder Structure</a></li>
+    <li><a href="#how-to-install">🚀 How To Install</a></li>
     <li><a href="#dataset"> ➤ Dataset</a></li>
     <li><a href="#roadmap"> ➤ Roadmap</a></li>
     <li>
