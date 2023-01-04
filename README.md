@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">TICKETBLASTER </h1>
 <h3 align="center">"What if Ticketmaster and Craigslist had a baby?"</h3>  
-<h5 align="center">Because We're All Sick of Ticketmaster's Monopoly </h5>  
+<h5 align="center">(because we're all sick of Ticketmaster's monopoloy) </h5>  
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
