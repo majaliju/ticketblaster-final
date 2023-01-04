@@ -3,9 +3,10 @@
 </p>
 <h1 align="center">TICKETBLASTER </h1>
 <h3 align="center">Because We're All Sick of Ticketmaster's Monopoly </h3>  
+<br />
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-</br>
+
 <!-- TABLE OF CONTENTS -->
 <h2 id="table-of-contents">Table of Contents</h2>
 <p align="center">
