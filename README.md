@@ -2,7 +2,8 @@
   <!-- <img src="images/Project Logo.png" alt="HAR Logo" width="80px" height="80px"> -->
 </p>
 <h1 align="center">TICKETBLASTER </h1>
-<h3 align="center">Because We're All Sick of Ticketmaster's Monopoly </h3>  
+<h3 align="center">"What if Ticketmaster and Craigslist had a baby?"</h3>  
+<h5 align="center">Because We're All Sick of Ticketmaster's Monopoly </h5>  
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -10,9 +11,8 @@
 <!-- TABLE OF CONTENTS -->
 <h2 id="table-of-contents">Table of Contents</h2>
 <p align="center">
-  <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%">
+  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
-
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
