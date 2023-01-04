@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="images/Project Logo.png" alt="HAR Logo" width="80px" height="80px">
+  <!-- <img src="images/Project Logo.png" alt="HAR Logo" width="80px" height="80px"> -->
 </p>
 <h1 align="center">TICKETBLASTER </h1>
 <h3 align="center">Because We're All Sick of Ticketmaster's Monopoly </h3>  
@@ -41,7 +41,7 @@
 <!-- WHAT IS THIS -->
 <h2 id="what-is-this">What Is This?</h2>
 <p align="center">
-  <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%">
+  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
 
 <p align="justify"> 
@@ -55,7 +55,7 @@
 <!-- WHAT'S IT RUNNING -->
 <h2 id="whats-it-running">What's It Running?</h2>
 <p align="center">
-  <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%">
+  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
 
 <p> 
@@ -66,7 +66,7 @@
 <!-- HOW TO INSTALL -->
 <h2 id="how-to-install">🚀 How To Install</h2>
 <p align="center">
-  <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%">
+  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
 
 <p> 
@@ -80,7 +80,7 @@
 <!-- THE ERD AND RELATIONSHIPS -->
 <h2 id="erd-and-relationships">The ERD and Relationships</h2>
 <p align="center">
-  <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%">
+  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
 
 <p align="justify"> 
