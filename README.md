@@ -16,19 +16,19 @@
 <details open="open">
   <summary>Where Is Everything?</summary>
   <ul>
-    <li><a href="#what-is-this"> ➤What Is This?</a></li>
-    <li><a href="#prerequisites"> ➤ Prerequisites</a></li>
+    <li><a href="#what-is-this">What Is This?</a></li>
+    <li><a href="#what-do-I-need">What Do I Need?</a></li>
     <li><a href="#how-to-install">🚀 How To Install</a></li>
-    <li><a href="#dataset"> ➤ Dataset</a></li>
-    <li><a href="#roadmap"> ➤ Roadmap</a></li>
-    <li>
+    <li><a href="#erd-and-relationships">The ERD and Relationships</a></li>
+    <li><a href="#seed-info">Seed Info</a></li>
+    <!-- <li>
       <a href="#preprocessing"> ➤ Preprocessing</a>
       <ul>
         <li><a href="#preprocessed-data">Pre-processed data</a></li>
         <li><a href="#statistical-feature">Statistical feature</a></li>
         <li><a href="#topological-feature">Topological feature</a></li>
       </ul>
-    </li>
+    </li> -->
     <!--<li><a href="#experiments">Experiments</a></li>-->
     <li><a href="#results-and-discussion"> ➤ Results and Discussion</a></li>
     <li><a href="#references"> ➤ References</a></li>
@@ -53,7 +53,7 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- WHAT'S IT RUNNING -->
-<h2 id="whats-it-running">What's It Running?</h2>
+<h2 id="what-do-I-need">What Do I Need?</h2>
 <p align="center">
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
@@ -79,6 +79,21 @@
 
 <!-- THE ERD AND RELATIONSHIPS -->
 <h2 id="erd-and-relationships">The ERD and Relationships</h2>
+<p align="center">
+  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
+</p>
+
+<p align="justify"> 
+  This project aims to classify human activities using data obtained from accelerometer and gyroscope sensors from phone and watch. The raw data will be preprocessed using two
+  different approaches such as topological data analysis and statistical features extraction from segmented time series. The goal is to compare and evaluate the performance of
+  different classifiers (Decision Tree, k Nearest Neighbors, Random Forest, SVM and CNN) which are trained on the two sets of preprocessed data.
+</p>
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- THE ERD AND RELATIONSHIPS -->
+<h2 id="seed-info">Seed Info</h2>
 <p align="center">
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
