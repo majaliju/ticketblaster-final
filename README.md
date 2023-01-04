@@ -16,11 +16,11 @@
 <details open="open">
   <summary>Where Is Everything?</summary>
   <ul>
-    <li><a href="#what-is-this">What Is This?</a></li>
-    <li><a href="#what-do-I-need">What Do I Need?</a></li>
+    <li><a href="#what-is-this">🎫 What Is This?</a></li>
+    <li><a href="#what-do-I-need">✨ What Do I Need?</a></li>
     <li><a href="#how-to-install">🚀 How To Install</a></li>
-    <li><a href="#erd-and-relationships">The ERD and Relationships</a></li>
-    <li><a href="#seed-info">Seed Info</a></li>
+    <li><a href="#erd-and-relationships">🏠 The ERD and Relationships</a></li>
+    <li><a href="#seed-info">🌱 Seed Info</a></li>
     <!-- <li>
       <a href="#preprocessing"> ➤ Preprocessing</a>
       <ul>
@@ -39,7 +39,7 @@
 
 
 <!-- WHAT IS THIS -->
-<h2 id="what-is-this">What Is This?</h2>
+<h2 id="what-is-this">🎫 What Is This?</h2>
 <p align="center">
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
@@ -53,7 +53,7 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- WHAT'S IT RUNNING -->
-<h2 id="what-do-I-need">What Do I Need?</h2>
+<h2 id="what-do-I-need">✨ What Do I Need?</h2>
 <p align="center">
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
@@ -78,7 +78,7 @@
 
 
 <!-- THE ERD AND RELATIONSHIPS -->
-<h2 id="erd-and-relationships">The ERD and Relationships</h2>
+<h2 id="erd-and-relationships">🏠 The ERD and Relationships</h2>
 <p align="center">
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
@@ -93,7 +93,7 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- THE ERD AND RELATIONSHIPS -->
-<h2 id="seed-info">Seed Info</h2>
+<h2 id="seed-info">🌱 Seed Info</h2>
 <p align="center">
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
