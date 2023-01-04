@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">TICKETBLASTER </h1>
 <h3 align="center">"What if Ticketmaster and Craigslist had a baby?"</h3>  
-<h5 align="center">(because we're all sick of Ticketmaster's monopoloy) </h5>  
+<h5 align="center">(because we're all sick of Ticketmaster's monopoly) </h5>  
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -14,9 +14,9 @@
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
 <details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project"> ➤ About The Project</a></li>
+  <summary>Where Is Everything?</summary>
+  <ul>
+    <li><a href="#what-is-this"> ➤What Is This?</a></li>
     <li><a href="#prerequisites"> ➤ Prerequisites</a></li>
     <li><a href="#folder-structure"> ➤ Folder Structure</a></li>
     <li><a href="#dataset"> ➤ Dataset</a></li>
@@ -33,7 +33,7 @@
     <li><a href="#results-and-discussion"> ➤ Results and Discussion</a></li>
     <li><a href="#references"> ➤ References</a></li>
     <li><a href="#contributors"> ➤ Contributors</a></li>
-  </ol>
+  </ul>
 </details>
 
 
