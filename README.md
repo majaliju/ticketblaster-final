@@ -78,10 +78,18 @@
   These are the four models used on the backend.
   <ul>
     <li>Users</li>
-    <p align="justify">A User has many Posts</p>
+    <p align="justify">➤ has many Posts</p>
+    <p align="justify">➤ has many Concerts, through Posts</p>
     <li>Posts</li>
+     <p align="justify">➤ belongs to a User</p>
+     <p align="justify">➤ belongs to a Concert</p>
     <li>Concerts</li>
+     <p align="justify">➤ has many Posts</p>
+     <p align="justify">➤ has many Users, through Posts</p>
+     <p align="justify">➤ belongs to an Artist</p>
     <li>Artists</li>
+     <p align="justify">➤ has many Concerts</p>
+     <p align="justify">➤ has many Posts, through Concerts</p>
    </ul>
 
 </p>
