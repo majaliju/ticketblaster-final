@@ -78,8 +78,10 @@
   These are the four models used on the backend, and their relationships to each other. All relevant ActiveRecord methods, validations, etc can be used in relation to this knowledge.
   <ul>
     <li>Users</li>
-    <p align="justify">➤ has many Posts</p>
-    <p align="justify">➤ has many Concerts, through Posts</p>
+    <ul>
+    <li align="justify">➤ has many Posts</li>
+    <li align="justify">➤ has many Concerts, through Posts</li>
+    </ul>
     <li>Posts</li>
      <p align="justify">➤ belongs to a User</p>
      <p align="justify">➤ belongs to a Concert</p>
