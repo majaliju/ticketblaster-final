@@ -1,5 +1,7 @@
 <p align="center"> 
-  <!-- <img src="images/Project Logo.png" alt="HAR Logo" width="80px" height="80px"> -->
+  <p align="center">
+  <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="ERD.gif" display="inline-block" width="90%" height="80%">
+</p>
 </p>
 <h1 align="center">TICKETBLASTER </h1>
 <h3 align="center">"What if Ticketmaster and Craigslist had a baby?"</h3>  
