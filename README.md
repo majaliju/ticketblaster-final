@@ -38,9 +38,11 @@
 </p>
 
 <p align="justify"> 
-  One day, I asked myself: "what if Ticketmaster and Craigslist had a baby?"
+  *One day, I asked myself: "what if Ticketmaster and Craigslist had a baby?"*
 
-  For buying tickets, TicketMaster (and as a consequence, its parent company Live Nation) is pretty much the dominant source. However they're famous for a lot of horrible business practices that hurt the consumer in many ways, among which include: exorbitant service fees, artificial control of ticket capacity, and discriminatory practices against musical artists based on secret relationships with venues/labels, etc. 
+  For buying tickets, TicketMaster (and as a consequence, its parent company Live Nation) is pretty much the dominant source. 
+  
+  However they're famous for a lot of horrible business practices that hurt the consumer in many ways, among which include: exorbitant service fees, artificial control of ticket capacity, and discriminatory practices against musical artists based on secret relationships with venues/labels, etc. 
 
   <a href="https://www.nytimes.com/2022/11/18/technology/live-nation-ticketmaster-investigation-taylor-swift.html">It's gotten so bad that even the US Justice Department had to step in recently. </a>
   
@@ -52,6 +54,17 @@
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- WHAT'S IT RUNNING -->
+<h2 id="how-do-I-use-it">🎹 How Do I Use it?</h2>
+<p align="center">
+  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
+</p>
+<p align="justify"> 
+  Just make an account, and scroll through to find your favorite artists and their shows! Just click the Artists tab if you want to see more about a specific artist, or go to the Concerts tab to look directly for shows! You can search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use! 
+
+  My goal is to get you in and out, and help you buy/sell your tickets fast! Why spend time on a website when you should spend it listening to music??
+
 
 <!-- WHAT'S IT RUNNING -->
 <h2 id="what-do-I-need">✨ What Do I Need?</h2>
