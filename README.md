@@ -38,7 +38,7 @@
 </p>
 
 <p align="justify"> 
-  ***One day, I asked myself: "what if Ticketmaster and Craigslist had a baby?"***
+  One day, I asked myself: "what if Ticketmaster and Craigslist had a baby?"
 
   For buying tickets, TicketMaster (and as a consequence, its parent company Live Nation) is pretty much the dominant source. 
   
