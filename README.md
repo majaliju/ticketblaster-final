@@ -71,13 +71,18 @@
 <!-- THE ERD AND RELATIONSHIPS -->
 <h2 id="erd-and-relationships">🏠 The ERD and Relationships</h2>
 <p align="center">
-  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
+  <img src="https://i.imgur.com/478wfru.png" alt="ERD.gif" display="inline-block" width="90%" height="80%">
 </p>
 
 <p align="justify"> 
-  This project aims to classify human activities using data obtained from accelerometer and gyroscope sensors from phone and watch. The raw data will be preprocessed using two
-  different approaches such as topological data analysis and statistical features extraction from segmented time series. The goal is to compare and evaluate the performance of
-  different classifiers (Decision Tree, k Nearest Neighbors, Random Forest, SVM and CNN) which are trained on the two sets of preprocessed data.
+  These are the four models used on the backend.
+  <ul>
+    <li>Users</li>
+    <li>Posts</li>
+    <li>Concerts</li>
+    <li>Artists</li>
+   </ul>
+
 </p>
 
 
@@ -86,13 +91,11 @@
 <!-- THE ERD AND RELATIONSHIPS -->
 <h2 id="seed-info">🌱 Seed Info</h2>
 <p align="center">
-  <img src="https://i.imgur.com/478wfru.png" alt="ERD.gif" display="inline-block" width="90%" height="80%">
+  <!-- <img src="https://i.imgur.com/478wfru.png" alt="ERD.gif" display="inline-block" width="90%" height="80%"> -->
 </p>
 
 <p align="justify"> 
-  This project aims to classify human activities using data obtained from accelerometer and gyroscope sensors from phone and watch. The raw data will be preprocessed using two
-  different approaches such as topological data analysis and statistical features extraction from segmented time series. The goal is to compare and evaluate the performance of
-  different classifiers (Decision Tree, k Nearest Neighbors, Random Forest, SVM and CNN) which are trained on the two sets of preprocessed data.
+  These are the four models used on the backend. 
 </p>
 
 
