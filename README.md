@@ -21,15 +21,6 @@
     <li><a href="#how-to-install">🚀 How To Install</a></li>
     <li><a href="#erd-and-relationships">🏠 The ERD and Relationships</a></li>
     <li><a href="#seed-info">🌱 Seed Info</a></li>
-    <!-- <li>
-      <a href="#preprocessing"> ➤ Preprocessing</a>
-      <ul>
-        <li><a href="#preprocessed-data">Pre-processed data</a></li>
-        <li><a href="#statistical-feature">Statistical feature</a></li>
-        <li><a href="#topological-feature">Topological feature</a></li>
-      </ul>
-    </li> -->
-    <!--<li><a href="#experiments">Experiments</a></li>-->
     <li><a href="#results-and-discussion"> ➤ Results and Discussion</a></li>
     <li><a href="#references"> ➤ References</a></li>
     <li><a href="#contributors"> ➤ Contributors</a></li>
@@ -95,7 +86,7 @@
 <!-- THE ERD AND RELATIONSHIPS -->
 <h2 id="seed-info">🌱 Seed Info</h2>
 <p align="center">
-  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
+  <img src="https://i.imgur.com/478wfru.png" alt="ERD.gif" display="inline-block" width="60%" height="50%">
 </p>
 
 <p align="justify"> 
