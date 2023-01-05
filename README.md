@@ -44,6 +44,10 @@
   
   However they're famous for a lot of horrible business practices that hurt the consumer in many ways, among which include: exorbitant service fees, artificial control of ticket capacity, and discriminatory practices against musical artists based on secret relationships with venues/labels, etc. 
 
+  <p align="center">
+  <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%">
+</p>
+
   <a href="https://www.nytimes.com/2022/11/18/technology/live-nation-ticketmaster-investigation-taylor-swift.html">It's gotten so bad that even the US Justice Department had to step in recently. </a>
   
   As a musician and programmer both, I took it upon myself to create an alternative to the ticket-buying process!
@@ -70,8 +74,10 @@
 </p>
  
   
-  You can search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use! 
-
+  You can also search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use! 
+ <!-- CREATE A GIF OF ME USING THE ARTISTS TAB AND CONCERTS TAB HERE -->
+  <p align="center">
+  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 
   My goal is to get you in and out, and help you buy/sell your tickets fast! Why spend time on a website when you should spend it listening to music??
 
