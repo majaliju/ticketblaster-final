@@ -79,8 +79,8 @@
   <ul>
     <li>Users</li>
     <ul>
-    <li align="justify">➤ has many Posts</li>
-    <li align="justify">➤ has many Concerts, through Posts</li>
+    <li align="justify">has many Posts</li>
+    <li align="justify">has many Concerts, through Posts</li>
     </ul>
     <li>Posts</li>
      <p align="justify">➤ belongs to a User</p>
