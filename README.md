@@ -79,19 +79,25 @@
   <ul>
     <li>Users</li>
     <ul>
-    <li align="justify">has many `Posts`</li>
+    <li align="justify">has many Posts</li>
     <li align="justify">has many Concerts, through Posts</li>
     </ul>
     <li>Posts</li>
-     <p align="justify">➤ belongs to a User</p>
-     <p align="justify">➤ belongs to a Concert</p>
+      <ul>
+     <li align="justify">belongs to a User</li>
+     <li align="justify"> belongs to a Concert</li>
+      </ul>
     <li>Concerts</li>
-     <p align="justify">➤ has many Posts</p>
-     <p align="justify">➤ has many Users, through Posts</p>
-     <p align="justify">➤ belongs to an Artist</p>
+      <ul>
+     <li align="justify"> has many Posts</li>
+     <li align="justify"> has many Users, through Posts</li>
+     <li align="justify"> belongs to an Artist</li>
+      </ul>
     <li>Artists</li>
-     <p align="justify">➤ has many Concerts</p>
-     <p align="justify">➤ has many Posts, through Concerts</p>
+      <ul>
+     <li align="justify"> has many Concerts</li>
+     <li align="justify"> has many Posts, through Concerts</li>
+      </ul>
    </ul>
 
 </p>
