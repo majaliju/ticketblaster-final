@@ -76,7 +76,7 @@
 
 <p align="justify"> 
   These are the four models used on the backend.
-  <ul align="center">
+  <ul>
     <li>Users</li>
     <li>Posts</li>
     <li>Concerts</li>
