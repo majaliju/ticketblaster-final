@@ -6,6 +6,10 @@
 <h1 align="center">TICKETBLASTER </h1>
 <h3 align="center"><small>(because we're all sick of Ticketmaster's monopoly)</small> </h3>  
 
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- CREATE THE LITTLE BADGES HERE TO SHOW WHATS BEING USED -->
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 
