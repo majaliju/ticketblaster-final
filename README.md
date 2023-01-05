@@ -38,9 +38,17 @@
 </p>
 
 <p align="justify"> 
-  This project aims to classify human activities using data obtained from accelerometer and gyroscope sensors from phone and watch. The raw data will be preprocessed using two
-  different approaches such as topological data analysis and statistical features extraction from segmented time series. The goal is to compare and evaluate the performance of
-  different classifiers (Decision Tree, k Nearest Neighbors, Random Forest, SVM and CNN) which are trained on the two sets of preprocessed data.
+  One day, I asked myself: "what if Ticketmaster and Craigslist had a baby?"
+
+  For buying tickets, TicketMaster (and as a consequence, its parent company Live Nation) is pretty much the dominant source. However they're famous for a lot of horrible business practices that hurt the consumer in many ways, among which include: exorbitant service fees, artificial control of ticket capacity, and discriminatory practices against musical artists based on secret relationships with venues/labels, etc. 
+
+  <a href="https://www.nytimes.com/2022/11/18/technology/live-nation-ticketmaster-investigation-taylor-swift.html">It's gotten so bad that even the US Justice Department had to step in recently. </a>
+  
+  As a musician and programmer both, I took it upon myself to create an alternative to the ticket-buying process!
+
+  With TICKETBLASTER, you can buy directly from other fans or sell directly to other fans. We have the entire database of concerts and artists, and all you have to do is either create a post to sell tickets or check out posts to find tickets. Apart from that, we hold no money or handle any deals for you. We have only one job: to help fans buy and sell tickets to see artists and bands perform live, without paying horrible service fees and getting F'd over. 
+
+  As a musician first, I want everybody to experience the communal, mystic power of music surrounded by other people *without* the greedy hand of business perverting yet another wonderful facet of this human experience we enjoy daily.
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
