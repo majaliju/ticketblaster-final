@@ -38,7 +38,7 @@
 </p>
 
 <p align="justify"> 
-  One day, I asked myself: "what if Ticketmaster and Craigslist had a baby?"
+ * One day, I asked myself: "what if Ticketmaster and Craigslist had a baby?"*
 
   For buying tickets, TicketMaster (and as a consequence, its parent company Live Nation) is pretty much the dominant source. 
   
@@ -61,6 +61,8 @@
 
 <!-- WHAT'S IT RUNNING -->
 <h2 id="how-do-I-use-it">🎹 How Do I Use it?</h2>
+
+<!-- MAKE A GIF HERE OF DOING THE LOGIN AND SIGNUP -->
 <p align="center">
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
@@ -79,7 +81,9 @@
   <p align="center">
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 
-  My goal is to get you in and out, and help you buy/sell your tickets fast! Why spend time on a website when you should spend it listening to music??
+  My goal is to get you in and out, and help you buy/sell your tickets fast! 
+  
+**  Why spend time on a website when you should spend it listening to music??**
 
 
 <!-- WHAT'S IT RUNNING -->
