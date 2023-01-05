@@ -4,8 +4,7 @@
 </p>
 </p>
 <h1 align="center">TICKETBLASTER </h1>
-<h3 align="center">"What if Ticketmaster and Craigslist had a baby?"</h3>  
-<h5 align="center">(because we're all sick of Ticketmaster's monopoly) </h5>  
+<small align="center">(because we're all sick of Ticketmaster's monopoly) </small>  
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -38,7 +37,7 @@
 </p>
 
 <p align="justify"> 
- * One day, I asked myself: "what if Ticketmaster and Craigslist had a baby?"*
+  <em>One day, I asked myself: "what if Ticketmaster and Craigslist had a baby?"</em>
 
   For buying tickets, TicketMaster (and as a consequence, its parent company Live Nation) is pretty much the dominant source. 
   
@@ -54,7 +53,7 @@
 
   With TICKETBLASTER, you can buy directly from other fans or sell directly to other fans. We have the entire database of concerts and artists, and all you have to do is either create a post to sell tickets or check out posts to find tickets. Apart from that, we hold no money or handle any deals for you. We have only one job: to help fans buy and sell tickets to see artists and bands perform live, without paying horrible service fees and getting F'd over. 
 
-  As a musician first, I want everybody to experience the communal, mystic power of music surrounded by other people *without* the greedy hand of business perverting yet another wonderful facet of this human experience we enjoy daily.
+  As a musician first, I want everybody to experience the communal, mystic power of music surrounded by other people <strong>without</strong> the greedy hand of business perverting yet another wonderful facet of this human experience we enjoy daily.
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
@@ -83,7 +82,7 @@
 
   My goal is to get you in and out, and help you buy/sell your tickets fast! 
   
-**  Why spend time on a website when you should spend it listening to music??**
+  Why spend time on a website when you should spend it listening to music??
 
 
 <!-- WHAT'S IT RUNNING -->
