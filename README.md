@@ -86,7 +86,7 @@
 <!-- THE ERD AND RELATIONSHIPS -->
 <h2 id="seed-info">🌱 Seed Info</h2>
 <p align="center">
-  <img src="https://i.imgur.com/478wfru.png" alt="ERD.gif" display="inline-block" width="75%" height="65%">
+  <img src="https://i.imgur.com/478wfru.png" alt="ERD.gif" display="inline-block" width="90%" height="80%">
 </p>
 
 <p align="justify"> 
