@@ -45,7 +45,7 @@
 
   <p align="center">
   <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%">
-</p>
+</p style="color:orange;">
 
   <a href="https://www.nytimes.com/2022/11/18/technology/live-nation-ticketmaster-investigation-taylor-swift.html">It's gotten so bad that even the US Justice Department had to step in recently. </a>
   
@@ -53,7 +53,7 @@
 
   With TICKETBLASTER, you can buy directly from other fans or sell directly to other fans. We have the entire database of concerts and artists, and all you have to do is either create a post to sell tickets or check out posts to find tickets. Apart from that, we hold no money or handle any deals for you. We have only one job: to help fans buy and sell tickets to see artists and bands perform live, without paying horrible service fees and getting F'd over. 
 
-  As a musician first, I want everybody to experience the communal, mystic power of music surrounded by other people <strong style="color:orange;">without</strong> the greedy hand of business perverting yet another wonderful facet of this human experience we enjoy daily.
+  As a musician first, I want everybody to experience the communal, mystic power of music surrounded by other people <strong >without</strong> the greedy hand of business perverting yet another wonderful facet of this human experience we enjoy daily.
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
