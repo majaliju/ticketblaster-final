@@ -112,7 +112,7 @@
 </p>
 
 <p align="justify"> 
-  These are the four models used on the backend. 
+  The site is seeded with 33 Users, 20 Artists, and at least 1 Concert per Artist, and at least 1 Post per Concert.
 </p>
 
 
