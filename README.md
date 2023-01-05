@@ -22,9 +22,7 @@
     <li><a href="#how-to-install">🚀 How To Install</a></li>
     <li><a href="#erd-and-relationships">🏠 The ERD and Relationships</a></li>
     <li><a href="#seed-info">🌱 Seed Info</a></li>
-    <li><a href="#results-and-discussion"> ➤ Results and Discussion</a></li>
-    <li><a href="#references"> ➤ References</a></li>
-    <li><a href="#contributors"> ➤ Contributors</a></li>
+    <li><a href="#about-me">👨🏻‍💻 About Me</a></li>
   </ul>
 </details>
 
