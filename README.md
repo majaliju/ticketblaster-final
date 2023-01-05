@@ -75,7 +75,7 @@
 </p>
 
 <p align="justify"> 
-  These are the four models used on the backend.
+  These are the four models used on the backend, and their relationships to each other. All relevant ActiveRecord methods, validations, etc can be used in relation to this knowledge.
   <ul>
     <li>Users</li>
     <p align="justify">➤ has many Posts</p>
