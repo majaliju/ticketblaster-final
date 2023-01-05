@@ -78,6 +78,7 @@
   These are the four models used on the backend.
   <ul>
     <li>Users</li>
+    <p align="justify">A User has many Posts</p>
     <li>Posts</li>
     <li>Concerts</li>
     <li>Artists</li>
