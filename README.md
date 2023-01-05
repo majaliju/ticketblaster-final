@@ -61,7 +61,17 @@
   <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
 </p>
 <p align="justify"> 
-  Just make an account, and scroll through to find your favorite artists and their shows! Just click the Artists tab if you want to see more about a specific artist, or go to the Concerts tab to look directly for shows! You can search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use! 
+  Just make an account, and scroll through to find your favorite artists and their shows! 
+  
+  Click the Artists tab if you want to see more about a specific artist, or go to the Concerts tab to look directly for shows! 
+  <!-- CREATE A GIF OF ME USING THE ARTISTS TAB AND CONCERTS TAB HERE -->
+  <p align="center">
+  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
+</p>
+ 
+  
+  You can search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use! 
+
 
   My goal is to get you in and out, and help you buy/sell your tickets fast! Why spend time on a website when you should spend it listening to music??
 
