@@ -109,22 +109,27 @@ Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per t
 
 #~ Ed Sheeran
 
-#* HIP-HOP GENRE
+#* RAP GENRE
 
 #~ Freddie Gibbs
 puts "---------------------- Seeding Freddie Gibbs ..."
+freddie_gibbs = Artist.create!({ name: "Freddie Gibbs", image: "https://i.imgur.com/Gnv8wIel.jpg", genre: "Rap"})
+
 
 #~ Jay-Z
 puts "---------------------- Seeding Jay-Z ..."
+jayz = Artist.create!({ name: "JAY-Z", image: "https://i.imgur.com/jz6hIaPl.jpg", genre: "Rap"})
 
 
 #* COUNTRY GENRE
 
 #~ Chris Stapleton
 puts "---------------------- Seeding Chris Stapleton ..."
+chris_stapleton = Artist.create!({ name: "Chris Stapleton", image: "https://i.imgur.com/IRE3ge8l.jpg", genre: "Country"})
 
 #~ Sturgill Simpson
 puts "---------------------- Seeding Sturgill Simpson ..."
+sturgill_simpson = Artist.create!({ name: "Sturgill Simpson", image: "https://i.imgur.com/BmMLXmUl.jpg", genre: "Country"})
 
 
 
