@@ -47,6 +47,7 @@ u31 = User.create({ username: "marvin_gaye_rip87", password: "123123123123",  em
 u32 = User.create({ username: "majboy", password: "123123123123",  email: Faker::Internet.email})
 
 
+## ALL ARTIST IMAGES ARE OF THE IMGUR TYPE "LARGE THUMBNAIL"
 ##* NOTE: use the syntax 
 ##* artist_name = ----> to create the Artist, via the variabel just ='ing their name
 ##* artist_name_cX ---> for Concerts, where X is any increasing number 
@@ -59,7 +60,7 @@ puts "---------------------- Seeding each Artist, their concerts, and their post
 
 #~ Adele
 puts "---------------------- Seeding Adele ..."
-adele = Artist.create!({ name: "Adele", image: "https://i.imgur.com/zmGbfKSm.jpg", genre: "Pop"})
+adele = Artist.create!({ name: "Adele", image: "https://i.imgur.com/GQX2eakl.jpg", genre: "Pop"})
 
 adele_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Steel", image: "https://i.imgur.com/SmFrzTC.jpg", artist_id: adele.id})
 adele_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Mao Livehouse", image: "https://i.imgur.com/CghhYym.jpg", artist_id: adele.id})
@@ -83,7 +84,7 @@ Post.create!({body: "I NEED TEN TICKETS, CONTACT ME AT 622-222-2830", for_sale: 
 
 #~ John Legend
 puts "---------------------- Seeding John Legend ..."
-john_legend = Artist.create!({ name: "John Legend", image: "https://i.imgur.com/Nogyupgm.jpg", genre: "Pop"})
+john_legend = Artist.create!({ name: "John Legend", image: "https://i.imgur.com/rgpniPrl.jpg", genre: "Pop"})
 
 john_legend_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Madison Square Garden", image: "https://i.imgur.com/0gd1dD0.jpg", artist_id: john_legend.id})
 john_legend_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "SoFi Stadium", image: "https://i.imgur.com/YM6MkgX.jpg", artist_id: john_legend.id})
@@ -94,7 +95,7 @@ Post.create!({body: "Can't find just one ticket anywhere! Idc where the seat is,
 
 #~ Alicia Keys
 puts "---------------------- Seeding Alicia Keys ..."
-alicia_keys = Artist.create!({ name: "Alicia Keys", image: "https://i.imgur.com/nHxOMjy.jpg", genre: "R&B"})
+alicia_keys = Artist.create!({ name: "Alicia Keys", image: "https://i.imgur.com/dv2Unpql.jpg", genre: "R&B"})
 
 alicia_keys_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Bowery Ballroom", image: "https://i.imgur.com/qQN0hVK.jpg", artist_id: alicia_keys.id})
 alicia_keys_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Bowery Ballroom", image: "https://i.imgur.com/qQN0hVK.jpg", artist_id: alicia_keys.id})
@@ -130,9 +131,11 @@ puts "---------------------- Seeding Sturgill Simpson ..."
 
 #* R&B GENRE
 
+# ##! match brent faiyaz's picture stats bc it renders very well on the site; check if square shape or whatever, mimci the dimensions
+
 #~ Brent Faiyaz
 puts "---------------------- Seeding Brent Faiyaz ..."
-brent_faiyaz = Artist.create!({ name: "Brent Faiyaz", image: "https://i.imgur.com/fKlp2Qv.jpg", genre: "R&B"})
+brent_faiyaz = Artist.create!({ name: "Brent Faiyaz", image: "https://i.imgur.com/fKlp2Qvl.jpg", genre: "R&B"})
 brent_faiyaz_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Steel", image: "https://i.imgur.com/SmFrzTCm.jpg", artist_id: brent_faiyaz.id})
 Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u4.id, concert_id: brent_faiyaz_c1.id})
 
