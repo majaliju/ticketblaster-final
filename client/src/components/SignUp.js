@@ -132,7 +132,7 @@ function SignUp({ onLogin, users, setUsers }) {
                 <span class='label-text uppercase'>password</span>
               </label>
               <input
-                type='text'
+                type='password'
                 id='password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -145,7 +145,7 @@ function SignUp({ onLogin, users, setUsers }) {
                 <span class='label-text uppercase'>password confirmation</span>
               </label>
               <input
-                type='text'
+                type='password'
                 id='password'
                 value={passwordConfirmation}
                 onChange={(e) => setPasswordConfirmation(e.target.value)}
@@ -159,7 +159,7 @@ function SignUp({ onLogin, users, setUsers }) {
               </label>
               <input
                 type='text'
-                id='password'
+                id='email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder='finally, type your email and hit signup!'
