@@ -62,9 +62,9 @@ puts "---------------------- Seeding each Artist, their concerts, and their post
 puts "---------------------- Seeding Adele ..."
 adele = Artist.create!({ name: "Adele", image: "https://i.imgur.com/GQX2eakl.jpg", genre: "Pop"})
 
-adele_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Steel", image: "https://i.imgur.com/SmFrzTC.jpg", artist_id: adele.id})
-adele_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Mao Livehouse", image: "https://i.imgur.com/CghhYym.jpg", artist_id: adele.id})
-adele_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Madison Square Garden", image: "https://i.imgur.com/0gd1dD0.jpg", artist_id: adele.id})
+adele_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Steel", image: "https://i.imgur.com/SmFrzTCl.jpg", artist_id: adele.id})
+adele_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Mao Livehouse", image: "https://i.imgur.com/CghhYyml.jpg", artist_id: adele.id})
+adele_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Madison Square Garden", image: "https://i.imgur.com/0gd1dD0l.jpg", artist_id: adele.id})
 
 Post.create!({body: "2 tickets, $100 total OBO -- CHEAPEST YOU'LL EVER FIND FOR ADELE!!", for_sale: true, tickets: 2, user_id: u1.id, concert_id: adele_c1.id})
 Post.create!({body: "3 tickets, $400 total OBO!", for_sale: true, tickets: 3, user_id: u1.id, concert_id: adele_c1.id})
@@ -86,8 +86,8 @@ Post.create!({body: "I NEED TEN TICKETS, CONTACT ME AT 622-222-2830", for_sale: 
 puts "---------------------- Seeding John Legend ..."
 john_legend = Artist.create!({ name: "John Legend", image: "https://i.imgur.com/rgpniPrl.jpg", genre: "Pop"})
 
-john_legend_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Madison Square Garden", image: "https://i.imgur.com/0gd1dD0.jpg", artist_id: john_legend.id})
-john_legend_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "SoFi Stadium", image: "https://i.imgur.com/YM6MkgX.jpg", artist_id: john_legend.id})
+john_legend_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Madison Square Garden", image: "https://i.imgur.com/0gd1dD0l.jpg", artist_id: john_legend.id})
+john_legend_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "SoFi Stadium", image: "https://i.imgur.com/YM6MkgXl.jpg", artist_id: john_legend.id})
 john_legend_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Waldbuhne", image: "https://i.imgur.com/4YNVVe2l.jpg", artist_id: john_legend.id})
 
 Post.create!({body: "Need 3 tickets badly! Willing to pay $400 total for 3 tix", for_sale: false, tickets: 3, user_id: u2.id, concert_id: john_legend_c1.id})
@@ -98,7 +98,7 @@ Post.create!({body: "Can't find just one ticket anywhere! Idc where the seat is,
 puts "---------------------- Seeding Alicia Keys ..."
 alicia_keys = Artist.create!({ name: "Alicia Keys", image: "https://i.imgur.com/dv2Unpql.jpg", genre: "R&B"})
 
-alicia_keys_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Bowery Ballroom", image: "https://i.imgur.com/qQN0hVK.jpg", artist_id: alicia_keys.id})
+alicia_keys_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Bowery Ballroom", image: "https://i.imgur.com/qQN0hVKl.jpg", artist_id: alicia_keys.id})
 alicia_keys_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "O2 Arena", image: "https://i.imgur.com/XfpSr2wl.jpg", artist_id: alicia_keys.id})
 alicia_keys_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Verona Arena", image: "https://i.imgur.com/R82xj4Cl.jpg", artist_id: alicia_keys.id})
 
