@@ -50,9 +50,7 @@
   
   However they're famous for a lot of horrible business practices that hurt the consumer in many ways, among which include: exorbitant service fees, artificial control of ticket capacity, and discriminatory practices against musical artists based on secret relationships with venues/labels, etc. 
 
-  <p align="center">
-  <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/>
-</p>
+  <img align="center" src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/>
 
   <a href="https://www.nytimes.com/2022/11/18/technology/live-nation-ticketmaster-investigation-taylor-swift.html">It's gotten so bad that even the US Justice Department had to step in recently. </a>
   
