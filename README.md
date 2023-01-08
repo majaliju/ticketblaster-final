@@ -167,3 +167,12 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+<!-- THE ERD AND RELATIONSHIPS -->
+<h2 id="about-me">👨🏻‍💻 About Me</h2>
+<p align="center">
+  <!-- <img src="https://i.imgur.com/478wfru.png" alt="ERD.gif" display="inline-block" width="90%" height="80%"> -->
+</p>
+
+<p align="justify"> 
+  My name is Maj (pronounced 'my'). I love making music and that's why I wrote this site. Check out the rest of my GitHub for more, and as far as a music itself goes, feel free to search 'MAJ ALIJU' anywhere on the internet! 
+</p>
