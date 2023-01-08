@@ -88,6 +88,7 @@ john_legend = Artist.create!({ name: "John Legend", image: "https://i.imgur.com/
 
 john_legend_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Madison Square Garden", image: "https://i.imgur.com/0gd1dD0.jpg", artist_id: john_legend.id})
 john_legend_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "SoFi Stadium", image: "https://i.imgur.com/YM6MkgX.jpg", artist_id: john_legend.id})
+john_legend_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Waldbuhne", image: "https://i.imgur.com/4YNVVe2l.jpg", artist_id: john_legend.id})
 
 Post.create!({body: "Need 3 tickets badly! Willing to pay $400 total for 3 tix", for_sale: false, tickets: 3, user_id: u2.id, concert_id: john_legend_c1.id})
 Post.create!({body: "Can't find just one ticket anywhere! Idc where the seat is, HMU", for_sale: false, tickets: 1, user_id: u30.id, concert_id: john_legend_c1.id})
@@ -98,8 +99,8 @@ puts "---------------------- Seeding Alicia Keys ..."
 alicia_keys = Artist.create!({ name: "Alicia Keys", image: "https://i.imgur.com/dv2Unpql.jpg", genre: "R&B"})
 
 alicia_keys_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Bowery Ballroom", image: "https://i.imgur.com/qQN0hVK.jpg", artist_id: alicia_keys.id})
-alicia_keys_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Bowery Ballroom", image: "https://i.imgur.com/qQN0hVK.jpg", artist_id: alicia_keys.id})
-alicia_keys_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Bowery Ballroom", image: "https://i.imgur.com/qQN0hVK.jpg", artist_id: alicia_keys.id})
+alicia_keys_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "O2 Arena", image: "https://i.imgur.com/XfpSr2wl.jpg", artist_id: alicia_keys.id})
+alicia_keys_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Verona Arena", image: "https://i.imgur.com/R82xj4Cl.jpg", artist_id: alicia_keys.id})
 
 Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per ticket", for_sale: false, tickets: 2, user_id: u4.id, concert_id: alicia_keys_c1.id})
 Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per ticket", for_sale: false, tickets: 2, user_id: u4.id, concert_id: alicia_keys_c1.id})
@@ -108,17 +109,29 @@ Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per t
 
 
 #~ Ed Sheeran
+puts "---------------------- Seeding Ed Sheeran ..."
+ed_sheeran = Artist.create!({ name: "Ed Sheeran", image: "https://i.imgur.com/dv2Unpql.jpg", genre: "Pop"})
+ed_sheeran_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Dubai Opera House", image: "https://i.imgur.com/seuJ6yal.jpg", artist_id: ed_sheeran.id})
+ed_sheeran_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Ronnie Scotts", image: "https://i.imgur.com/Xt6bRkTl.jpg", artist_id: ed_sheeran.id})
+ed_sheeran_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Pallacio", image: "https://i.imgur.com/4XVx0Wol.jpg", artist_id: ed_sheeran.id})
+
 
 #* RAP GENRE
 
 #~ Freddie Gibbs
 puts "---------------------- Seeding Freddie Gibbs ..."
 freddie_gibbs = Artist.create!({ name: "Freddie Gibbs", image: "https://i.imgur.com/Gnv8wIel.jpg", genre: "Rap"})
+freddie_gibbs_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "El Club", image: "https://i.imgur.com/6Jm3E6Ql.jpg", artist_id: freddie_gibbs.id})
+freddie_gibbs_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "House of Blues Boston", image: "https://i.imgur.com/EaTJwSZl.jpg", artist_id: freddie_gibbs.id})
+freddie_gibbs_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Mirage", image: "https://i.imgur.com/aWcIOQnl.jpg", artist_id: freddie_gibbs.id})
 
 
 #~ Jay-Z
 puts "---------------------- Seeding Jay-Z ..."
 jayz = Artist.create!({ name: "JAY-Z", image: "https://i.imgur.com/jz6hIaPl.jpg", genre: "Rap"})
+jayz_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Jones Beach", image: "https://i.imgur.com/gzsbgJgl.jpg", artist_id: jayz.id})
+jayz_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Royal Albert Hall", image: "https://i.imgur.com/Y1MJL5Cl.jpg", artist_id: jayz.id})
+jayz_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Teatro Antico di Taormina", image: "https://i.imgur.com/w8FpXUkl.jpg", artist_id: jayz.id})
 
 
 #* COUNTRY GENRE
@@ -126,10 +139,16 @@ jayz = Artist.create!({ name: "JAY-Z", image: "https://i.imgur.com/jz6hIaPl.jpg"
 #~ Chris Stapleton
 puts "---------------------- Seeding Chris Stapleton ..."
 chris_stapleton = Artist.create!({ name: "Chris Stapleton", image: "https://i.imgur.com/IRE3ge8l.jpg", genre: "Country"})
+chris_stapleton_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Tower Theatre", image: "https://i.imgur.com/YWwDAthl.jpg", artist_id: chris_stapleton.id})
+chris_stapleton_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Great Scott", image: "https://i.imgur.com/MrIiJ9ql.jpg", artist_id: chris_stapleton.id})
+chris_stapleton_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "JPP Chicago", image: "https://i.imgur.com/21140aZl.jpg", artist_id: chris_stapleton.id})
 
 #~ Sturgill Simpson
 puts "---------------------- Seeding Sturgill Simpson ..."
 sturgill_simpson = Artist.create!({ name: "Sturgill Simpson", image: "https://i.imgur.com/BmMLXmUl.jpg", genre: "Country"})
+sturgill_simpson_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Prinzenbar", image: "https://i.imgur.com/kYLonnDl.jpg", artist_id: sturgill_simpson.id})
+sturgill_simpson_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "100 Club", image: "https://i.imgur.com/xNI1qsIl.jpg", artist_id: sturgill_simpson.id})
+sturgill_simpson_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Stubbs", image: "https://i.imgur.com/Ev0r7Zwl.jpg", artist_id: sturgill_simpson.id})
 
 
 
