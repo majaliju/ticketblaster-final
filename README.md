@@ -9,7 +9,7 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<!-- CREATE THE LITTLE BADGES HERE TO SHOW WHATS BEING USED -->
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='react' src='https://img.shields.io/badge/react-100000?style=for-the-badge&logo=react&logoColor=000000&labelColor=00F2FF&color=black'/></a>
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 

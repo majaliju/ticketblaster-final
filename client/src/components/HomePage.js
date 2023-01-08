@@ -5,17 +5,6 @@ import EachPostForUser from './EachUserPost';
 import EachUserPost from './EachUserPost';
 
 function HomePage({ currentUser, users, sessionInfo, loggedIn, handleDelete }) {
-  // function handleDelete(eachPost) {
-  //   fetch(`/delete_post/${eachPost.id}`, {
-  //     method: 'DELETE',
-  //   });
-  //   console.log('deletedPost :', eachPost);
-  //   const remainingPosts = posts.filter(
-  //     (thisPost) => parseInt(thisPost.id) !== parseInt(eachPost.id)
-  //   );
-  //   setPosts(remainingPosts);
-  // }
-
   const homePosts = currentUser.posts;
 
   return (
@@ -32,7 +21,6 @@ function HomePage({ currentUser, users, sessionInfo, loggedIn, handleDelete }) {
               <div>
                 {homePosts.map((post) => {
                   <EachUserPost
-                    // handleDelete={handleDelete}
                     post={post}
                     users={users}
                     currentUser={currentUser}
