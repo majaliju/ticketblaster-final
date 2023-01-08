@@ -110,7 +110,7 @@ Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per t
 
 #~ Ed Sheeran
 puts "---------------------- Seeding Ed Sheeran ..."
-ed_sheeran = Artist.create!({ name: "Ed Sheeran", image: "https://i.imgur.com/dv2Unpql.jpg", genre: "Pop"})
+ed_sheeran = Artist.create!({ name: "Ed Sheeran", image: "https://i.imgur.com/byaK7Wel.jpg", genre: "Pop"})
 ed_sheeran_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Dubai Opera House", image: "https://i.imgur.com/seuJ6yal.jpg", artist_id: ed_sheeran.id})
 ed_sheeran_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Ronnie Scotts", image: "https://i.imgur.com/Xt6bRkTl.jpg", artist_id: ed_sheeran.id})
 ed_sheeran_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Pallacio", image: "https://i.imgur.com/4XVx0Wol.jpg", artist_id: ed_sheeran.id})
