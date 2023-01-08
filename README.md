@@ -90,6 +90,7 @@
   Why spend time on a website when you should spend it listening to music??
   </p>
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- WHAT'S IT RUNNING -->
 <h2 id="what-do-I-need">✨ What Do I Need?</h2>
