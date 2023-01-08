@@ -43,7 +43,7 @@ function HomePage({ currentUser, users, sessionInfo, loggedIn, handleDelete }) {
             <div className='text-center hero-content text-neutral-content'>
               <div className='max-w-md'>
                 <h1 className='mb-5 text-5xl font-bold'>
-                  Welcome back, {currentUser.username}!
+                  Welcome, {currentUser.username}!
                 </h1>
                 <p className='mb-5'>
                   Your sessionID is {sessionInfo.session_id}
@@ -83,8 +83,3 @@ function HomePage({ currentUser, users, sessionInfo, loggedIn, handleDelete }) {
   );
 }
 export default HomePage;
-
-// //* a nice gradient usersPage with actions & gradient
-// //* https://www.hyperui.dev/components/marketing/banners
-// //* also pull the image from the 3rd image one
-// //* code here is for the 2nd one: Actions & Gradient

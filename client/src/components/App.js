@@ -95,8 +95,6 @@ function App() {
       .then((thisInfo) => setSessionInfo(thisInfo));
   }
 
-  // ! HANDLE DELETE FUNCTION NEEDS UPDATING
-  // ! try a local version in each spot
   function handleDelete(post) {
     // console.yarn('post in handleDelete in App: ', post);
     fetch(`/delete_post/${post.id}`, {
@@ -147,6 +145,7 @@ function App() {
               artists={artists}
               concerts={concerts}
               currentUser={currentUser}
+              loggedIn={loggedIn}
               users={users}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
