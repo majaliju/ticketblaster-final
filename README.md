@@ -51,7 +51,7 @@
   However they're famous for a lot of horrible business practices that hurt the consumer in many ways, among which include: exorbitant service fees, artificial control of ticket capacity, and discriminatory practices against musical artists based on secret relationships with venues/labels, etc. 
 
   <p align="center">
-  <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%">
+  <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/>
 </p>
 
   <a href="https://www.nytimes.com/2022/11/18/technology/live-nation-ticketmaster-investigation-taylor-swift.html">It's gotten so bad that even the US Justice Department had to step in recently. </a>
@@ -90,6 +90,7 @@
   My goal is to get you in and out, and help you buy/sell your tickets fast! 
   
   Why spend time on a website when you should spend it listening to music??
+  </p>
 
 
 <!-- WHAT'S IT RUNNING -->
@@ -100,17 +101,18 @@
 
 <p> 
   The WISDM (Wireless Sensor Data Mining) dataset includes raw time-series data collected from accelerometer and gyroscope sensors of a smartphone and smartwatch with their corresponding labels for each activity. The sensor data was collected at a rate of 20 Hz (i.e., every 50ms). Weiss et.al., collected this dataset from 51 subjects who performed 18 different activities listed in Table 2, each for 3 minutes, while having the smartphone in their right pant pocket and wearing the smartwatch in their dominant hand. Each line of the time-series sensor file is considered as input.
+  </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- HOW TO INSTALL -->
 <h2 id="how-to-install">🚀 How To Install</h2>
 <p align="center">
-  <!-- <img src="images/Human Activity.gif" alt="Human Activity.gif" display="inline-block" width="60%" height="50%"> -->
+  <img src="(https://i.imgur.com/wXdMXOr.png)" alt="git-installation.gif" display="inline-block" width="60%" height="50%">
 </p>
 
-<p> 
-  The WISDM (Wireless Sensor Data Mining) dataset includes raw time-series data collected from accelerometer and gyroscope sensors of a smartphone and smartwatch with their corresponding labels for each activity. The sensor data was collected at a rate of 20 Hz (i.e., every 50ms). Weiss et.al., collected this dataset from 51 subjects who performed 18 different activities listed in Table 2, each for 3 minutes, while having the smartphone in their right pant pocket and wearing the smartwatch in their dominant hand. Each line of the time-series sensor file is considered as input.
+<p align="justify"> 
+  </p>
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
