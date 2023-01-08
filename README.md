@@ -9,10 +9,10 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<a href='' target="_blank"><img alt='react' src='https://img.shields.io/badge/react-100000?style=for-the-badge&logo=react&logoColor=000000&labelColor=61DAFB&color=black'/></a>
-<a href='' target="_blank"><img alt='ruby' src='https://img.shields.io/badge/rails-100000?style=for-the-badge&logo=ruby&logoColor=000000&labelColor=CC0000&color=black'/></a>
-<a href='' target="_blank"><img alt='tailwindcss' src='https://img.shields.io/badge/tailwind-100000?style=for-the-badge&logo=tailwindcss&logoColor=white&labelColor=06B6D4&color=black'/></a>
-<a href='' target="_blank"><img alt='render' src='https://img.shields.io/badge/render-100000?style=for-the-badge&logo=render&logoColor=white&labelColor=46E3B7&color=black'/></a>
+<a href='https://i-hate-you-render.onrender.com/' target="_blank"><img alt='react' src='https://img.shields.io/badge/react-100000?style=for-the-badge&logo=react&logoColor=000000&labelColor=61DAFB&color=black'/></a>
+<a href='https://i-hate-you-render.onrender.com/' target="_blank"><img alt='ruby' src='https://img.shields.io/badge/rails-100000?style=for-the-badge&logo=ruby&logoColor=000000&labelColor=CC0000&color=black'/></a>
+<a href='https://i-hate-you-render.onrender.com/' target="_blank"><img alt='tailwindcss' src='https://img.shields.io/badge/tailwind-100000?style=for-the-badge&logo=tailwindcss&logoColor=white&labelColor=06B6D4&color=black'/></a>
+<a href='https://i-hate-you-render.onrender.com/' target="_blank"><img alt='render' src='https://img.shields.io/badge/render-100000?style=for-the-badge&logo=render&logoColor=white&labelColor=46E3B7&color=black'/></a>
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 
