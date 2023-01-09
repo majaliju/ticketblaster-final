@@ -67,19 +67,18 @@
 <h2 id="how-do-I-use-it">🎹 How Do I Use it?</h2>
 
 <!-- MAKE A GIF HERE OF DOING THE LOGIN AND SIGNUP -->
-  <!-- <img align="center" src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/> -->
+   <!-- //* <p align="center"> <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/></p> -->
 <p align="justify"> 
   Just make an account, and scroll through to find your favorite artists and their shows! 
   
   Click the Artists tab if you want to see more about a specific artist, or go to the Concerts tab to look directly for shows! 
   <!-- CREATE A GIF OF ME USING THE ARTISTS TAB AND CONCERTS TAB HERE -->
-  <!-- <img align="center" src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/>
-  -->
+  <!-- //* <p align="center"> <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/></p> -->
   
   You can also search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use! 
 
  <!-- CREATE A GIF OF ME USING THE ARTISTS TAB AND CONCERTS TAB HERE -->
-  <!-- <img align="center" src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/> -->
+   <!-- //* <p align="center"> <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/></p> -->
 
   My goal is to get you in and out, and help you buy/sell your tickets fast! 
   
@@ -90,7 +89,7 @@
 
 <!-- WHAT'S IT RUNNING -->
 <h2 id="what-do-I-need">✨ What Do I Need?</h2>
-  <!-- <img align="center" src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/> -->
+  <!-- //* <p align="center"> <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/></p> -->
 
 <p align="justify"> 
   You need to have installed: 
@@ -129,7 +128,7 @@
 </p>
 
 <p align="justify"> 
-  These are the four models used on the backend, and their relationships to each other. All relevant ActiveRecord methods, validations, etc can be used in relation to this knowledge.
+  These are the four models used on the backend, and their relationships to each other. All relevant ActiveRecord methods, validations, (etc.) can be used in relation to this knowledge.
   <ul>
     <li>Users</li>
     <ul>
