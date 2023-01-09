@@ -70,12 +70,6 @@ function Header({
                 </li>
               ) : null}
 
-              {/* concerts tab is redundant */}
-              {/* <li>
-                <NavLink to='/concerts' className='font-bold uppercase'>
-                  concerts
-                </NavLink>
-              </li> */}
               <div>
                 {currentUser === (null || '') && (
                   <li>
@@ -117,14 +111,14 @@ function Header({
               <li>
                 <NavLink
                   to='/artists'
-                  className='font-bold uppercase border-none btn btn-secondary btn-outline'>
+                  className='font-bold uppercase bg-transparent border-none btn btn-outline '>
                   <h3 className='font-bold uppercase'>artists</h3>
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   to='/concerts'
-                  className='font-bold uppercase border-none btn btn-secondary btn-outline'>
+                  className='font-bold uppercase bg-transparent border-none btn btn-outline '>
                   <h3 className='font-bold uppercase'>concerts</h3>
                 </NavLink>
               </li>
@@ -133,20 +127,11 @@ function Header({
                   <NavLink
                     to='/thisUser'
                     state={{ thisUser: currentUser }}
-                    className='font-bold uppercase border-none btn btn-secondary btn-outline'>
+                    className='font-bold uppercase bg-transparent border-none btn btn-outline'>
                     your posts
                   </NavLink>
                 </li>
               ) : null}
-
-              {/* concerts tab is redundant */}
-              {/* <li>
-                <NavLink
-                  to='/concerts'
-                  className='font-bold uppercase btn btn-primary'>
-                  <h3 className='font-bold uppercase'>concerts</h3>
-                </NavLink>
-              </li> */}
             </ul>
           </div>
         </div>
