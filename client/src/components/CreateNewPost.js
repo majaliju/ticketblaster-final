@@ -45,13 +45,12 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
     }).then((response) => {
       if (response.status >= 200 && response.status <= 299) {
         response.json().then((createdPost) => {
-          // updated currentUser with the right posts
           setCurrentUser({
             ...currentUser,
             posts: [...currentUser.posts, createdPost],
           });
           console.log(currentUser);
-          // updated users itself with the updated currentUser (who now has the updatedPost)
+
           const updatedUsers = users.map((user) => {
             if (user.id === currentUser.id) {
               return currentUser;
@@ -76,13 +75,6 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
       }
     });
   };
-
-  console.log('errorArray state: ', errorArray);
-
-  //* things to note for the error on errors rendering
-  //* success is a string, error is an array
-  //! issue appears to be with rendering .map on undefined
-  //* need to flatten the array and make a string, then render that string basically
 
   return (
     <div>
