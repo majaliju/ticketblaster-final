@@ -20,7 +20,8 @@ function ConcertsDisplay({ concerts, loggedIn, searchTerm, setSearchTerm }) {
         <div className='flex w-full input-group input-group-lg'>
           <Link to='/createConcert' state={{}} replace={true}>
             <button className='btn btn-secondary btn-outline'>
-              Add An Concert
+              {/* admin access only */}
+              Add A Concert
             </button>
           </Link>
         </div>

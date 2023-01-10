@@ -25,6 +25,7 @@ function ArtistsDisplay({
         <div className='flex w-full input-group input-group-lg'>
           <Link to='/createArtist' replace={true}>
             <button className='btn btn-secondary btn-outline'>
+              {/* admin access only */}
               Add An Artist
             </button>
           </Link>
