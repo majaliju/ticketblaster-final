@@ -13,16 +13,6 @@ function Login({ onLogin }) {
   const [errorsExist, setErrorsExist] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  // function checkError(response) {
-  //   if (response.status >= 200 && response.status <= 299) {
-  //     return response.json();
-  //   } else {
-  //     //~ below is where I gotta set a better error from the login (configure backend for it)
-  //     setError(response.status);
-  //     throw response;
-  //   }
-  // }
-
   function handleSubmit(e) {
     e.preventDefault();
     fetch('/login', {
@@ -42,7 +32,7 @@ function Login({ onLogin }) {
           onLogin(info);
           setErrorArray([]);
           setErrorsExist(false);
-
+          setSuccess('success!');
           setSubmitted(true);
           navigate('/');
         });
@@ -57,26 +47,6 @@ function Login({ onLogin }) {
       }
     });
   }
-
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   fetch('/login', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       'Access-Control-Allow-Origin': '*',
-  //     },
-  //     body: JSON.stringify({
-  //       username,
-  //       password,
-  //     }),
-  //   })
-  //     .then(checkError)
-  //     .then((item) => {
-  //       onLogin(item);
-  //       navigate('/');
-  //     });
-  // }
 
   return (
     <div>
@@ -148,7 +118,7 @@ function Login({ onLogin }) {
                 <span class='label-text uppercase'>password</span>
               </label>
               <input
-                type='text'
+                type='password'
                 id='password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
