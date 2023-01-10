@@ -48,9 +48,13 @@ function EachConcertPost({
             className='text-2xl font-thin btn btn-ghost text-secondary'>
             {matchingUser.username}
           </Link>
-          <h3 className='text-xl font-thin text-secondary'>
+          <div
+            className='text-2xl font-thin btn btn-ghost text-accent'
+            onClick={() => {
+              window.location.href = `mailto:${matchingUser.email}`;
+            }}>
             {matchingUser.email}
-          </h3>
+          </div>
         </div>
       ) : null}
 
