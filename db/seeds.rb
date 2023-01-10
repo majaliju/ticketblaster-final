@@ -88,7 +88,7 @@ john_legend = Artist.create!({ name: "John Legend", image: "https://i.imgur.com/
 
 john_legend_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Madison Square Garden", image: "https://i.imgur.com/0gd1dD0l.jpg", artist_id: john_legend.id})
 john_legend_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "SoFi Stadium", image: "https://i.imgur.com/YM6MkgXl.jpg", artist_id: john_legend.id})
-john_legend_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Waldbuhne", image: "https://i.imgur.com/4YNVVe2l.jpg", artist_id: john_legend.id})
+john_legend_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Waldbuhne", image: "https://i.imgur.com/4YNVVe2l.jpg", artist_id: john_legend.id})
 
 Post.create!({body: "Need 3 tickets badly! Willing to pay $400 total for 3 tix", for_sale: false, tickets: 3, user_id: u2.id, concert_id: john_legend_c1.id})
 Post.create!({body: "Can't find just one ticket anywhere! Idc where the seat is, HMU", for_sale: false, tickets: 1, user_id: u30.id, concert_id: john_legend_c1.id})
@@ -151,6 +151,12 @@ Post.create!({body: "Selling both tix for $1000 a pop. It's JAYZ, come on....", 
 Post.create!({body: "Lol I need these for my BF, he lovess himmmmm", for_sale: false, tickets: 2, user_id: u22.id, concert_id: jayz_c2.id})
 Post.create!({body: "Got these but idc for him tbh he's not beyonce, hmu tho", for_sale: true, tickets: 6, user_id: u21.id, concert_id: jayz_c3.id})
 
+#~ Kodak Black
+puts "---------------------- Seeding Kodak Black ..."
+
+#~ Lil Wayne
+puts "---------------------- Seeding Erykah Badu ..."
+
 
 #* COUNTRY GENRE
 
@@ -161,10 +167,10 @@ chris_stapleton_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-0
 chris_stapleton_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Great Scott", image: "https://i.imgur.com/MrIiJ9ql.jpg", artist_id: chris_stapleton.id})
 chris_stapleton_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "JPP Chicago", image: "https://i.imgur.com/21140aZl.jpg", artist_id: chris_stapleton.id})
 
-Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u20.id, concert_id: ed_sheeran_c1.id})
-Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u19.id, concert_id: ed_sheeran_c1.id})
-Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u18.id, concert_id: ed_sheeran_c1.id})
-Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u17.id, concert_id: ed_sheeran_c1.id})
+Post.create!({body: "Me and my group love him, please if anybody has all 10 tix contact me!! I gotta see him please", for_sale: false, tickets: 10, user_id: u20.id, concert_id: chris_stapleton_c1.id})
+Post.create!({body: "I need to see him, his voice is amazing please contact me", for_sale: false, tickets: 1, user_id: u19.id, concert_id: chris_stapleton_c1.id})
+Post.create!({body: "Each ticket $200! Or both for $175", for_sale: true, tickets: 2, user_id: u18.id, concert_id: chris_stapleton_c2.id})
+Post.create!({body: "All 4 together for $1000! I've seen him enough haha he's great though!", for_sale: true, tickets: 4, user_id: u17.id, concert_id: chris_stapleton_c3.id})
 
 #~ Sturgill Simpson
 puts "---------------------- Seeding Sturgill Simpson ..."
@@ -173,12 +179,16 @@ sturgill_simpson_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-
 sturgill_simpson_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "100 Club", image: "https://i.imgur.com/xNI1qsIl.jpg", artist_id: sturgill_simpson.id})
 sturgill_simpson_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Stubbs", image: "https://i.imgur.com/Ev0r7Zwl.jpg", artist_id: sturgill_simpson.id})
 
-Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u16.id, concert_id: ed_sheeran_c1.id})
-Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u15.id, concert_id: ed_sheeran_c1.id})
-Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u14.id, concert_id: ed_sheeran_c1.id})
-Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u13.id, concert_id: ed_sheeran_c1.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: false, tickets: 1, user_id: u16.id, concert_id: sturgill_simpson_c1.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 3, user_id: u15.id, concert_id: sturgill_simpson_c2.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: false, tickets: 4, user_id: u14.id, concert_id: sturgill_simpson_c3.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 1, user_id: u13.id, concert_id: sturgill_simpson_c3.id})
 
+#~ Luke Combs
+puts "---------------------- Seeding Luke Combs ..."
 
+#~ Cody Johnson
+puts "---------------------- Seeding Cody Johnson ..."
 
 
 #* R&B GENRE
@@ -189,15 +199,22 @@ Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tic
 puts "---------------------- Seeding Brent Faiyaz ..."
 brent_faiyaz = Artist.create!({ name: "Brent Faiyaz", image: "https://i.imgur.com/fKlp2Qvl.jpg", genre: "R&B"})
 brent_faiyaz_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Steel", image: "https://i.imgur.com/SmFrzTCm.jpg", artist_id: brent_faiyaz.id})
+brent_faiyaz_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Madison Square Garden", image: "https://i.imgur.com/0gd1dD0l.jpg", artist_id: brent_faiyaz.id})
+brent_faiyaz_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "El Club", image: "https://i.imgur.com/6Jm3E6Ql.jpg", artist_id: brent_faiyaz.id})
 
 Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u12.id, concert_id: brent_faiyaz_c1.id})
-Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u11.id, concert_id: brent_faiyaz_c1.id})
-Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u10.id, concert_id: brent_faiyaz_c1.id})
-Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u9.id, concert_id: brent_faiyaz_c1.id})
+Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: false, tickets: 2, user_id: u11.id, concert_id: brent_faiyaz_c2.id})
+Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: false, tickets: 5, user_id: u10.id, concert_id: brent_faiyaz_c2.id})
+Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 2, user_id: u9.id, concert_id: brent_faiyaz_c3.id})
 
-#~ Erykah Badu
-puts "---------------------- Seeding Erykah Badu ..."
+#~ Kali Uchis
+puts "---------------------- Seeding Kali Uchis ..."
 
+#~ Giveon
+puts "---------------------- Seeding Giveon ..."
+
+#~ SZA
+puts "---------------------- Seeding SZA ..."
 
 
 #* JAZZ GENRE
@@ -206,15 +223,47 @@ puts "---------------------- Seeding Erykah Badu ..."
 #~ Esperanza Spalding
 puts "---------------------- Seeding Esperanza Spalding..."
 
+#~ Ambrose Akinmusire
+puts "---------------------- Seeding Ambrose Akinmusire..."
+
+#~ Vijay Iyer
+puts "---------------------- Seeding Vijay Iyer..."
+
+#~ Michael Bublé
+puts "---------------------- Seeding Michael Bublé ..."
+
+
+
 
 #* ELECTRONIC GENRE
 
 
+#~ Amelie Lens
+puts "---------------------- Seeding Amelie Lens ..."
+
+#~ Tiesto
+puts "---------------------- Seeding Tiesto ..."
+
+#~ Kaytranada
+puts "---------------------- Seeding Kaytranada ..."
+
+#~ Peggy Gou
+puts "---------------------- Seeding Peggy Gou ..."
 
 
+##* ROCK GENRE
 
+#~ Arctic Monkeys
+puts "---------------------- Seeding Arctic Monkeys ..."
 
+#~ Greta Van Fleet
+puts "---------------------- Seeding Greta Van Fleet ..."
 
+#~ Maneskin
+puts "---------------------- Seeding Maneskin ..."
+
+#~ Jack White
+puts "---------------------- Seeding Jack White ..."
 
 
 
