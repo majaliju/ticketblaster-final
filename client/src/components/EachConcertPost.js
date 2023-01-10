@@ -10,15 +10,7 @@ function EachConcertPost({
   users,
   handleDelete,
 }) {
-  //! this is a point-of-three-rivers
-  //~ post info is needed but post doesn't have any concerts info, or any user info, apart from the foreign keys
-
-  //! showPosts breaks on render due to username info within ECP
-
   const [isOriginalPoster, setIsOriginalPoster] = useState(false);
-
-  console.warn('post within ECP: ', post);
-  console.warn('concert within ECP: ', concert);
 
   let matchingUser = users.find(
     (user) => parseInt(post.user_id) === parseInt(user.id)

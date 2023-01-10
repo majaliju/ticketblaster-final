@@ -5,10 +5,6 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 function EachUserPost({ thisUser, currentUser, post, concerts, handleDelete }) {
   let navigate = useNavigate();
   const location = useLocation();
-  // const thisUser = location.state.thisUser;
-
-  // console.log('matchingConcert: ', matchingConcert);
-  // console.log('currentUser within EUP: ', currentUser);
 
   const [isOriginalPoster, setIsOriginalPoster] = useState(false);
   const matchingConcert = concerts.find(
@@ -52,8 +48,14 @@ function EachUserPost({ thisUser, currentUser, post, concerts, handleDelete }) {
           <h3 className='text-4xl font'>BUYING: {post.tickets} TICKETS</h3>
         )}
       </div>
-
-      <h3 className='text-xl font-thin text-secondary'>{thisUser.email}</h3>
+      {/* have the mailto: implemented here so a user can open an email link to that user */}
+      <div
+        className='w-full font-normal text-white text-md btn btn-secondary btn-outline'
+        onClick={() => {
+          window.location.href = `mailto:${thisUser.email}`;
+        }}>
+        {thisUser.email}
+      </div>
       <p className='my-6 text-lg font-medium text-accent'>{post.body}</p>
       {isOriginalPoster === true ? (
         <div>
