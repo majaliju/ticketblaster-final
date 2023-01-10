@@ -191,8 +191,10 @@ Post.create!({ body: "Got these but idc for him tbh he's not beyonce, hmu tho", 
                user_id: u21.id, concert_id: jayz_c3.id })
 
 puts '---------------------- Seeding Kodak Black ...'
+kodak_black = Artist.create!({ name: 'Kodak Black', image: 'https://i.imgur.com/NLzCqZRl.jpg', genre: 'Rap' })
 
-puts '---------------------- Seeding Erykah Badu ...'
+puts '---------------------- Seeding Lil Wayne ...'
+lil_wayne = Artist.create!({ name: 'Lil Wayne', image: 'https://i.imgur.com/O5nfmjAl.jpg', genre: 'Rap' })
 
 # * COUNTRY GENRE
 
@@ -235,8 +237,10 @@ Post.create!({ body: 'Selling both for $300. Email me only.', for_sale: true, ti
                concert_id: sturgill_simpson_c3.id })
 
 puts '---------------------- Seeding Luke Combs ...'
+luke_combs = Artist.create!({ name: 'Luke Combs', image: 'https://i.imgur.com/pCd7ouvl.jpg', genre: 'Country' })
 
 puts '---------------------- Seeding Cody Johnson ...'
+cody_johnson = Artist.create!({ name: 'Cody Johnson', image: 'https://i.imgur.com/XVRbmjil.jpg', genre: 'Country' })
 
 # * R&B GENRE
 
@@ -259,41 +263,61 @@ Post.create!({ body: 'All 3 tickets together = $250, one ticket = $100', for_sal
 Post.create!({ body: 'All 3 tickets together = $250, one ticket = $100', for_sale: true, tickets: 2, user_id: u9.id,
                concert_id: brent_faiyaz_c3.id })
 
+puts '---------------------- Seeding Erykah Badu ...'
+erykah_badu = Artist.create!({ name: 'Erykah Badu', image: 'https://i.imgur.com/vIno0n1l.jpg', genre: 'R&B' })
+
 puts '---------------------- Seeding Kali Uchis ...'
+kali_uchis = Artist.create!({ name: 'Kali Uchis', image: 'https://i.imgur.com/CNIB3cVl.jpg', genre: 'R&B' })
 
 puts '---------------------- Seeding Giveon ...'
+giveon = Artist.create!({ name: 'Giveon', image: 'https://i.imgur.com/T0hSO6ul.jpg', genre: 'R&B' })
 
 puts '---------------------- Seeding SZA ...'
+sza = Artist.create!({ name: 'SZA', image: 'https://i.imgur.com/1bREHYTl.jpg', genre: 'R&B' })
 
 # * JAZZ GENRE
 
 puts '---------------------- Seeding Esperanza Spalding...'
+esperanza_spalding = Artist.create!({ name: 'Esperanza Spalding', image: 'https://i.imgur.com/Q0MgPOll.jpg',
+                                      genre: 'Jazz' })
 
 puts '---------------------- Seeding Ambrose Akinmusire...'
+ambrose_akinmusire = Artist.create!({ name: 'Ambrose Akinmusire', image: 'https://i.imgur.com/wVsfw7Il.jpg',
+                                      genre: 'Jazz' })
 
 puts '---------------------- Seeding Vijay Iyer...'
+vijay_iyer = Artist.create!({ name: 'Vijay Iyer', image: 'https://i.imgur.com/ldT5xj1l.jpg', genre: 'Jazz' })
 
 puts '---------------------- Seeding Michael Bublé ...'
+michael_buble = Artist.create!({ name: 'Michael Bublé', image: 'https://i.imgur.com/UiFQ7G3l.jpg', genre: 'Jazz' })
 
 # * ELECTRONIC GENRE
 
 puts '---------------------- Seeding Amelie Lens ...'
+amelie_lens = Artist.create!({ name: 'Amelie Lens', image: 'https://i.imgur.com/5fnRjWGl.jpg', genre: 'Electronic' })
 
-puts '---------------------- Seeding Tiesto ...'
+puts '---------------------- Seeding Tchami ...'
+tchami = Artist.create!({ name: 'Tchami', image: 'https://i.imgur.com/vDQRP0el.jpg', genre: 'Electronic' })
 
 puts '---------------------- Seeding Kaytranada ...'
+kaytranada = Artist.create!({ name: 'Kaytranada', image: 'https://i.imgur.com/dbmcUx0l.jpg', genre: 'Electronic' })
 
 puts '---------------------- Seeding Peggy Gou ...'
+peggy_gou = Artist.create!({ name: 'Peggy Gou', image: 'https://i.imgur.com/R9se7BOl.jpg', genre: 'Electronic' })
 
 # #* ROCK GENRE
 
 puts '---------------------- Seeding Arctic Monkeys ...'
+arctic_monkeys = Artist.create!({ name: 'Arctic Monkeys', image: 'https://i.imgur.com/dAjWJOZl.jpg', genre: 'Rock' })
 
 puts '---------------------- Seeding Greta Van Fleet ...'
+greta_van_fleet = Artist.create!({ name: 'Greta Van Fleet', image: 'https://i.imgur.com/yUr25bul.jpg', genre: 'Rock' })
 
 puts '---------------------- Seeding Maneskin ...'
+maneskin = Artist.create!({ name: 'Maneskin', image: 'https://i.imgur.com/6WnbZ7Al.jpg', genre: 'Rock' })
 
-puts '---------------------- Seeding Jack White ...'
+puts '---------------------- Seeding Red Hot Chili Peppers ...'
+rhcp = Artist.create!({ name: 'Red Hot Chili Peppers', image: 'https://i.imgur.com/eGCrztCl.jpg', genre: 'Rock' })
 
 puts '---------------------- Success!!'
 ## so far so good
