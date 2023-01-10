@@ -14,9 +14,6 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
   let isSelling = location.state.isSelling;
   let concert = location.state.concert;
 
-  // console.log('concert: ', concert);
-  // console.log('currentUser: ', currentUser);
-
   // //* resetting our states when a new page renders
   //! gotta figure this useEffect out
   // useEffect(() => {
@@ -127,6 +124,11 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
           </h1>
           <form className='p-8 mt-2 mb-0 space-y-4 rounded-lg shadow-2xl'>
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  how many tickets?
+                </span>
+              </label>
               <input
                 type='number'
                 id='ticketAmount'
@@ -138,6 +140,11 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
             </div>
 
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  leave a comment
+                </span>
+              </label>
               <input
                 type='text'
                 id='body'

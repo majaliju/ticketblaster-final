@@ -97,6 +97,11 @@ function CreateArtist({ artists, setArtists }) {
 
           <form className='p-8 mt-2 mb-0 space-y-4 rounded-lg shadow-2xl'>
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  what's the artist or bands name?
+                </span>
+              </label>
               <input
                 type='text'
                 id='artistName'
@@ -108,6 +113,11 @@ function CreateArtist({ artists, setArtists }) {
             </div>
 
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  what do they look like?
+                </span>
+              </label>
               <input
                 type='text'
                 id='imageLink'
@@ -118,6 +128,11 @@ function CreateArtist({ artists, setArtists }) {
               />
             </div>
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  what genre would you call their music?
+                </span>
+              </label>
               <input
                 type='text'
                 id='genreName'

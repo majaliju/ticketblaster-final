@@ -106,6 +106,11 @@ function CreateConcert({ artists, setConcerts, concerts }) {
               </select>
             </div> */}
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  which artist/band is performing?
+                </span>
+              </label>
               <select
                 onChange={(e) => setArtistID(e.target.value)}
                 className='w-full select select-info'>
@@ -118,6 +123,11 @@ function CreateConcert({ artists, setConcerts, concerts }) {
             </div>
 
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  when is the show?
+                </span>
+              </label>
               <input
                 type='date'
                 id='dateSelect'
@@ -130,6 +140,11 @@ function CreateConcert({ artists, setConcerts, concerts }) {
             </div>
 
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  what does the venue look like?
+                </span>
+              </label>
               <input
                 type='text'
                 id='imageLink'
@@ -140,6 +155,11 @@ function CreateConcert({ artists, setConcerts, concerts }) {
               />
             </div>
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  what's the venue's name?
+                </span>
+              </label>
               <input
                 type='text'
                 id='locationName'

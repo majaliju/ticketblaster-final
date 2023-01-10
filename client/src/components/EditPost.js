@@ -12,8 +12,6 @@ function EditPost({
 }) {
   const navigate = useNavigate();
 
-  console.log('currentUser in editpost: ', currentUser);
-
   const location = useLocation();
   let currentBody = location.state.currentBody;
   let currentTickets = location.state.currentTickets;
@@ -21,7 +19,8 @@ function EditPost({
 
   const [body, setBody] = useState(currentBody);
   const [ticketAmount, setTicketAmount] = useState(currentTickets);
-  const [error, setError] = useState([]);
+  const [errorArray, setErrorArray] = useState([]);
+  const [errorsExist, setErrorsExist] = useState(false);
   const [success, setSuccess] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -59,15 +58,18 @@ function EditPost({
             }
           });
           setUsers(updatedUsers);
-          setError([]);
+          setErrorArray([]);
+          setErrorsExist(false);
           setSuccess('Your post has been successfully updated!');
           setSubmitted(true);
         });
       } else {
         response.json().then((e) => {
-          console.log('e : ', e);
-          console.log('e. errors: ', e.errors);
-          setError(e.errors);
+          console.log('e. errors within bad response: ', e.errors);
+
+          setErrorsExist(true);
+          setErrorArray(e.errors);
+          console.log('errorArray state within bad response: ', errorArray);
         });
       }
     });
@@ -96,28 +98,27 @@ function EditPost({
               </div>
             </div>
           ) : null}
-          {/* {error !== []
-            ? error.map((eachError) => {
-                <div class='alert alert-warning shadow-lg'>
-                  <div>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      class='stroke-current flex-shrink-0 h-6 w-6'
-                      fill='none'
-                      viewBox='0 0 24 24'>
-                      <path
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        stroke-width='2'
-                        d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'
-                      />
-                    </svg>
-                    <span>{eachError}</span>
-                    {console.log('eachError: ', eachError)}
-                  </div>
-                </div>;
-              })
-            : null} */}
+          {errorsExist !== false ? (
+            <div className='shadow-lg alert alert-warning'>
+              <div>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  className='flex-shrink-0 w-6 h-6 stroke-current'
+                  fill='none'
+                  viewBox='0 0 24 24'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'
+                  />
+                </svg>
+                {errorArray.map((eachError) => (
+                  <span>{eachError}</span>
+                ))}
+              </div>
+            </div>
+          ) : null}
 
           <h1 class='text-2xl font-bold text-center text-white sm:text-3xl'>
             EDIT YOUR POST!
@@ -125,24 +126,34 @@ function EditPost({
 
           <form class='p-8 mt-2 mb-0 rounded-lg shadow-2xl space-y-4'>
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  how many tickets?
+                </span>
+              </label>
               <input
                 type='number'
                 id='ticketAmount'
                 value={ticketAmount}
                 onChange={(e) => setTicketAmount(e.target.value)}
                 placeholder='how many tickets?'
-                class='input input-ghost w-full '
+                class='w-full max-w-xl input input-bordered input-primary'
               />
             </div>
 
             <div>
+              <label class='label'>
+                <span class='label-text text-secondary uppercase'>
+                  leave a comment
+                </span>
+              </label>
               <input
                 type='text'
                 id='body'
                 value={body}
                 onChange={(e) => setBody(e.target.value)}
                 placeholder='write your message here! price, offers, etc'
-                class='input input-ghost w-full '
+                class='w-full max-w-xl input input-bordered input-primary '
               />
             </div>
             {submitted === false ? (
