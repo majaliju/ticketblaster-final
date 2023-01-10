@@ -133,6 +133,11 @@ freddie_gibbs_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01'
 freddie_gibbs_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "House of Blues Boston", image: "https://i.imgur.com/EaTJwSZl.jpg", artist_id: freddie_gibbs.id})
 freddie_gibbs_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Mirage", image: "https://i.imgur.com/aWcIOQnl.jpg", artist_id: freddie_gibbs.id})
 
+Post.create!({body: "Selling both tix for $600. Email me only.", for_sale: true, tickets: 2, user_id: u28.id, concert_id: freddie_gibbs_c1.id})
+Post.create!({body: "all 5 for sale, contact me to make an offer.", for_sale: true, tickets: 5, user_id: u27.id, concert_id: freddie_gibbs_c1.id})
+Post.create!({body: "need for my fam hmu lmao love gangsta gibbs", for_sale: false, tickets: 4, user_id: u26.id, concert_id: freddie_gibbs_c2.id})
+Post.create!({body: "I need three tix...HMU...", for_sale: false, tickets: 2, user_id: u25.id, concert_id: freddie_gibbs_c3.id})
+
 
 #~ Jay-Z
 puts "---------------------- Seeding Jay-Z ..."
@@ -140,6 +145,11 @@ jayz = Artist.create!({ name: "JAY-Z", image: "https://i.imgur.com/jz6hIaPl.jpg"
 jayz_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Jones Beach", image: "https://i.imgur.com/gzsbgJgl.jpg", artist_id: jayz.id})
 jayz_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Royal Albert Hall", image: "https://i.imgur.com/Y1MJL5Cl.jpg", artist_id: jayz.id})
 jayz_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Teatro Antico di Taormina", image: "https://i.imgur.com/w8FpXUkl.jpg", artist_id: jayz.id})
+
+Post.create!({body: "HOV!!! I GOTTA SEE HIM LIVE HMU ILL PAY ANYTHING", for_sale: false, tickets: 1, user_id: u24.id, concert_id: jayz_c1.id})
+Post.create!({body: "Selling both tix for $1000 a pop. It's JAYZ, come on....", for_sale: true, tickets: 2, user_id: u23.id, concert_id: jayz_c3.id})
+Post.create!({body: "Lol I need these for my BF, he lovess himmmmm", for_sale: false, tickets: 2, user_id: u22.id, concert_id: jayz_c2.id})
+Post.create!({body: "Got these but idc for him tbh he's not beyonce, hmu tho", for_sale: true, tickets: 6, user_id: u21.id, concert_id: jayz_c3.id})
 
 
 #* COUNTRY GENRE
@@ -151,12 +161,22 @@ chris_stapleton_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-0
 chris_stapleton_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Great Scott", image: "https://i.imgur.com/MrIiJ9ql.jpg", artist_id: chris_stapleton.id})
 chris_stapleton_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "JPP Chicago", image: "https://i.imgur.com/21140aZl.jpg", artist_id: chris_stapleton.id})
 
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u20.id, concert_id: ed_sheeran_c1.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u19.id, concert_id: ed_sheeran_c1.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u18.id, concert_id: ed_sheeran_c1.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u17.id, concert_id: ed_sheeran_c1.id})
+
 #~ Sturgill Simpson
 puts "---------------------- Seeding Sturgill Simpson ..."
 sturgill_simpson = Artist.create!({ name: "Sturgill Simpson", image: "https://i.imgur.com/BmMLXmUl.jpg", genre: "Country"})
 sturgill_simpson_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Prinzenbar", image: "https://i.imgur.com/kYLonnDl.jpg", artist_id: sturgill_simpson.id})
 sturgill_simpson_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "100 Club", image: "https://i.imgur.com/xNI1qsIl.jpg", artist_id: sturgill_simpson.id})
 sturgill_simpson_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Stubbs", image: "https://i.imgur.com/Ev0r7Zwl.jpg", artist_id: sturgill_simpson.id})
+
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u16.id, concert_id: ed_sheeran_c1.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u15.id, concert_id: ed_sheeran_c1.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u14.id, concert_id: ed_sheeran_c1.id})
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u13.id, concert_id: ed_sheeran_c1.id})
 
 
 
@@ -169,7 +189,11 @@ sturgill_simpson_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-
 puts "---------------------- Seeding Brent Faiyaz ..."
 brent_faiyaz = Artist.create!({ name: "Brent Faiyaz", image: "https://i.imgur.com/fKlp2Qvl.jpg", genre: "R&B"})
 brent_faiyaz_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Brooklyn Steel", image: "https://i.imgur.com/SmFrzTCm.jpg", artist_id: brent_faiyaz.id})
-Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u4.id, concert_id: brent_faiyaz_c1.id})
+
+Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u12.id, concert_id: brent_faiyaz_c1.id})
+Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u11.id, concert_id: brent_faiyaz_c1.id})
+Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u10.id, concert_id: brent_faiyaz_c1.id})
+Post.create!({body: "All 3 tickets together = $250, one ticket = $100", for_sale: true, tickets: 3, user_id: u9.id, concert_id: brent_faiyaz_c1.id})
 
 #~ Erykah Badu
 puts "---------------------- Seeding Erykah Badu ..."
