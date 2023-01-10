@@ -12,8 +12,6 @@ function ConcertsDisplay({ concerts, loggedIn, searchTerm, setSearchTerm }) {
     setSearchTerm('');
   }, [concerts]);
 
-  //^ display an EachConcertCard for the map function, to keep the consistency
-
   return (
     <div class='bg-base-900 py-6 sm:py-8 lg:py-12'>
       {loggedIn === true ? (

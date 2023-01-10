@@ -92,7 +92,9 @@ john_legend_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', 
 
 Post.create!({body: "Need 3 tickets badly! Willing to pay $400 total for 3 tix", for_sale: false, tickets: 3, user_id: u2.id, concert_id: john_legend_c1.id})
 Post.create!({body: "Can't find just one ticket anywhere! Idc where the seat is, HMU", for_sale: false, tickets: 1, user_id: u30.id, concert_id: john_legend_c1.id})
-Post.create!({body: "Can't find just one ticket anywhere! Idc where the seat is, HMU", for_sale: false, tickets: 1, user_id: u30.id, concert_id: john_legend_c1.id})
+Post.create!({body: "NEEEEEEEED", for_sale: false, tickets: 1, user_id: u32.id, concert_id: john_legend_c2.id})
+Post.create!({body: "MY DAUGHTER LOVES HIM!! EMAIL ME PLZ", for_sale: false, tickets: 2, user_id: u12.id, concert_id: john_legend_c2.id})
+Post.create!({body: "Selling 5!! Email or call 777-777-7772", for_sale: true, tickets: 5, user_id: u9.id, concert_id: john_legend_c3.id})
 
 #~ Alicia Keys
 puts "---------------------- Seeding Alicia Keys ..."
@@ -102,18 +104,24 @@ alicia_keys_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', 
 alicia_keys_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "O2 Arena", image: "https://i.imgur.com/XfpSr2wl.jpg", artist_id: alicia_keys.id})
 alicia_keys_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Verona Arena", image: "https://i.imgur.com/R82xj4Cl.jpg", artist_id: alicia_keys.id})
 
-Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per ticket", for_sale: false, tickets: 2, user_id: u4.id, concert_id: alicia_keys_c1.id})
-Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per ticket", for_sale: false, tickets: 2, user_id: u4.id, concert_id: alicia_keys_c1.id})
-Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per ticket", for_sale: false, tickets: 2, user_id: u4.id, concert_id: alicia_keys_c1.id})
-Post.create!({body: "My daughter loves him (dont ask), will pay up to $500 per ticket", for_sale: false, tickets: 2, user_id: u4.id, concert_id: alicia_keys_c1.id})
+Post.create!({body: "I love her!!! Need 10 tickets for my family", for_sale: false, tickets: 10, user_id: u7.id, concert_id: alicia_keys_c1.id})
+Post.create!({body: "Selling 1 ticket only, $500 OBO", for_sale: true, tickets: 1, user_id: u8.id, concert_id: alicia_keys_c2.id})
+Post.create!({body: "$100 per ticket OBO", for_sale: true, tickets: 6, user_id: u13.id, concert_id: alicia_keys_c2.id})
+Post.create!({body: "Need 2!! Taking my girl, she loves her", for_sale: false, tickets: 2, user_id: u32.id, concert_id: alicia_keys_c3.id})
 
 
 #~ Ed Sheeran
 puts "---------------------- Seeding Ed Sheeran ..."
+
 ed_sheeran = Artist.create!({ name: "Ed Sheeran", image: "https://i.imgur.com/byaK7Wel.jpg", genre: "Pop"})
 ed_sheeran_c1 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Dubai Opera House", image: "https://i.imgur.com/seuJ6yal.jpg", artist_id: ed_sheeran.id})
 ed_sheeran_c2 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Ronnie Scotts", image: "https://i.imgur.com/Xt6bRkTl.jpg", artist_id: ed_sheeran.id})
 ed_sheeran_c3 = Concert.create!({date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: "Pallacio", image: "https://i.imgur.com/4XVx0Wol.jpg", artist_id: ed_sheeran.id})
+
+Post.create!({body: "Selling both for $300. Email me only.", for_sale: true, tickets: 2, user_id: u2.id, concert_id: ed_sheeran_c1.id})
+Post.create!({body: "just need 2 plzzzzz lmao", for_sale: false, tickets: 2, user_id: u4.id, concert_id: ed_sheeran_c3.id})
+Post.create!({body: "$2000 for all 6 or $400 per! email.", for_sale: true, tickets: 6, user_id: u31.id, concert_id: ed_sheeran_c2.id})
+Post.create!({body: "Need 2!! My daughter loves him, she thinks he's cute so I need these tix lol", for_sale: false, tickets: 2, user_id: u29.id, concert_id: ed_sheeran_c3.id})
 
 
 #* RAP GENRE

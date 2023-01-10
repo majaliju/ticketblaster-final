@@ -167,11 +167,11 @@ function Login({ onLogin }) {
                 ) : null
               ) : null
             ) : (
-              <div className='alert alert-success shadow-lg'>
+              <div className='shadow-lg alert alert-success'>
                 <div>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='stroke-current flex-shrink-0 h-6 w-6'
+                    className='flex-shrink-0 w-6 h-6 stroke-current'
                     fill='none'
                     viewBox='0 0 24 24'>
                     <path
@@ -219,11 +219,11 @@ export default Login;
 //     </label>
 //   </div>
 // ) : (
-//   <div className='alert alert-success shadow-lg'>
+//   <div className='shadow-lg alert alert-success'>
 //     <div>
 //       <svg
 //         xmlns='http://www.w3.org/2000/svg'
-//         className='stroke-current flex-shrink-0 h-6 w-6'
+//         className='flex-shrink-0 w-6 h-6 stroke-current'
 //         fill='none'
 //         viewBox='0 0 24 24'>
 //         <path

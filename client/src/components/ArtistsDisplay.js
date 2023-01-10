@@ -17,8 +17,6 @@ function ArtistsDisplay({
     setSearchTerm('');
   }, [artists]);
 
-  //* fix the search bar better to reset values once the app is exited
-
   return (
     <div class='bg-base-900 justify-center py-6 sm:py-8 lg:py-12'>
       {loggedIn === true ? (
