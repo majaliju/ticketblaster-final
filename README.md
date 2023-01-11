@@ -116,9 +116,7 @@
 </p>
 
 <p align="justify">You can go to that green box that says CODE and clone the file either way; or open a shell in an empty directory and run this line. It will clone the repo locally to your machine.</p>
-```
-git@github.com:majaliju/ticketblaster-final.git
-```
+```git@github.com:majaliju/ticketblaster-final.git```
 <p align="justify">You can go to that green box that says CODE and clone the file either way; or open a shell in an empty directory and run this line. It will clone the repo locally to your machine.
 
 Ideally, you create a new branch and this way you can commit changes which (if are great improvements) will eventually get absorbed! In any case, once you have the project on your local machine, just type these out and get started! </p>
