@@ -121,9 +121,12 @@
 
 Ideally, you create a new branch and this way you can commit changes which (if are great improvements) will eventually get absorbed! In any case, once you have the project on your local machine, just type these out and get started! </p>
 
-<code>bundle install
+
+
+```bundle install
 rails db:create
-npm install --prefix client</code>
+npm install --prefix client```
+
 
 <p align="justify">To run the server locally, on http://localhost:3000, run this command: </p>
 <code>rails s</code>
