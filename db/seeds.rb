@@ -227,7 +227,7 @@ Post.create!({ body: 'please please please call me at 555-555-555, i need to see
 Post.create!({ body: 'Weezy F Baby, $100 for each ticket. You wont find cheaper!!', for_sale: true, tickets: 2,
                user_id: u6.id, concert_id: lil_wayne_c1.id })
 Post.create!({ body: 'me & my dad love him hahaha my dads 75 but loves weezy, please email me asap', for_sale: false, tickets: 2, user_id: u7.id,
-               concert_id: lil_wayne_c1.id })
+               concert_id: lil_wayne_c2.id })
 Post.create!({ body: 'Each ticket $55 but all six go for $250 together, lmk', for_sale: true, tickets: 6,
                user_id: u8.id, concert_id: lil_wayne_c3.id })
 
@@ -319,26 +319,87 @@ brent_faiyaz_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01'
 brent_faiyaz_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
                                     location: 'El Club', image: 'https://i.imgur.com/6Jm3E6Ql.jpg', artist_id: brent_faiyaz.id })
 
-Post.create!({ body: 'All 3 tickets together = $250, one ticket = $100', for_sale: true, tickets: 3, user_id: u12.id,
+Post.create!({ body: 'baby you know what brent izzz....3 tix $100 each, cashapp only', for_sale: true, tickets: 3, user_id: u12.id,
                concert_id: brent_faiyaz_c1.id })
-Post.create!({ body: 'All 3 tickets together = $250, one ticket = $100', for_sale: false, tickets: 2, user_id: u11.id,
+Post.create!({ body: 'I LOVE HIMMMMM PLZZZ LOL HMU', for_sale: false, tickets: 2, user_id: u11.id,
                concert_id: brent_faiyaz_c2.id })
-Post.create!({ body: 'All 3 tickets together = $250, one ticket = $100', for_sale: false, tickets: 5, user_id: u10.id,
+Post.create!({ body: 'My girl loves him and her friends too so guess who gotta pay....smh her birthday. hmu', for_sale: false, tickets: 5, user_id: u10.id,
                concert_id: brent_faiyaz_c2.id })
-Post.create!({ body: 'All 3 tickets together = $250, one ticket = $100', for_sale: true, tickets: 2, user_id: u9.id,
+Post.create!({ body: 'TWO TIX $200 EACH OR $350 TOGETHER, NO OFFERING', for_sale: true, tickets: 2, user_id: u9.id,
                concert_id: brent_faiyaz_c3.id })
 
 puts '---------------------- Seeding Erykah Badu ...'
 erykah_badu = Artist.create!({ name: 'Erykah Badu', image: 'https://i.imgur.com/vIno0n1l.jpg', genre: 'R&B' })
+erykah_badu_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                   location: 'Brooklyn Steel', image: 'https://i.imgur.com/SmFrzTCl.jpg', artist_id: erykah_badu.id })
+erykah_badu_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                   location: 'Madison Square Garden', image: 'https://i.imgur.com/0gd1dD0l.jpg', artist_id: erykah_badu.id })
+erykah_badu_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                   location: 'Madison Square Garden', image: 'https://i.imgur.com/0gd1dD0l.jpg', artist_id: erykah_badu.id })
+
+Post.create!({ body: 'baduizm stop playing....real fans discount: only $50 a ticket. selling fast', for_sale: true, tickets: 8,
+               user_id: u1.id, concert_id: erykah_badu_c1.id })
+Post.create!({ body: 'ALL THREE TICKETS $1000 TOGETHER. THIS IS ERYKAH, THATS CHEAP AF', for_sale: true, tickets: 3, user_id: u1.id,
+               concert_id: erykah_badu_c2.id })
+Post.create!({
+               body: 'mannnnnn stop I need to see her, her voice is heaven on earth. tryna take my entire family Ill pay whatever idc just hmu plzzzzz', for_sale: false, tickets: 5, user_id: u1.id, concert_id: erykah_badu_c3.id
+             })
+Post.create!({ body: 'badu at MSG. I need two tickets. Ill sell my kidneys idc. Whatever you want.', for_sale: false, tickets: 2, user_id: u33.id,
+               concert_id: erykah_badu_c3.id })
 
 puts '---------------------- Seeding Kali Uchis ...'
 kali_uchis = Artist.create!({ name: 'Kali Uchis', image: 'https://i.imgur.com/CNIB3cVl.jpg', genre: 'R&B' })
+kali_uchis_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: 'Mao Livehouse',
+                                  image: 'https://i.imgur.com/CghhYyml.jpg', artist_id: kali_uchis.id })
+kali_uchis_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: 'Pallacio',
+                                  image: 'https://i.imgur.com/4XVx0Wol.jpg', artist_id: kali_uchis.id })
+kali_uchis_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                  location: 'O2 Arena', image: 'https://i.imgur.com/XfpSr2wl.jpg', artist_id: kali_uchis.id })
+Post.create!({ body: 'kaliiiii $75 a ticket, we love her in China!!!!', for_sale: true, tickets: 3, user_id: u32.id,
+               concert_id: kali_uchis_c1.id })
+Post.create!({ body: 'queiro 2', for_sale: false, tickets: 2, user_id: u31.id,
+               concert_id: kali_uchis_c2.id })
+Post.create!({ body: 'First time in England, need to see her!! I love her, me and the whole gang lol <3 plz hmu', for_sale: false, tickets: 4, user_id: u30.id,
+               concert_id: kali_uchis_c3.id })
+Post.create!({ body: 'Two tickets, $400 each! No discounts!! I love her too but no negotiation.', for_sale: true, tickets: 2, user_id: u29.id,
+               concert_id: kali_uchis_c3.id })
 
 puts '---------------------- Seeding Giveon ...'
 giveon = Artist.create!({ name: 'Giveon', image: 'https://i.imgur.com/T0hSO6ul.jpg', genre: 'R&B' })
+giveon_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                              location: 'Bowery Ballroom', image: 'https://i.imgur.com/qQN0hVKl.jpg', artist_id: giveon.id })
+giveon_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                              location: 'O2 Arena', image: 'https://i.imgur.com/XfpSr2wl.jpg', artist_id: giveon.id })
+giveon_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                              location: 'Verona Arena', image: 'https://i.imgur.com/R82xj4Cl.jpg', artist_id: giveon.id })
+
+Post.create!({ body: '230 baby wont you meet by the beaacchhh, $400 each is the most ima pay', for_sale: false, tickets: 2, user_id: u28.id,
+               concert_id: giveon_c1.id })
+Post.create!({ body: 'Selling 1 ticket only, $450 OBO', for_sale: true, tickets: 1, user_id: u27.id,
+               concert_id: giveon_c2.id })
+Post.create!({ body: '$500 per ticket but bulk is cheap. EMAIL ME ', for_sale: true, tickets: 6, user_id: u26.id,
+               concert_id: giveon_c2.id })
+Post.create!({ body: 'Need 2 tix!! Taking my girl, she loves him', for_sale: false, tickets: 2, user_id: u25.id,
+               concert_id: giveon_c3.id })
 
 puts '---------------------- Seeding SZA ...'
 sza = Artist.create!({ name: 'SZA', image: 'https://i.imgur.com/1bREHYTl.jpg', genre: 'R&B' })
+
+sza_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                           location: 'Dubai Opera House', image: 'https://i.imgur.com/seuJ6yal.jpg', artist_id: sza.id })
+sza_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                           location: 'Ronnie Scotts', image: 'https://i.imgur.com/Xt6bRkTl.jpg', artist_id: sza.id })
+sza_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: 'Pallacio',
+                           image: 'https://i.imgur.com/4XVx0Wol.jpg', artist_id: sza.id })
+
+Post.create!({ body: 'Selling both. Email me only!', for_sale: true, tickets: 2, user_id: u24.id,
+               concert_id: sza_c1.id })
+Post.create!({ body: 'just need 2 plzzzzz lmao', for_sale: false, tickets: 2, user_id: u23.id,
+               concert_id: sza_c2.id })
+Post.create!({ body: '$2000 for all 4 or $400 per! email.', for_sale: true, tickets: 4, user_id: u22.id,
+               concert_id: sza_c2.id })
+Post.create!({ body: 'Need 2!!  my daughter and wife love her', for_sale: false,
+               tickets: 2, user_id: u21.id, concert_id: sza_c3.id })
 
 # * JAZZ GENRE
 
