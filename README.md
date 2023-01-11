@@ -135,9 +135,13 @@ npm install --prefix client
 
 
 <p align="justify">To run the server locally, on http://localhost:3000, run this command: </p>
+
 ```rails s```
+
 <p align="justify">To run the frontend locally, on http://localhost:4000, run this command: </p>
+
 ```npm start --prefix client```
+
 
 <p align="justify">Run both of the above commands in their own seperate shells and you'll have a running version of the app locally!</p>
 
