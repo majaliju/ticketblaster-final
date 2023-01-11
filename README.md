@@ -115,6 +115,24 @@
   <img src="https://i.imgur.com/wXdMXOr.png" alt="git-installation.gif" display="inline-block" width="60%" height="50%">
 </p>
 
+<p align="justify">You can go to that green box that says CODE and clone the file either way; or open a shell in an empty directory and run this line. It will clone the repo locally to your machine.</p>
+<code>git@github.com:majaliju/ticketblaster-final.git</code>
+<p align="justify">You can go to that green box that says CODE and clone the file either way; or open a shell in an empty directory and run this line. It will clone the repo locally to your machine.
+
+Ideally, you create a new branch and this way you can commit changes which (if are great improvements) will eventually get absorbed! In any case, once you have the project on your local machine, just type these out and get started! </p>
+
+<code>bundle install
+rails db:create
+npm install --prefix client</code>
+
+<p align="justify">To run the server locally, on http://localhost:3000, run this command: </p>
+<code>rails s</code>
+<p align="justify">To run the frontend locally, on http://localhost:4000, run this command: </p>
+<code>npm start --prefix client</code>
+
+<p align="justify">Run both of the above commands in their own seperate shells and you'll have a running version of the app locally!</p>
+
+
 <p align="justify"> 
   </p>
 
