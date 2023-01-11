@@ -115,7 +115,7 @@
   <img src="https://i.imgur.com/wXdMXOr.png" alt="git-installation.gif" display="inline-block" width="60%" height="50%">
 </p>
 
-<p align="justify">You can go to that green box that says CODE and clone the file either way; or open a shell in an empty directory and run this line. It will clone the repo locally to your machine.</p>
+<p align="justify">You can go to that green box that says CODE and clone the file either way; or open a shell in an empty directory and run this line below; it will clone the repo locally to your machine.</p>
 
 ```
 git@github.com:majaliju/ticketblaster-final.git
