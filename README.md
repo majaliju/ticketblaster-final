@@ -202,6 +202,40 @@ npm start --prefix client
 <p align="justify"> 
   The site is seeded with 33 Users, 20 Artists, and at least 1 Concert per Artist, and at least 1 Post per Concert.
 </p>
+<details open="open">
+  <summary>the Artists (and genre)</summary>
+  <ul>
+    <li>Adele (Pop)</li>
+    <li>John Legend (Pop)</li>
+    <li>Alicia Keys (Pop)</li>
+    <li>Ed Sheeran (Pop)</li>
+    <li>Freddie Gibbs (Rap)</li>
+    <li>JAY-Z (Rap)</li>
+    <li>Kodak Black (Rap)</li>
+    <li>Lil Wayne (Rap)</li>
+    <li>Chris Stapleton (Country)</li>
+    <li>Sturgill Simpson (Country)</li>
+    <li>Luke Combs (Country)</li>
+    <li>Cody Johnson (Country)</li>
+    <li>Brent Faiyaz (R&B)</li>
+     <li>Erykah Badu (R&B)</li>
+      <li>Kali Uchis (R&B)</li>
+       <li>Giveon (R&B)</li>
+        <li>Esperanza Spalding (Jazz)</li>
+         <li>Ambrose Akinmusire (Jazz)</li>
+          <li>Vijay Iyer (Jazz)</li>
+          <li>Michael Bublé (Jazz)</li>
+
+           <li>Tchami (Electronic)</li>
+             <li>Kaytranada (Electronic)</li>
+               <li>Peggy Gou (Electronic)</li>
+                 <li>Arctic Monkeys (Rock)</li>
+                  <li>Greta Van Fleet (Rock)</li>
+                   <li>Maneskin (Rock)</li>
+                    <li>Red Hot Chili Peppers (Rock)</li>
+
+  </ul>
+</details>
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
