@@ -121,7 +121,7 @@
 git@github.com:majaliju/ticketblaster-final.git
 ```
 
-<p align="justify">Ideally, you create a new branch and this way you can commit changes which (if are great improvements) will eventually get absorbed! In any case, once you have the project on your local machine, just type these out and get started! </p>
+<p align="justify">Ideally, you create a new branch and this way you can commit changes which (if are great improvements) will eventually get absorbed. In any case, once you have the project on your local machine, just type these out and get started! </p>
 
 
 
@@ -145,7 +145,7 @@ npm start --prefix client
 ```
 
 
-<p align="justify">Run both of the above commands in their own seperate shells and you'll have a running version of the app locally!</p>
+<p align="justify">Run both of the above commands in their own seperate shells and you'll have a running version of the app locally.</p>
 
 
 <p align="justify"> 
