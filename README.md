@@ -125,7 +125,8 @@ Ideally, you create a new branch and this way you can commit changes which (if a
 
 ```bundle install
 rails db:create
-npm install --prefix client```
+npm install --prefix client
+```
 
 
 <p align="justify">To run the server locally, on http://localhost:3000, run this command: </p>
