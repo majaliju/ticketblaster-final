@@ -136,6 +136,7 @@ Post.create!({ body: 'Need 2!! Taking my girl, she loves her', for_sale: false, 
 puts '---------------------- Seeding Ed Sheeran ...'
 
 ed_sheeran = Artist.create!({ name: 'Ed Sheeran', image: 'https://i.imgur.com/byaK7Wel.jpg', genre: 'Pop' })
+
 ed_sheeran_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
                                   location: 'Dubai Opera House', image: 'https://i.imgur.com/seuJ6yal.jpg', artist_id: ed_sheeran.id })
 ed_sheeran_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
@@ -156,6 +157,7 @@ Post.create!({ body: "Need 2!! My daughter loves him, she thinks he's cute so I 
 
 puts '---------------------- Seeding Freddie Gibbs ...'
 freddie_gibbs = Artist.create!({ name: 'Freddie Gibbs', image: 'https://i.imgur.com/Gnv8wIel.jpg', genre: 'Rap' })
+
 freddie_gibbs_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
                                      location: 'El Club', image: 'https://i.imgur.com/6Jm3E6Ql.jpg', artist_id: freddie_gibbs.id })
 freddie_gibbs_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
@@ -174,6 +176,7 @@ Post.create!({ body: 'I need three tix...HMU...', for_sale: false, tickets: 2, u
 
 puts '---------------------- Seeding Jay-Z ...'
 jayz = Artist.create!({ name: 'JAY-Z', image: 'https://i.imgur.com/jz6hIaPl.jpg', genre: 'Rap' })
+
 jayz_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: 'Jones Beach',
                             image: 'https://i.imgur.com/gzsbgJgl.jpg', artist_id: jayz.id })
 jayz_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
@@ -193,8 +196,40 @@ Post.create!({ body: "Got these but idc for him tbh he's not beyonce, hmu tho", 
 puts '---------------------- Seeding Kodak Black ...'
 kodak_black = Artist.create!({ name: 'Kodak Black', image: 'https://i.imgur.com/NLzCqZRl.jpg', genre: 'Rap' })
 
+kodak_black_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                   location: '100 Club', image: 'https://i.imgur.com/xNI1qsIl.jpg', artist_id: kodak_black.id })
+kodak_black_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                   location: 'Bowery Ballroom', image: 'https://i.imgur.com/qQN0hVKl.jpg', artist_id: kodak_black.id })
+kodak_black_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                   location: 'SoFi Stadium', image: 'https://i.imgur.com/YM6MkgXl.jpg', artist_id: kodak_black.id })
+
+Post.create!({ body: 'man i love yak, tryna see him', for_sale: false, tickets: 1, user_id: u1.id,
+               concert_id: kodak_black_c1.id })
+Post.create!({ body: 'TWO 4 SALE HMU CASHAPP ONLY NO CHECK', for_sale: true, tickets: 2,
+               user_id: u2.id, concert_id: kodak_black_c2.id })
+Post.create!({ body: 'lmaooooo i neeed these luh yak', for_sale: false, tickets: 2, user_id: u3.id,
+               concert_id: kodak_black_c3.id })
+Post.create!({ body: 'two tickets for sale, email me or call 222-222-2222', for_sale: true, tickets: 6,
+               user_id: u4.id, concert_id: kodak_black_c3.id })
+
 puts '---------------------- Seeding Lil Wayne ...'
 lil_wayne = Artist.create!({ name: 'Lil Wayne', image: 'https://i.imgur.com/O5nfmjAl.jpg', genre: 'Rap' })
+
+lil_wayne_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                 location: 'SoFi Stadium', image: 'https://i.imgur.com/YM6MkgXl.jpg', artist_id: lil_wayne.id })
+lil_wayne_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                 location: 'Royal Albert Hall', image: 'https://i.imgur.com/Y1MJL5Cl.jpg', artist_id: lil_wayne.id })
+lil_wayne_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                 location: 'Stubbs', image: 'https://i.imgur.com/Ev0r7Zwl.jpg', artist_id: lil_wayne.id })
+
+Post.create!({ body: 'please please please call me at 555-555-555, i need to see him fr fr', for_sale: false, tickets: 1, user_id: u5.id,
+               concert_id: lil_wayne_c1.id })
+Post.create!({ body: 'Weezy F Baby, $100 for each ticket. You wont find cheaper!!', for_sale: true, tickets: 2,
+               user_id: u6.id, concert_id: lil_wayne_c1.id })
+Post.create!({ body: 'me & my dad love him hahaha my dads 75 but loves weezy, please email me asap', for_sale: false, tickets: 2, user_id: u7.id,
+               concert_id: lil_wayne_c1.id })
+Post.create!({ body: 'Each ticket $55 but all six go for $250 together, lmk', for_sale: true, tickets: 6,
+               user_id: u8.id, concert_id: lil_wayne_c3.id })
 
 # * COUNTRY GENRE
 
@@ -227,20 +262,50 @@ sturgill_simpson_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01
 sturgill_simpson_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
                                         location: 'Stubbs', image: 'https://i.imgur.com/Ev0r7Zwl.jpg', artist_id: sturgill_simpson.id })
 
-Post.create!({ body: 'Selling both for $300. Email me only.', for_sale: false, tickets: 1, user_id: u16.id,
+Post.create!({ body: 'gotta see him live, I love his youtube performances', for_sale: false, tickets: 1, user_id: u16.id,
                concert_id: sturgill_simpson_c1.id })
-Post.create!({ body: 'Selling both for $300. Email me only.', for_sale: true, tickets: 3, user_id: u15.id,
+Post.create!({ body: 'Selling all three together for $400. Email me only!!', for_sale: true, tickets: 3, user_id: u15.id,
                concert_id: sturgill_simpson_c2.id })
-Post.create!({ body: 'Selling both for $300. Email me only.', for_sale: false, tickets: 4, user_id: u14.id,
+Post.create!({ body: 'Need great front-row seats for me and the boys, will pay whatever!! ', for_sale: false, tickets: 4, user_id: u14.id,
                concert_id: sturgill_simpson_c3.id })
-Post.create!({ body: 'Selling both for $300. Email me only.', for_sale: true, tickets: 1, user_id: u13.id,
+Post.create!({ body: 'ONLY ONE TICKET $200, NO NEGOTIATION', for_sale: true, tickets: 1, user_id: u13.id,
                concert_id: sturgill_simpson_c3.id })
 
 puts '---------------------- Seeding Luke Combs ...'
 luke_combs = Artist.create!({ name: 'Luke Combs', image: 'https://i.imgur.com/pCd7ouvl.jpg', genre: 'Country' })
+luke_combs_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                  location: 'Prinzenbar', image: 'https://i.imgur.com/kYLonnDl.jpg', artist_id: luke_combs.id })
+luke_combs_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                  location: '100 Club', image: 'https://i.imgur.com/xNI1qsIl.jpg', artist_id: luke_combs.id })
+luke_combs_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                  location: 'Stubbs', image: 'https://i.imgur.com/Ev0r7Zwl.jpg', artist_id: luke_combs.id })
+
+Post.create!({ body: 'LOVE LUKE COMBS, WILL PAY $400 FOR A TICKET', for_sale: false, tickets: 1, user_id: u12.id,
+               concert_id: luke_combs_c1.id })
+Post.create!({ body: 'Selling all three together for $350. Email me only!!', for_sale: true, tickets: 3, user_id: u11.id,
+               concert_id: luke_combs_c2.id })
+Post.create!({ body: 'Trying to see him live. Will pay up to $200 for a ticket but not more. Contact me.', for_sale: false, tickets: 4, user_id: u10.id,
+               concert_id: luke_combs_c3.id })
+Post.create!({ body: 'ONLY ONE TICKET $100, NO NEGOTIATION', for_sale: true, tickets: 1, user_id: u19.id,
+               concert_id: luke_combs_c3.id })
 
 puts '---------------------- Seeding Cody Johnson ...'
 cody_johnson = Artist.create!({ name: 'Cody Johnson', image: 'https://i.imgur.com/XVRbmjil.jpg', genre: 'Country' })
+cody_johnson_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                    location: 'Prinzenbar', image: 'https://i.imgur.com/kYLonnDl.jpg', artist_id: cody_johnson.id })
+cody_johnson_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                    location: '100 Club', image: 'https://i.imgur.com/xNI1qsIl.jpg', artist_id: cody_johnson.id })
+cody_johnson_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                    location: 'Stubbs', image: 'https://i.imgur.com/Ev0r7Zwl.jpg', artist_id: cody_johnson.id })
+
+Post.create!({ body: 'need 2 tix', for_sale: false, tickets: 2, user_id: u9.id,
+               concert_id: cody_johnson_c1.id })
+Post.create!({ body: 'Selling all four together for $250. Email me only!!', for_sale: true, tickets: 4, user_id: u8.id,
+               concert_id: cody_johnson_c2.id })
+Post.create!({ body: 'Need a ticket for my boyfriend and I. Email plz', for_sale: false, tickets: 2, user_id: u7.id,
+               concert_id: cody_johnson_c3.id })
+Post.create!({ body: '$50 ticket but first person who emails', for_sale: true, tickets: 1, user_id: u6.id,
+               concert_id: cody_johnson_c3.id })
 
 # * R&B GENRE
 

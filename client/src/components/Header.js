@@ -140,10 +140,10 @@ function Header({
             <ul className='float-right p-0 menu menu-horizontal'>
               {currentUser === (null || '') && (
                 <li>
-                  <NavLink className='font-bold uppercase' to='/login'>
-                    <h3 className='font-bold uppercase border-none glass btn btn-outline'>
-                      login
-                    </h3>
+                  <NavLink
+                    className='font-bold uppercase border-none btn btn-outline'
+                    to='/login'>
+                    LOGIN
                   </NavLink>
                 </li>
               )}

@@ -132,7 +132,7 @@ function CreateConcert({ artists, setConcerts, concerts }) {
                 type='date'
                 id='dateSelect'
                 value={dateSelect}
-                min='2023-02-01'
+                min='2023-04-01'
                 max='2025-12-31'
                 onChange={(e) => setDateSelect(e.target.value)}
                 className='w-full max-w-xl input input-bordered input-primary'
