@@ -60,7 +60,7 @@
 
   As a musician first, I want everybody to experience the communal, mystic power of music surrounded by other people <strong >without</strong> the greedy hand of business perverting yet another wonderful facet of this human experience we enjoy daily.
 
-  <sup>**</sup> - currently artists & concerts are being manually seeded; eventually we will move towards real API-fed updates of actual artists and live concerts.
+  <sup>**</sup> <i>currently artists & concerts are being manually seeded; eventually we will move towards real API-fed updates of actual artists and live concerts.</i>
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
