@@ -406,6 +406,12 @@ Post.create!({ body: 'Need 2!!  my daughter and wife love her', for_sale: false,
 puts '---------------------- Seeding Esperanza Spalding...'
 esperanza_spalding = Artist.create!({ name: 'Esperanza Spalding', image: 'https://i.imgur.com/Q0MgPOll.jpg',
                                       genre: 'Jazz' })
+esperanza_spalding_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'), location: 'Jones Beach',
+                                          image: 'https://i.imgur.com/gzsbgJgl.jpg', artist_id: esperanza_spalding.id })
+esperanza_spalding_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                          location: 'Royal Albert Hall', image: 'https://i.imgur.com/Y1MJL5Cl.jpg', artist_id: esperanza_spalding.id })
+esperanza_spalding_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                          location: 'Teatro Antico di Taormina', image: 'https://i.imgur.com/w8FpXUkl.jpg', artist_id: esperanza_spalding.id })
 
 puts '---------------------- Seeding Ambrose Akinmusire...'
 ambrose_akinmusire = Artist.create!({ name: 'Ambrose Akinmusire', image: 'https://i.imgur.com/wVsfw7Il.jpg',
@@ -421,6 +427,13 @@ michael_buble = Artist.create!({ name: 'Michael Bublé', image: 'https://i.imgur
 
 puts '---------------------- Seeding Amelie Lens ...'
 amelie_lens = Artist.create!({ name: 'Amelie Lens', image: 'https://i.imgur.com/5fnRjWGl.jpg', genre: 'Electronic' })
+
+amelie_lens_c1 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                   location: 'El Club', image: 'https://i.imgur.com/6Jm3E6Ql.jpg', artist_id: amelie_lens.id })
+amelie_lens_c2 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                   location: 'House of Blues Boston', image: 'https://i.imgur.com/EaTJwSZl.jpg', artist_id: amelie_lens.id })
+amelie_lens_c3 = Concert.create!({ date: Faker::Date.between(from: '2023-01-01', to: '2024-05-25'),
+                                   location: 'Brooklyn Mirage', image: 'https://i.imgur.com/aWcIOQnl.jpg', artist_id: amelie_lens.id })
 
 puts '---------------------- Seeding Tchami ...'
 tchami = Artist.create!({ name: 'Tchami', image: 'https://i.imgur.com/vDQRP0el.jpg', genre: 'Electronic' })
