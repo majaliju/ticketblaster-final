@@ -27,7 +27,7 @@ function Header({
 
   return (
     <div>
-      <div className='navbar bg-base-700 text-primary-content'>
+      <div className='bg-zinc-900 navbar text-primary-content'>
         <div className='navbar-start'>
           <div className='dropdown'>
             <label tabIndex={0} className='btn btn-ghost sm:hidden'>
@@ -105,20 +105,20 @@ function Header({
           </div>
         </div>
 
-        <div className='hidden navbar-center sm:flex'>
+        <div className='navbar-center sm:flex'>
           <div className='flex-auto'>
             <ul className='p-0 menu menu-horizontal'>
               <li>
                 <NavLink
                   to='/artists'
-                  className='font-bold text-white uppercase border-none glass btn btn-outline'>
+                  className='font-bold uppercase border-none btn btn-outline'>
                   <h3 className='font-bold uppercase'>artists</h3>
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   to='/concerts'
-                  className='font-bold text-white uppercase border-none glass btn btn-outline '>
+                  className='font-bold uppercase border-none btn btn-outline '>
                   <h3 className='font-bold uppercase'>concerts</h3>
                 </NavLink>
               </li>
@@ -127,7 +127,7 @@ function Header({
                   <NavLink
                     to='/thisUser'
                     state={{ thisUser: currentUser }}
-                    className='font-bold text-white uppercase border-none glass btn btn-outline'>
+                    className='font-bold uppercase border-none btn btn-outline'>
                     your posts
                   </NavLink>
                 </li>
@@ -141,7 +141,7 @@ function Header({
               {currentUser === (null || '') && (
                 <li>
                   <NavLink className='font-bold uppercase' to='/login'>
-                    <h3 className='font-bold text-white uppercase border-none glass btn btn-outline'>
+                    <h3 className='font-bold uppercase border-none glass btn btn-outline'>
                       login
                     </h3>
                   </NavLink>
@@ -151,7 +151,7 @@ function Header({
                 <div>
                   <li>
                     <button
-                      className='font-bold text-white uppercase border-none glass btn btn-outline'
+                      className='font-bold uppercase border-none btn btn-outline'
                       onClick={handleLogout}>
                       logout {currentUser.username}
                     </button>
