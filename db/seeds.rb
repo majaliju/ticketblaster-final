@@ -45,6 +45,7 @@ u29 = User.create({ username: 'okletsgetit', password: '123123123123', email: Fa
 u30 = User.create({ username: 'mulholland_driver', password: '123123123123',  email: Faker::Internet.email })
 u31 = User.create({ username: 'marvin_gaye_rip87', password: '123123123123',  email: Faker::Internet.email })
 u32 = User.create({ username: 'majboy', password: '123123123123', email: Faker::Internet.email })
+u33 = User.create({ username: 'cheddarbiscuits01', password: '123123123123', email: Faker::Internet.email })
 
 ## ALL ARTIST IMAGES ARE OF THE IMGUR TYPE "LARGE THUMBNAIL"
 # #* NOTE: use the syntax
