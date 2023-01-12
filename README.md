@@ -69,7 +69,7 @@ As a musician first, I want everybody to experience the communal, mystic power o
 <p align="justify"> 
   Just make an account, and scroll through to find your favorite artists and their shows!
 
-To make an account, go to Login and click Signup on the bottom!
+To make an account, go to Login (on the upper right) and click Signup on the bottom!
 
 <p align="center">
   <img src="https://i.imgur.com/Jsz8Tkc.png" alt="signup-page" display="inline-block" width="60%" height="50%">
