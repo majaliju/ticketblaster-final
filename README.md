@@ -71,6 +71,10 @@ As a musician first, I want everybody to experience the communal, mystic power o
 
 To make an account, go to Login and click Signup on the bottom!
 
+<p align="center">
+  <img src="https://i.imgur.com/Jsz8Tkc.png" alt="signup-page" display="inline-block" width="60%" height="50%">
+</p>
+
 Click the Artists tab if you want to see more about a specific artist, or use the search bar to filter results by genre, or artist name!
 
 <p align="center">
