@@ -69,14 +69,25 @@ As a musician first, I want everybody to experience the communal, mystic power o
 <p align="justify"> 
   Just make an account, and scroll through to find your favorite artists and their shows! 
   
+<<<<<<< HEAD
   Click the Artists tab if you want to see more about a specific artist, or go to the Concerts tab to look directly for shows!
+=======
+  Click the Artists tab if you want to see more about a specific artist, or go to the Concerts tab to look directly for shows! 
+  <!-- CREATE A GIF OF ME USING THE ARTISTS TAB AND CONCERTS TAB HERE -->
+  <!-- //* <p align="center"> <img src="https://i.imgur.com/R6jF0XH.png" alt="New York Times headline.gif" display="inline-block" width="60%" height="50%"/></p> -->
+  
+  You can also search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use!
+>>>>>>> a236a5ff62fdf0cc762a785022a91de085febbd6
 
 You can scroll through and look for artists, like this:
 
+<<<<<<< HEAD
  <iframe src="https://giphy.com/embed/Ts7Id7X36SWrEXmp0Z" width="480" height="288" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
   
   You can also search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use!
 
+=======
+>>>>>>> a236a5ff62fdf0cc762a785022a91de085febbd6
 My goal is to get you in and out, and help you buy/sell your tickets fast!
 
 Why spend time on a website when you should spend it listening to music??
