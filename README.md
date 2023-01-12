@@ -93,10 +93,16 @@ You can search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Sta
   <img src="https://i.imgur.com/wKBQJMd.png" alt="searching-concerts-page" display="inline-block" width="60%" height="50%">
 </p>
 
-You can create a post on a concert for buying and selling, and see your own posts as well.
+You can create a post on a concert for buying and selling, and see all posts for that concert.
 
 <p align="center">
-  <img src="https://i.imgur.com/XabpItS.png" alt="searching-concerts-page" display="inline-block" width="60%" height="50%">
+  <img src="https://i.imgur.com/n02Iyb5.png" alt="searching-concerts-posts-page" display="inline-block" width="60%" height="50%">
+</p>
+
+You can see your own posts as well!
+
+<p align="center">
+  <img src="https://i.imgur.com/XabpItS.png" alt="users-own-posts-page" display="inline-block" width="60%" height="50%">
 </p>
 
 My goal is to get you in and out, and help you buy/sell your tickets fast!
