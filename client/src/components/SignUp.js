@@ -109,7 +109,7 @@ function SignUp({ onLogin, users, setUsers }) {
           ) : null}
 
           <h1 className='text-2xl font-bold text-center text-white sm:text-3xl'>
-            LOGIN
+            SIGNUP
           </h1>
           <form
             onSubmit={handleSubmit}
