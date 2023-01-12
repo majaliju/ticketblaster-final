@@ -67,16 +67,14 @@ As a musician first, I want everybody to experience the communal, mystic power o
 <h2 id="how-do-I-use-it">🎹 How Do I Use it?</h2>
 
 <p align="justify"> 
-  Just make an account, and scroll through to find your favorite artists and their shows! 
-  
-  Click the Artists tab if you want to see more about a specific artist, or go to the Concerts tab to look directly for shows!
+  Just make an account, and scroll through to find your favorite artists and their shows!
 
-You can scroll through and look for artists, like this:</p>
+To make an account, go to Login and click Signup on the bottom! Very easy.
 
-<div style="width:100%;height:0;padding-bottom:60%;position:relative;"><iframe src="https://giphy.com/embed/Ts7Id7X36SWrEXmp0Z" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/Ts7Id7X36SWrEXmp0Z">via GIPHY</a></p>
- <p align="justify"> 
-  
-  You can also search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use!
+Click the Artists tab if you want to see more about a specific artist, or go to the Concerts tab to look directly for shows!
+
+You can scroll through and look for artists or concerts directly...
+You can also search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use!
 
 My goal is to get you in and out, and help you buy/sell your tickets fast!
 
