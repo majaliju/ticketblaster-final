@@ -74,11 +74,26 @@ To make an account, go to Login and click Signup on the bottom!
 Click the Artists tab if you want to see more about a specific artist, or use the search bar to filter results by genre, or artist name!
 
 <p align="center">
-  <img src="https://i.imgur.com/AE2NDhy.mp4" alt="using-artists.gif" display="inline-block" width="60%" height="50%">
+  <img src="https://i.imgur.com/4ApMxJY.png" alt="using-artists-page" display="inline-block" width="60%" height="50%">
 </p>
 
 You can scroll through and look for artists or concerts directly...
+
+<p align="center">
+  <img src="https://i.imgur.com/5ojTmWr.png" alt="searching-artists-page" display="inline-block" width="60%" height="50%">
+</p>
+
 You can search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use!
+
+<p align="center">
+  <img src="https://i.imgur.com/wKBQJMd.png" alt="searching-concerts-page" display="inline-block" width="60%" height="50%">
+</p>
+
+You can create a post on a concert for buying and selling, and see your own posts as well.
+
+<p align="center">
+  <img src="https://i.imgur.com/XabpItS.png" alt="searching-concerts-page" display="inline-block" width="60%" height="50%">
+</p>
 
 My goal is to get you in and out, and help you buy/sell your tickets fast!
 
