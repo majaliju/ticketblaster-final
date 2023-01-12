@@ -73,7 +73,7 @@ As a musician first, I want everybody to experience the communal, mystic power o
 
 You can scroll through and look for artists, like this:</p>
 
- <iframe src="https://giphy.com/embed/Ts7Id7X36SWrEXmp0Z" width="480" height="288" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div style="width:100%;height:0;padding-bottom:60%;position:relative;"><iframe src="https://giphy.com/embed/Ts7Id7X36SWrEXmp0Z" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/Ts7Id7X36SWrEXmp0Z">via GIPHY</a></p>
  <p align="justify"> 
   
   You can also search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use!
