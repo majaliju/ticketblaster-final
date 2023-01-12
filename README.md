@@ -74,7 +74,7 @@ To make an account, go to Login and click Signup on the bottom!
 Click the Artists tab if you want to see more about a specific artist, or use the search bar to filter results by genre, or artist name!
 
 <p align="center">
-  <img src="https://i.imgur.com/AE2NDhy.mp4" alt="using-artists" display="inline-block" width="60%" height="50%">
+  <img src="https://i.imgur.com/AE2NDhy.mp4" alt="using-artists.gif" display="inline-block" width="60%" height="50%">
 </p>
 
 You can scroll through and look for artists or concerts directly...
