@@ -69,12 +69,16 @@ As a musician first, I want everybody to experience the communal, mystic power o
 <p align="justify"> 
   Just make an account, and scroll through to find your favorite artists and their shows!
 
-To make an account, go to Login and click Signup on the bottom! Very easy.
+To make an account, go to Login and click Signup on the bottom!
 
-Click the Artists tab if you want to see more about a specific artist, or go to the Concerts tab to look directly for shows!
+Click the Artists tab if you want to see more about a specific artist, or use the search bar to filter results by genre, or artist name!
+
+<p align="center">
+  <img src="https://i.imgur.com/AE2NDhy.mp4" alt="using-artists" display="inline-block" width="60%" height="50%">
+</p>
 
 You can scroll through and look for artists or concerts directly...
-You can also search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use!
+You can search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Stadium"), by artist name (ex. "adele" or "john legend"), and even by date in the YYYY-MM-DD format! It's super easy to use!
 
 My goal is to get you in and out, and help you buy/sell your tickets fast!
 
