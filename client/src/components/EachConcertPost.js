@@ -29,7 +29,7 @@ function EachConcertPost({
 
   return (
     <div className='relative block p-8 pb-24 border-t-4 rounded-sm shadow-xl border-secondary'>
-      <h4 className='text-3xl font-thin text-secondary'>
+      <h4 className='text-3xl font-thin'>
         {concert.artist.name} at {concert.location}
       </h4>
       {post.for_sale === true ? (
