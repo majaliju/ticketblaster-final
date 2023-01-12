@@ -96,7 +96,7 @@ You can search (case-insensitive) by venue name (ex. "MSG" or "mSg" or "SoFi Sta
 You can create a post on a concert for buying and selling, and see all posts for that concert.
 
 <p align="center">
-  <img src="https://i.imgur.com/n02Iyb5.png" alt="searching-concerts-posts-page" display="inline-block" width="60%" height="50%">
+  <img src="https://i.imgur.com/6t44xOs.png" alt="searching-concerts-posts-page" display="inline-block" width="60%" height="50%">
 </p>
 
 You can see your own posts as well!
