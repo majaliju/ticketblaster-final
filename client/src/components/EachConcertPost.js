@@ -25,8 +25,6 @@ function EachConcertPost({
 
   let navigate = useNavigate();
 
-  console.log('(users.find) -- matchingUser: ', matchingUser);
-
   return (
     <div className='relative block p-8 pb-24 border-t-4 rounded-sm shadow-xl border-secondary'>
       <h4 className='text-3xl font-thin'>
@@ -38,6 +36,8 @@ function EachConcertPost({
         <h3 className='text-4xl font'>BUYING: {post.tickets} TICKETS</h3>
       )}
 
+      {/* work on these lines below to figure things out */}
+
       {matchingUser !== undefined ? (
         <div>
           <Link
@@ -46,17 +46,37 @@ function EachConcertPost({
               thisUser: matchingUser,
             }}
             className='text-2xl font-thin btn btn-ghost text-secondary'>
-            {matchingUser.username}
+            {post.poster_name}
           </Link>
           <div
             className='text-2xl font-thin btn btn-ghost text-accent'
             onClick={() => {
               window.location.href = `mailto:${matchingUser.email}`;
             }}>
-            {matchingUser.email}
+            {post.poster_email}
           </div>
         </div>
       ) : null}
+
+      {/* {matchingUser !== undefined ? (
+        <div>
+          <Link
+            to='/thisUser'
+            state={{
+              thisUser: matchingUser,
+            }}
+            className='text-2xl font-thin btn btn-ghost text-secondary'>
+            {post.poster_name}
+          </Link>
+          <div
+            className='text-2xl font-thin btn btn-ghost text-accent'
+            onClick={() => {
+              window.location.href = `mailto:${matchingUser.email}`;
+            }}>
+            {post.poster_email}
+          </div>
+        </div>
+      ) : null} */}
 
       <p className='mt-4 text-lg font-medium text-accent'>{post.body}</p>
       {isOriginalPoster === true ? (
