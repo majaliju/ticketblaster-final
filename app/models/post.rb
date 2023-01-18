@@ -24,4 +24,12 @@ class Post < ApplicationRecord
   def concert_date
     concert.date
   end
+
+  def concert_artist_name
+    concert.Artist.name
+  end
+
+  def concert_artist_image
+    concert.artist.image
+  end
 end
