@@ -96,7 +96,6 @@ function App() {
   }
 
   function handleDelete(post) {
-    // console.yarn('post in handleDelete in App: ', post);
     fetch(`/delete_post/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
