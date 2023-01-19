@@ -10,6 +10,7 @@ function ThisUser({ currentUser, concerts }) {
   const thisUser = location.state.thisUser;
 
   const thisUserPosts = thisUser.posts;
+  const thisUserConcerts = thisUser.concerts;
 
   return (
     <div className='py-6 bg-base-900 sm:py-8 lg:py-12'>
@@ -21,18 +22,35 @@ function ThisUser({ currentUser, concerts }) {
                 {thisUser.username}
               </h1>
             </div>
-            {thisUser !== (null || undefined || '') ? (
-              <div className='grid gap-8 mx-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 '>
-                {thisUserPosts.map((post) => (
-                  <EachUserPost
-                    currentUser={currentUser}
-                    post={post}
-                    thisUser={thisUser}
-                    concerts={concerts}
-                  />
-                ))}
-              </div>
-            ) : null}
+            <div>
+              <h1 className='mb-4 text-6xl font-thin text-center text-primary md:mb-6 lg:text-7xl'>
+                {thisUser.username}'s concerts
+              </h1>{' '}
+              {thisUser !== (null || undefined || '') ? (
+                <div className='grid gap-8 mx-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 '>
+                  {thisUserConcerts.map((concert) =>
+                    console.log('usersConcert and id: ', concert.id)
+                  )}
+                </div>
+              ) : null}
+            </div>
+            <div>
+              <h1 className='mb-4 text-6xl font-thin text-center text-primary md:mb-6 lg:text-7xl'>
+                {thisUser.username}'s posts
+              </h1>{' '}
+              {thisUser !== (null || undefined || '') ? (
+                <div className='grid gap-8 mx-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 '>
+                  {thisUserPosts.map((post) => (
+                    <EachUserPost
+                      currentUser={currentUser}
+                      post={post}
+                      thisUser={thisUser}
+                      concerts={concerts}
+                    />
+                  ))}
+                </div>
+              ) : null}
+            </div>
           </div>
         ) : (
           <Navigate to='/login' replace={true} />
