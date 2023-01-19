@@ -2,19 +2,14 @@ import { useState, useEffect } from 'react';
 import EachUser from './ThisUser';
 import { Link, useNavigate } from 'react-router-dom';
 
-function EachConcertPost({
-  post,
-  concert,
-  currentUser,
-  concerts,
-  users,
-  handleDelete,
-}) {
+function EachConcertPost({ post, concert, currentUser, users }) {
   const [isOriginalPoster, setIsOriginalPoster] = useState(false);
 
-  let matchingUser = users.find(
-    (user) => parseInt(post.user_id) === parseInt(user.id)
-  );
+  // let matchingUser = users.find(
+  //   (user) => parseInt(post.user_id) === parseInt(user.id)
+  // );
+
+  let matchingUser = users.find((user) => post.poster_name === user.username);
 
   useEffect(() => {
     if (parseInt(post.user_id) === parseInt(currentUser.id)) {
@@ -28,15 +23,13 @@ function EachConcertPost({
   return (
     <div className='relative block p-8 pb-24 border-t-4 rounded-sm shadow-xl border-secondary'>
       <h4 className='text-3xl font-thin'>
-        {concert.artist.name} at {concert.location}
+        {concert.artist_name} at {concert.location}
       </h4>
       {post.for_sale === true ? (
         <h3 className='text-4xl font'>SELLING: {post.tickets} TICKETS</h3>
       ) : (
         <h3 className='text-4xl font'>BUYING: {post.tickets} TICKETS</h3>
       )}
-
-      {/* work on these lines below to figure things out */}
 
       {matchingUser !== undefined ? (
         <div>

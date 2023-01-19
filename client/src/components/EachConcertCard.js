@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
 import Loading from './Loading';
 
-function EachConcertCard({ loggedIn, concert, usersPageTag, concerts }) {
+function EachConcertCard({ loggedIn, concert }) {
   return (
     <div>
       <div className='py-6 bg-base-900 sm:py-8 lg:py-'>
@@ -15,7 +15,7 @@ function EachConcertCard({ loggedIn, concert, usersPageTag, concerts }) {
                 <div className=''>
                   <div className='rounded w-30'>
                     <img
-                      src={concert.artist.image}
+                      src={concert.artist_image}
                       alt='a small avatar of the musical artist'
                     />
                   </div>
@@ -29,7 +29,7 @@ function EachConcertCard({ loggedIn, concert, usersPageTag, concerts }) {
 
                 <div className='items-center text-center card-body'>
                   <h2 className='card-title'>
-                    {concert.artist.name} at {concert.location} on{' '}
+                    {concert.artist_name} at {concert.location} on{' '}
                     {concert.date}
                   </h2>
 

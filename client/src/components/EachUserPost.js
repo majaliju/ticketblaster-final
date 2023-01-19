@@ -2,14 +2,11 @@ import { useState, useEffect } from 'react';
 import EachUser from './ThisUser';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
-function EachUserPost({ thisUser, currentUser, post, concerts, handleDelete }) {
+function EachUserPost({ thisUser, currentUser, post }) {
   let navigate = useNavigate();
   const location = useLocation();
 
   const [isOriginalPoster, setIsOriginalPoster] = useState(false);
-  const matchingConcert = concerts.find(
-    (thisConcert) => parseInt(thisConcert.id) === parseInt(post.concert_id)
-  );
 
   useEffect(() => {
     if (parseInt(thisUser.id) === parseInt(currentUser.id)) {
@@ -19,24 +16,21 @@ function EachUserPost({ thisUser, currentUser, post, concerts, handleDelete }) {
 
   return (
     <div className='relative block p-8 pb-24 border-t-4 rounded-sm shadow-xl border-secondary'>
-      {matchingConcert !== undefined ? (
+      {post !== undefined ? (
         <div>
           <h4 className='text-3xl font-thin'>
-            {matchingConcert.artist.name} at {matchingConcert.location} on{' '}
-            {matchingConcert.date}
+            {post.concert_artist_name} at {post.concert_location} on{' '}
+            {post.concert_date}
           </h4>
           <div className=''>
             <div className=''>
               <img
-                src={matchingConcert.artist.image}
+                src={post.concert_artist_image}
                 alt='a small avatar of the musical artist'
               />
             </div>
             <div className='rounded'>
-              <img
-                src={matchingConcert.image}
-                alt='a small avatar of the venue'
-              />
+              <img src={post.concert_image} alt='a small avatar of the venue' />
             </div>
           </div>
         </div>
@@ -48,7 +42,7 @@ function EachUserPost({ thisUser, currentUser, post, concerts, handleDelete }) {
           <h3 className='text-4xl font'>BUYING: {post.tickets} TICKETS</h3>
         )}
       </div>
-      {/* have the mailto: implemented here so a user can open an email link to that user */}
+
       <div
         className='w-full font-normal text-white text-md btn btn-secondary btn-outline'
         onClick={() => {
