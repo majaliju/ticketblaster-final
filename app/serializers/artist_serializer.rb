@@ -1,7 +1,5 @@
 class ArtistSerializer < ActiveModel::Serializer
-  attributes :id, :name, :image, :genre, :concert_image,
-             :concert_location
-  :concert_date
+  attributes :id, :name, :image, :genre
 
   has_many :concerts, serializer: ConcertSerializer
 end

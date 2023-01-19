@@ -26,10 +26,10 @@ class Post < ApplicationRecord
   end
 
   def concert_artist_name
-    concert.Artist.name
+    concert.artist_name
   end
 
   def concert_artist_image
-    concert.artist.image
+    concert.artist_image
   end
 end
