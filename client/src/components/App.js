@@ -183,6 +183,7 @@ function App() {
           path='/thisUser'
           element={
             <ThisUser
+              loggedIn={loggedIn}
               currentUser={currentUser}
               users={users}
               concerts={concerts}

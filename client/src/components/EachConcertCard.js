@@ -67,7 +67,6 @@ function EachConcertCard({ loggedIn, concert }) {
                     <div>
                       <Link
                         to='/login'
-                        state={{}}
                         className='w-full btn btn-accent btn-outline'>
                         LOGIN TO SEE MORE
                       </Link>
