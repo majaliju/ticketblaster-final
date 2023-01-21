@@ -4,9 +4,7 @@ import EachArtistCard from './EachArtistCard';
 import EachUserPost from './EachUserPost';
 import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
 import Loading from './Loading';
-import EachConcertCard from './EachConcertCard';
-import thisUsersConcerts from './thisUsersConcerts';
-import thisUsersPosts from './thisUsersPosts';
+import EachUserConcert from './EachUserConcert';
 
 function ThisUser({ currentUser, concerts, loggedIn }) {
   const location = useLocation();
@@ -28,6 +26,17 @@ function ThisUser({ currentUser, concerts, loggedIn }) {
             <h1 className='mb-4 text-6xl font-thin text-center text-primary md:mb-6 lg:text-7xl'>
               {thisUser.username}'s concerts
             </h1>
+            {thisUser !== (null || undefined || '') ? (
+              <div className='grid gap-8 mx-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 '>
+                {thisUserConcerts.map((concert) => (
+                  <EachUserConcert
+                    currentUser={currentUser}
+                    concert={concert}
+                    thisUser={thisUser}
+                  />
+                ))}
+              </div>
+            ) : null}
 
             <div>
               <h1 className='mb-4 text-6xl font-thin text-center text-primary md:mb-6 lg:text-7xl'>
