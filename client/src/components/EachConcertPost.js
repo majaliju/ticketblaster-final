@@ -18,8 +18,6 @@ function EachConcertPost({ post, concert, currentUser, users }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   });
 
-  let navigate = useNavigate();
-
   return (
     <div className='relative block p-8 pb-24 border-t-4 rounded-sm shadow-xl border-secondary'>
       <h4 className='text-3xl font-thin'>
@@ -31,6 +29,8 @@ function EachConcertPost({ post, concert, currentUser, users }) {
         <h3 className='text-4xl font'>BUYING: {post.tickets} TICKETS</h3>
       )}
 
+      {/* the concerts has_many users relationship through: post is demonstrated here below */}
+      {/* however, for routing purposes, I do use the total Users state so I can route it to /thisUser; I didn't want to run into render issues */}
       {matchingUser !== undefined ? (
         <div>
           <Link
@@ -39,6 +39,8 @@ function EachConcertPost({ post, concert, currentUser, users }) {
               thisUser: matchingUser,
             }}
             className='text-2xl font-thin btn btn-ghost text-secondary'>
+            {/* //* here I'm using concert.posts((post) => post.poster_name) as opposed to matchingUser.username */}
+            {/* //* to demonstrate the concerts has_many users through: posts relationship */}
             {post.poster_name}
           </Link>
           <div
@@ -46,6 +48,8 @@ function EachConcertPost({ post, concert, currentUser, users }) {
             onClick={() => {
               window.location.href = `mailto:${matchingUser.email}`;
             }}>
+            {/* //* here I'm using concert.posts((post) => post.poster_email) as opposed to matchingUser.email */}
+            {/* //* to demonstrate the concerts has_many users through: posts relationship */}
             {post.poster_email}
           </div>
         </div>
