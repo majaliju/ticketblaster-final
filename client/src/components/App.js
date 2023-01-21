@@ -96,7 +96,6 @@ function App() {
   }
 
   function handleDelete(post) {
-    // console.yarn('post in handleDelete in App: ', post);
     fetch(`/delete_post/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
@@ -184,6 +183,7 @@ function App() {
           path='/thisUser'
           element={
             <ThisUser
+              loggedIn={loggedIn}
               currentUser={currentUser}
               users={users}
               concerts={concerts}

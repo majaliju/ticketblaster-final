@@ -65,7 +65,7 @@ function Header({
                     to='/thisUser'
                     state={{ thisUser: currentUser }}
                     className='font-bold uppercase'>
-                    your posts
+                    User's Page
                   </NavLink>
                 </li>
               ) : null}
@@ -128,7 +128,7 @@ function Header({
                     to='/thisUser'
                     state={{ thisUser: currentUser }}
                     className='font-bold uppercase border-none btn btn-outline'>
-                    your posts
+                    User's Page
                   </NavLink>
                 </li>
               ) : null}

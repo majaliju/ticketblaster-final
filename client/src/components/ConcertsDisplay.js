@@ -18,7 +18,6 @@ function ConcertsDisplay({ concerts, loggedIn, searchTerm, setSearchTerm }) {
         <div className='flex w-full input-group input-group-lg'>
           <Link to='/createConcert' state={{}} replace={true}>
             <button className='btn btn-secondary btn-outline'>
-              {/* admin access only */}
               Add A Concert
             </button>
           </Link>
@@ -50,7 +49,7 @@ function ConcertsDisplay({ concerts, loggedIn, searchTerm, setSearchTerm }) {
                 if (searchTerm === '') {
                   return concert;
                 } else if (
-                  concert.artist.name
+                  concert.artist_name
                     .toLowerCase()
                     .includes(searchTerm.toLowerCase()) ||
                   concert.location
