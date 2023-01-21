@@ -29,8 +29,8 @@ function EachConcertPost({ post, concert, currentUser, users }) {
         <h3 className='text-4xl font'>BUYING: {post.tickets} TICKETS</h3>
       )}
 
-      {/* the concerts has_many users relationship through: post is demonstrated here below */}
-      {/* however, for routing purposes, I do use the total Users state so I can route it to /thisUser; I didn't want to run into render issues */}
+      {/* //& the concerts has_many users relationship through: post is demonstrated here below */}
+      {/* //& however, for routing purposes, I do use the total Users state so I can route it to /thisUser; I didn't want to run into render issues */}
       {matchingUser !== undefined ? (
         <div>
           <Link
