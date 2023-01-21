@@ -25,6 +25,9 @@ function ThisUser({ currentUser, concerts, loggedIn }) {
                 {thisUser.username}
               </h1>
             </div>
+            <h1 className='mb-4 text-6xl font-thin text-center text-primary md:mb-6 lg:text-7xl'>
+              {thisUser.username}'s concerts
+            </h1>
 
             <div>
               <h1 className='mb-4 text-6xl font-thin text-center text-primary md:mb-6 lg:text-7xl'>
