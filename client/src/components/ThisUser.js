@@ -6,7 +6,7 @@ import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
 import Loading from './Loading';
 import EachUserConcert from './EachUserConcert';
 
-function ThisUser({ currentUser, concerts, loggedIn }) {
+function ThisUser({ currentUser }) {
   const location = useLocation();
   const thisUser = location.state.thisUser;
 
@@ -49,7 +49,6 @@ function ThisUser({ currentUser, concerts, loggedIn }) {
                       currentUser={currentUser}
                       post={post}
                       thisUser={thisUser}
-                      concerts={concerts}
                     />
                   ))}
                 </div>
