@@ -161,9 +161,6 @@ function App() {
           path='/thisUser'
           element={<ThisUser currentUser={currentUser} />}
         />
-        {/*
-         //! for showPosts, createNewPost, editPost -- create the loggedIn === true condition to show these
-         */}
         {loggedIn === true ? (
           <Route>
             <Route
