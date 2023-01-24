@@ -24,18 +24,11 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [cookies, setCookies] = useState([]);
 
-  // just preliminary but everything can be handled here within Artists ideally or Users
   const [searchTerm, setSearchTerm] = useState('');
   const [artists, setArtists] = useState([]);
   const [concerts, setConcerts] = useState([]);
   const [users, setUsers] = useState([]);
 
-  //TODO
-  //^ create an error message for user not found on the Login component if a wrong user renders
-
-  //? this whole area can be cleaned up but needs to be viewed at the end of the project, not just yet
-  //& need to manage the useEffects here as well, trigger only essential ones
-  //! dependencies are what need to be checked here
   useEffect(() => {
     fetch('/artists')
       .then((r) => r.json())
@@ -47,13 +40,14 @@ function App() {
       .then((r) => r.json())
       .then((info) => setConcerts(info));
   }, [users]);
-  // for a concert update, maybe include a submittedNewConcert one
+  // * why is concerts dependent on users?
 
   useEffect(() => {
     fetch('/users')
       .then((r) => r.json())
       .then((info) => setUsers(info));
   }, [currentUser]);
+  // * why is users dependent on currentUser?
 
   //? INITIAL FETCH BELOW FOR REGISTERING THE USER
   useEffect(() => {
