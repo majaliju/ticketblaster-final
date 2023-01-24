@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-function SignUp({ onLogin, users, setUsers }) {
+function SignUp({ onLogin }) {
   //todo
   //^ stylize this page way better
 

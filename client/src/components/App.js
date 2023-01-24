@@ -217,31 +217,8 @@ function App() {
           </Route>
         ) : null}
         )
-        <Route
-          path='/login'
-          element={
-            <Login
-              loggedIn={loggedIn}
-              onLogin={onLogin}
-              currentUser={currentUser}
-              setCurrentUser={setCurrentUser}
-              users={users}
-              setUsers={setUsers}
-            />
-          }
-        />
-        <Route
-          path='/signup'
-          element={
-            <SignUp
-              onLogin={onLogin}
-              currentUser={currentUser}
-              setCurrentUser={setCurrentUser}
-              users={users}
-              setUsers={setUsers}
-            />
-          }
-        />
+        <Route path='/login' element={<Login onLogin={onLogin} />} />
+        <Route path='/signup' element={<SignUp onLogin={onLogin} />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
