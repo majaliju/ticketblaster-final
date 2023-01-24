@@ -1,17 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
-function EditPost({
-  currentUser,
-  setCurrentUser,
-  users,
-  setUsers,
-  concerts,
-  user,
-  post,
-}) {
-  const navigate = useNavigate();
-
+function EditPost({ currentUser, setCurrentUser, users, setUsers }) {
   const location = useLocation();
   let currentBody = location.state.currentBody;
   let currentTickets = location.state.currentTickets;
@@ -23,8 +13,6 @@ function EditPost({
   const [errorsExist, setErrorsExist] = useState(false);
   const [success, setSuccess] = useState('');
   const [submitted, setSubmitted] = useState(false);
-
-  console.log('postID in editpost: ', postID);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,11 +53,8 @@ function EditPost({
         });
       } else {
         response.json().then((e) => {
-          console.log('e. errors within bad response: ', e.errors);
-
           setErrorsExist(true);
           setErrorArray(e.errors);
-          console.log('errorArray state within bad response: ', errorArray);
         });
       }
     });

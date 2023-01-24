@@ -10,8 +10,6 @@ function ThisArtist({ loggedIn }) {
   const artist = location.state.artist;
   const artistsConcerts = location.state.artistsConcerts;
 
-  console.log('artistsConcerts: ', artistsConcerts);
-
   return (
     <div>
       <div className='py-6 bg-base-900 sm:py-8 lg:py-'>

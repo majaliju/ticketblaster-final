@@ -9,7 +9,6 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
   const [success, setSuccess] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const navigate = useNavigate();
   const location = useLocation();
   let isSelling = location.state.isSelling;
   let concert = location.state.concert;
@@ -46,7 +45,6 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
             ...currentUser,
             posts: [...currentUser.posts, createdPost],
           });
-          console.log(currentUser);
 
           const updatedUsers = users.map((user) => {
             if (user.id === currentUser.id) {
@@ -63,11 +61,8 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
         });
       } else {
         response.json().then((e) => {
-          console.log('e. errors within bad response: ', e.errors);
-          // set the errorString to e.errors.join(*join with a comma*)
           setErrorsExist(true);
           setErrorArray(e.errors);
-          console.log('errorArray state within bad response: ', errorArray);
         });
       }
     });
