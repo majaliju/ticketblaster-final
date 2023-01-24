@@ -24,7 +24,6 @@ function ShowPosts({ concerts, users, currentUser }) {
                 post={post}
                 concert={concert}
                 currentUser={currentUser}
-                concerts={concerts}
                 users={users}
               />
             ))}

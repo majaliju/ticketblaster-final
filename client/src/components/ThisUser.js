@@ -29,11 +29,7 @@ function ThisUser({ currentUser }) {
             {thisUser !== (null || undefined || '') ? (
               <div className='grid gap-8 mx-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 '>
                 {thisUserConcerts.map((concert) => (
-                  <EachUserConcert
-                    currentUser={currentUser}
-                    concert={concert}
-                    thisUser={thisUser}
-                  />
+                  <EachUserConcert concert={concert} />
                 ))}
               </div>
             ) : null}

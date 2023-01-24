@@ -1,6 +1,6 @@
 import Loading from './Loading';
 
-function EachUserConcert({ currentUser, concert, thisUser }) {
+function EachUserConcert({ concert }) {
   return (
     <div>
       <div className='py-6 bg-base-900 sm:py-8 lg:py-'>
