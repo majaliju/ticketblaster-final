@@ -3,14 +3,7 @@
 import { NavLink, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function Header({
-  getUser,
-  currentUser,
-  setCurrentUser,
-  onLogin,
-  onLogout,
-  loggedIn,
-}) {
+function Header({ currentUser, onLogout }) {
   function handleLogout() {
     fetch('/logout', {
       method: 'DELETE',

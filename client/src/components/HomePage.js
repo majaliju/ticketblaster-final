@@ -4,7 +4,7 @@ import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
 import EachPostForUser from './EachUserPost';
 import EachUserPost from './EachUserPost';
 
-function HomePage({ currentUser, users, sessionInfo, loggedIn, handleDelete }) {
+function HomePage({ currentUser, users, sessionInfo, loggedIn }) {
   const homePosts = currentUser.posts;
 
   return (

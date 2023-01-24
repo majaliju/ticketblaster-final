@@ -5,7 +5,7 @@ import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
 import Loading from './Loading';
 import EachConcertCard from './EachConcertCard';
 
-function ThisArtist({ artists, concerts, loggedIn }) {
+function ThisArtist({ loggedIn }) {
   const location = useLocation();
   const artist = location.state.artist;
   const artistsConcerts = location.state.artistsConcerts;

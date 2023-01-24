@@ -116,14 +116,7 @@ function App() {
 
   return (
     <div>
-      <Header
-        getUser={getUser}
-        currentUser={currentUser}
-        setCurrentUser={setCurrentUser}
-        onLogin={onLogin}
-        onLogout={onLogout}
-        loggedIn={loggedIn}
-      />
+      <Header currentUser={currentUser} onLogout={onLogout} />
       <Routes>
         <Route
           path='/'
@@ -143,9 +136,7 @@ function App() {
             <ArtistsDisplay
               artists={artists}
               concerts={concerts}
-              currentUser={currentUser}
               loggedIn={loggedIn}
-              users={users}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
             />
@@ -153,26 +144,14 @@ function App() {
         />
         <Route
           path='/thisArtist'
-          element={
-            <ThisArtist
-              artists={artists}
-              concerts={concerts}
-              currentUser={currentUser}
-              users={users}
-              loggedIn={loggedIn}
-            />
-          }
+          element={<ThisArtist loggedIn={loggedIn} />}
         />
         <Route
           path='/concerts'
           element={
             <ConcertsDisplay
-              artists={artists}
               concerts={concerts}
-              setConcerts={setConcerts}
-              currentUser={currentUser}
               loggedIn={loggedIn}
-              users={users}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
             />
@@ -181,14 +160,7 @@ function App() {
 
         <Route
           path='/thisUser'
-          element={
-            <ThisUser
-              loggedIn={loggedIn}
-              currentUser={currentUser}
-              users={users}
-              concerts={concerts}
-            />
-          }
+          element={<ThisUser currentUser={currentUser} />}
         />
         {/* //! for showPosts, createNewPost, editPost -- create the loggedIn === true condition to show these  */}
         <Route
@@ -243,9 +215,6 @@ function App() {
             <DeleteConfirmation
               handleDelete={handleDelete}
               currentUser={currentUser}
-              setCurrentUser={setCurrentUser}
-              users={users}
-              setUsers={setUsers}
             />
           }
         />
