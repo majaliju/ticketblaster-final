@@ -15,7 +15,7 @@ function Login({ onLogin }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch('/login', {
+    fetch('/sessions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

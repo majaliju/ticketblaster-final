@@ -25,7 +25,7 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('/new_post', {
+    fetch('/posts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

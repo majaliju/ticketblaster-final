@@ -90,7 +90,7 @@ function App() {
   }
 
   function handleDelete(post) {
-    fetch(`/delete_post/${post.id}`, {
+    fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
       const updatedPosts = currentUser.posts.filter(

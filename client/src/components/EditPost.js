@@ -16,7 +16,7 @@ function EditPost({ currentUser, setCurrentUser, users, setUsers }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`/update_post/${postID}`, {
+    fetch(`/posts/${postID}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

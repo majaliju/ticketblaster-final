@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 function Header({ currentUser, onLogout }) {
   function handleLogout() {
-    fetch('/logout', {
+    fetch('/sessions', {
       method: 'DELETE',
     }).then(() => onLogout());
   }

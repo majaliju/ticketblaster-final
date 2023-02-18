@@ -1,16 +1,19 @@
 class SessionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
+  def show_session
+    render json: session
+  end
 
   ## logs in the user & cross-checks if the password is correct
   def create
-    user = User.find_by!(username: params[:username]) 
-      if user&.authenticate(params[:password])
-        session[:user_id] = user.id
-        render json: user
-      else
-        render json: { errors: ["Wrong password! Try again"] }, status: :unauthorized
-      end
+    user = User.find_by!(username: params[:username])
+    if user&.authenticate(params[:password])
+      session[:user_id] = user.id
+      render json: user
+    else
+      render json: { errors: ['Wrong password! Try again'] }, status: :unauthorized
+    end
   end
 
   # delete the user from the session

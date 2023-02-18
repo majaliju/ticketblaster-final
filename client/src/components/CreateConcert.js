@@ -13,7 +13,7 @@ function CreateConcert({ artists, setConcerts, concerts }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('/new_concert', {
+    fetch('/concerts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

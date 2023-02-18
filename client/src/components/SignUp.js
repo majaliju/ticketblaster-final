@@ -27,7 +27,7 @@ function SignUp({ onLogin }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch('/new_user', {
+    fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
