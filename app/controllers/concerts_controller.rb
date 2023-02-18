@@ -1,13 +1,6 @@
 class ConcertsController < ApplicationController
-  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-  rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
-
-  # ## does this go within ConcertsController or ArtistsController?
-  # def upcoming_shows
-  #   ## define a method that shows the upcoming shows 
-  #   ## shows = []
-  #   ## if the_show is after today's date, then shows << the_show
-  # end
+  # rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+  # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
   def index
     concerts = Concert.all
@@ -30,21 +23,22 @@ class ConcertsController < ApplicationController
     params.permit(:artist_id, :date, :image, :location)
   end
 
-  def render_unprocessable_entity_response(invalid)
-    render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
-  end
+  # def render_unprocessable_entity_response(invalid)
+  #   render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
+  # end
 
-  def render_not_found_response(invalid)
-    render json: { error: invalid.message }, status: :not_found
-  end
+  # def render_not_found_response(invalid)
+  #   render json: { error: invalid.message }, status: :not_found
+  # end
 end
+
 class ConcertsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
   # ## does this go within ConcertsController or ArtistsController?
   # def upcoming_shows
-  #   ## define a method that shows the upcoming shows 
+  #   ## define a method that shows the upcoming shows
   #   ## shows = []
   #   ## if the_show is after today's date, then shows << the_show
   # end
