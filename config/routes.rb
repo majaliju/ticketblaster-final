@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :concerts, only: %i[index create]
   resources :posts, only: %i[index create update destroy]
   resources :users, only: %i[index show create]
-  resources :sessions, only: %i[show create destroy]
+  resources :sessions, only: %i[index create destroy]
+
+  get '/session_cookies', to: 'sessions#show_cookies'
 
   # #~ SESSION & COOKIES INFO
   # & shows session_id and sessions info

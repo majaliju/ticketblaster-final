@@ -29,6 +29,8 @@ function App() {
   const [concerts, setConcerts] = useState([]);
   const [users, setUsers] = useState([]);
 
+  console.log('user_id: ', currentUser.id);
+
   useEffect(() => {
     fetch('/artists')
       .then((r) => r.json())
@@ -39,14 +41,14 @@ function App() {
     fetch('/concerts')
       .then((r) => r.json())
       .then((info) => setConcerts(info));
-  }, [users]);
+  }, []);
   // * why is concerts dependent on users?
 
   useEffect(() => {
     fetch('/users')
       .then((r) => r.json())
       .then((info) => setUsers(info));
-  }, [currentUser]);
+  }, []);
   // * why is users dependent on currentUser?
 
   //? INITIAL FETCH BELOW FOR REGISTERING THE USER
@@ -65,7 +67,6 @@ function App() {
           setLoggedIn(true);
         });
       } else {
-        // console.log('fetch /me failed due to: ', response);
         setLoggedIn(false);
       }
     });
@@ -86,9 +87,10 @@ function App() {
   }
 
   function getSession() {
-    fetch('/show_session')
+    fetch('/sessions')
       .then((r) => r.json())
       .then((thisInfo) => setSessionInfo(thisInfo));
+    console.log('sessionInfo after the call: ', sessionInfo);
   }
 
   function handleDelete(post) {
