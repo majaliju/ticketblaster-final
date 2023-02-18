@@ -52,18 +52,20 @@ function App() {
   //? INITIAL FETCH BELOW FOR REGISTERING THE USER
   useEffect(() => {
     getUser();
+    console.log('currentUser :', currentUser);
     getSession();
   }, []);
 
   function getUser() {
-    fetch('/me').then((response) => {
+    console.log('currentUser :', currentUser);
+    fetch(`/users/${currentUser.id}`).then((response) => {
       if (response.ok) {
         response.json().then((user) => {
           setCurrentUser(user);
           setLoggedIn(true);
         });
       } else {
-        console.log('fetch /me failed due to: ', response);
+        // console.log('fetch /me failed due to: ', response);
         setLoggedIn(false);
       }
     });

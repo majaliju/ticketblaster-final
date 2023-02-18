@@ -5,14 +5,10 @@ import { useEffect } from 'react';
 
 function Header({ currentUser, onLogout }) {
   function handleLogout() {
-    fetch('/sessions', {
+    fetch(`/sessions/${currentUser.id}`, {
       method: 'DELETE',
     }).then(() => onLogout());
   }
-
-  // useEffect(() => {
-  //   getUser();
-  // }, []);
 
   // TODO
   //^ dropdown should exit as soon as item is clicked
