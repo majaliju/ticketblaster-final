@@ -51,8 +51,8 @@ end
 # #& show all the users
 # get "/users", to: "users#index"
 
-# #~ SESSION & COOKIES INFO
-# & shows session_id and sessions info
-get '/show_session', to: 'application#show_session'
-# & displays cookies
-get '/cookies', to: 'application#show_cookies'
+# # #~ SESSION & COOKIES INFO
+# # & shows session_id and sessions info
+# get '/show_session', to: 'application#show_session'
+# # & displays cookies
+# get '/cookies', to: 'application#show_cookies'

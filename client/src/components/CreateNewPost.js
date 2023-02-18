@@ -13,16 +13,6 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
   let isSelling = location.state.isSelling;
   let concert = location.state.concert;
 
-  // //* resetting our states when a new page renders
-  //! gotta figure this useEffect out
-  // useEffect(() => {
-  //   setSuccess('');
-  //   setError([]);
-  //   setSubmitted(false);
-  //   setBody('');
-  //   setTicketAmount(0);
-  // }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch('/posts', {

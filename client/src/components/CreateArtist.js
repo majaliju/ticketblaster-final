@@ -12,7 +12,7 @@ function CreateArtist({ artists, setArtists }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('/new_artist', {
+    fetch('/artists', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
