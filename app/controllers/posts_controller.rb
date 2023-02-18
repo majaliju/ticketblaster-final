@@ -21,8 +21,8 @@ class PostsController < ApplicationController
   def update
     post = Post.find_by!(id: params[:id])
 
-    ## potential cross-check for if only body, or only tickets if being updated
-    ## but also seems irrelevant
+    ## include here a cross-check for the body && tickets being same as params when entered; rescue and output "nothing changed!"
+
     post.update!(
       body: params[:body],
       tickets: params[:tickets]
