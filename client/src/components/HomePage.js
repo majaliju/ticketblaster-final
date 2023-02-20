@@ -14,7 +14,7 @@ function HomePage({ currentUser, users, sessionInfo, loggedIn }) {
           <div
             className='min-h-screen hero'
             style={{
-              backgroundImage: `url("https://placeimg.com/1000/800/arch")`,
+              backgroundImage: `url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80")`,
             }}>
             <div className='bg-opacity-50 hero-overlay'>
               {' '}
@@ -31,7 +31,7 @@ function HomePage({ currentUser, users, sessionInfo, loggedIn }) {
             <div className='text-center hero-content text-neutral-content'>
               <div className='max-w-md'>
                 <h1 className='mb-5 text-5xl font-bold'>
-                  Welcome, {currentUser.username}!
+                  Welcome to TICKETBLASTER, {currentUser.username}!
                 </h1>
                 <p className='mb-5'>
                   Your sessionID is {sessionInfo.session_id}

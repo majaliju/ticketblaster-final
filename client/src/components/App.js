@@ -29,8 +29,6 @@ function App() {
   const [concerts, setConcerts] = useState([]);
   const [users, setUsers] = useState([]);
 
-  console.log('user_id: ', currentUser.id);
-
   useEffect(() => {
     fetch('/artists')
       .then((r) => r.json())
@@ -42,24 +40,21 @@ function App() {
       .then((r) => r.json())
       .then((info) => setConcerts(info));
   }, []);
-  // * why is concerts dependent on users?
 
   useEffect(() => {
     fetch('/users')
       .then((r) => r.json())
       .then((info) => setUsers(info));
   }, []);
-  // * why is users dependent on currentUser?
 
   //? INITIAL FETCH BELOW FOR REGISTERING THE USER
   useEffect(() => {
     getUser();
-    console.log('currentUser :', currentUser);
     getSession();
   }, []);
 
+  //^ we get the currentUser
   function getUser() {
-    console.log('currentUser :', currentUser);
     fetch(`/users/${currentUser.id}`).then((response) => {
       if (response.ok) {
         response.json().then((user) => {
@@ -90,7 +85,6 @@ function App() {
     fetch('/sessions')
       .then((r) => r.json())
       .then((thisInfo) => setSessionInfo(thisInfo));
-    console.log('sessionInfo after the call: ', sessionInfo);
   }
 
   function handleDelete(post) {
