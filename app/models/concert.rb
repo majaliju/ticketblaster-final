@@ -6,6 +6,7 @@ class Concert < ApplicationRecord
 
   validates :location, presence: true
   validates :image, presence: true
+  validates :date, presence: true
 
   def artist_name
     artist.name

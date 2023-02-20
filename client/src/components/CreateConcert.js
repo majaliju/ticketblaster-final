@@ -3,7 +3,7 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 function CreateConcert({ artists, setConcerts, concerts }) {
   const [artistID, setArtistID] = useState(1);
-  const [dateSelect, setDateSelect] = useState('2023-02-01');
+  const [dateSelect, setDateSelect] = useState('2023-05-01');
   const [imageLink, setImageLink] = useState('');
   const [locationName, setLocationName] = useState('');
   const [errorArray, setErrorArray] = useState([]);
@@ -96,15 +96,6 @@ function CreateConcert({ artists, setConcerts, concerts }) {
           </h1>
 
           <form className='p-8 mt-2 mb-0 space-y-4 rounded-lg shadow-2xl'>
-            {/* <div>
-              <select
-                onChange={(e) => handleArtistSelect(e.target.value)}
-                className='w-full select select-info'>
-                {singers.map((name, key) => (
-                  <option key={key}>{name}</option>
-                ))}
-              </select>
-            </div> */}
             <div>
               <label class='label'>
                 <span class='label-text text-secondary uppercase'>
