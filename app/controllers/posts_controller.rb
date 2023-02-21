@@ -36,7 +36,6 @@ end
 
   def destroy
     post = find_post
-
     post.destroy
     head :no_content
   end
