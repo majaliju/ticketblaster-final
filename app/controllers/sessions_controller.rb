@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
+  ##  gets session info
   def index
     render json: session
   end
+
 
   def show_cookies
     cookies[:cookies_tester] ||= 'Cookies work!'
@@ -28,11 +30,5 @@ class SessionsController < ApplicationController
     head :no_content
   end
 
-  # def render_unprocessable_entity_response(invalid)
-  #   render json: { errors: invalid.record.errors.full_messages }, status: :unauthorized
-  # end
 
-  # def render_not_found_response
-  #   render json: { errors: ["This user doesn't exist!"] }, status: :not_found
-  # end
 end

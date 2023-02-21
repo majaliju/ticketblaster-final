@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    post = Post.find_by!(id: params[:id])
+    post = find_post
     render json: post, status: 200
   end
 
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    post = Post.find_by!(id: params[:id])
+    post = find_post
 
     ## include here a cross-check for the body && tickets being same as params when entered; rescue and output "nothing changed!"
 
@@ -31,13 +31,17 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find_by!(id: params[:id])
+    post = find_post
 
     post.destroy
     head :no_content
   end
 
   private
+
+def find_post
+  post = Post.find_by!(id: params[:id])
+end
 
   def authorize_user
     unless session[:user_id] === params[:user_id]
@@ -50,13 +54,6 @@ class PostsController < ApplicationController
     params.permit(:concert_id, :user_id, :for_sale, :tickets, :body)
   end
 
-  # def render_unprocessable_entity_response(invalid)
-  #   render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
-  # end
-
-  # def render_not_found_response(invalid)
-  #   render json: { error: invalid.message }, status: :not_found
-  # end
 end
 
 # # original write-up for create

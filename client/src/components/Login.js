@@ -28,7 +28,6 @@ function Login({ onLogin }) {
     }).then((response) => {
       if (response.status >= 200 && response.status <= 299) {
         response.json().then((info) => {
-          console.log('info: ', info);
           onLogin(info);
           setErrorArray([]);
           setErrorsExist(false);
@@ -38,11 +37,8 @@ function Login({ onLogin }) {
         });
       } else {
         response.json().then((e) => {
-          console.log('e. errors within bad response: ', e.errors);
-          // set the errorString to e.errors.join(*join with a comma*)
           setErrorsExist(true);
           setErrorArray(e.errors);
-          console.log('errorArray state within bad response: ', errorArray);
         });
       }
     });

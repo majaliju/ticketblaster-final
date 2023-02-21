@@ -10,11 +10,7 @@ Rails.application.routes.draw do
 
   get '/session_cookies', to: 'sessions#show_cookies'
 
-  # #~ SESSION & COOKIES INFO
-  # & shows session_id and sessions info
-  get '/show_session', to: 'application#show_session'
-  # & displays cookies
-  get '/cookies', to: 'application#show_cookies'
+
 
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
