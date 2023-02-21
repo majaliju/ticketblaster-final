@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  # rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-  # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
-  before_action :authorize_user, only: %i[update destroy]
+
+  before_action :authorize_user, only: [:update, :destroy]
+ 
 
   def index
     posts = Post.all
@@ -18,17 +18,21 @@ class PostsController < ApplicationController
     render json: post, status: 201
   end
 
-  def update
-    post = find_post
 
-    ## include here a cross-check for the body && tickets being same as params when entered; rescue and output "nothing changed!"
+def update
+  post = find_post
 
-    post.update!(
-      body: params[:body],
-      tickets: params[:tickets]
-    )
-    render json: post, status: 200
-  end
+if post[:body] === params[:body] && post[:tickets] === params[:tickets]
+  render json: {errors: ['Nothing was edited! Make a change at least to one of the sections here']}, status: :unprocessable_entity
+else
+  post.update!(
+    body: params[:body],
+    tickets: params[:tickets]
+  )
+  render json: post, status: 200
+end
+end
+
 
   def destroy
     post = find_post
@@ -50,31 +54,26 @@ class PostsController < ApplicationController
     end
   end
 
+ 
+
   def new_post_params
     params.permit(:concert_id, :user_id, :for_sale, :tickets, :body)
   end
 
 end
 
-# # original write-up for create
-# def create
-#   post = Post.create!(new_post_params)
 
-#   if post.valid?
-#     render json: post, status: 200
-#   else
-#     render json: { errors: post.errors }, status: :unprocessable_entity
-#   end
-# end
-
+## have to reconfigure frontend error handling, to render this error message
 # def update
-#   post = Post.find_by(id: params[:id])
-#   user = User.find_by(id: session[:user_id])
-#   if session[:user_id] === params[:user_id]
-#     post.update(
-#       comment_body: params[:comment_body],
-#       tickets: params[:tickets]
-#     )
-#     render json: post, status: 200
-#     end
-#   end
+#   post = find_post
+
+# if post[:body] === params[:body] && post[:tickets] === params[:tickets]
+#   render json: [{error: "Nothing was edited!"}], status: :unprocessable_entity
+# else
+#   post.update!(
+#     body: params[:body],
+#     tickets: params[:tickets]
+#   )
+#   render json: post, status: 200
+# end
+# end

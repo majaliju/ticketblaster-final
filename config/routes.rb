@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :artists, only: [:index, :create]
   resources :concerts, only: [:index, :create]
   resources :posts, only: [:index, :create, :update, :destroy]
-  resources :users, only: only: [:index, :show, :create]
+  resources :users, only: [:index, :show, :create]
   resources :sessions, only: [:index, :create, :destroy]
 
   get '/session_cookies', to: 'sessions#show_cookies'
