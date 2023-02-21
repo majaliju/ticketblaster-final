@@ -46,7 +46,7 @@ function HomePage({ currentUser, users, sessionInfo, loggedIn }) {
           <div
             className='min-h-screen hero'
             style={{
-              backgroundImage: `url("https://placeimg.com/1000/800/arch")`,
+              backgroundImage: `url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80")`,
             }}>
             <div className='hero-overlay bg-opacity-60'></div>
             <div className='text-center hero-content text-neutral-content'>
