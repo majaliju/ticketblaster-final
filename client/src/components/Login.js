@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 
-//! TAILWIND DOCS FOR STYLING: hovers, form input etc
-// https://tailwindcss.com/docs/hover-focus-and-other-states
-
 function Login({ onLogin }) {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
@@ -37,8 +34,9 @@ function Login({ onLogin }) {
         });
       } else {
         response.json().then((e) => {
-          setErrorsExist(true);
-          setErrorArray(e.errors);
+          console.log('e: ', e);
+          // setErrorsExist(true);
+          // setErrorArray(e.errors);
         });
       }
     });
