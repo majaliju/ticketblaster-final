@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    artist = Artist.find_by!(id: params[:id])
+    artist = find_artist
     render json: artist, status: 200
   end
 
@@ -20,6 +20,10 @@ class ArtistsController < ApplicationController
 
 
   private
+
+  def find_artist
+    artist = Artist.find_by!(id: params[:id])
+  end
 
   def new_artist_params
     params.permit(:name, :image, :genre)

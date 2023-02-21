@@ -39,9 +39,9 @@ class PostsController < ApplicationController
 
   private
 
-def find_post
-  post = Post.find_by!(id: params[:id])
-end
+  def find_post
+    post = Post.find_by!(id: params[:id])
+  end
 
   def authorize_user
     unless session[:user_id] === params[:user_id]
