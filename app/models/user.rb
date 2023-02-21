@@ -8,6 +8,6 @@ class User < ApplicationRecord
   validates_presence_of :email
   validates_format_of :email, with: URI::MailTo::EMAIL_REGEXP
 
-  has_many :posts
+  has_many :posts, dependent: :destroy
   has_many :concerts, -> { distinct }, through: :posts
 end
