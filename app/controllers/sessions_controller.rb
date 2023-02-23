@@ -25,11 +25,13 @@ class SessionsController < ApplicationController
   ## to render proper errors if username doesn't exist
   def create
     user = User.find_by!(username: params[:username])
+    # check the user find return and find_by! return (and find_by return) to see which is triggering 
+    # AR:RNR exception; and which to return for this exception 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
       render json: user
     else
-      render json: { errors: ['Wrong password! Try again'] }, status: :unauthorized
+      render json: { error: 'Wrong password! Try again' }, status: :unauthorized
     end
   end
 

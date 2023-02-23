@@ -6,7 +6,7 @@ function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [success, setSuccess] = useState('');
-  const [errorArray, setErrorArray] = useState([]);
+  const [error, setError] = useState('');
   const [errorsExist, setErrorsExist] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -26,7 +26,7 @@ function Login({ onLogin }) {
       if (response.status >= 200 && response.status <= 299) {
         response.json().then((info) => {
           onLogin(info);
-          setErrorArray([]);
+          setError('');
           setErrorsExist(false);
           setSuccess('success!');
           setSubmitted(true);
@@ -35,8 +35,8 @@ function Login({ onLogin }) {
       } else {
         response.json().then((e) => {
           console.log('e: ', e);
-          // setErrorsExist(true);
-          // setErrorArray(e.errors);
+          setErrorsExist(true);
+          setError(e.error);
         });
       }
     });
@@ -81,9 +81,8 @@ function Login({ onLogin }) {
                     d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'
                   />
                 </svg>
-                {errorArray.map((eachError) => (
-                  <span>{eachError}</span>
-                ))}
+
+                <span>{error}</span>
               </div>
             </div>
           ) : null}
