@@ -16,15 +16,6 @@ function SignUp({ onLogin }) {
   const [success, setSuccess] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  // function checkError(response) {
-  //   if (response.status >= 200 && response.status <= 299) {
-  //     return response.json();
-  //   } else {
-  //     //~ render the proper error from the backend to the error here
-  //     throw response;
-  //   }
-  // }
-
   function handleSubmit(e) {
     e.preventDefault();
     fetch('/users', {
@@ -145,8 +136,8 @@ function SignUp({ onLogin }) {
                 <span class='label-text uppercase'>password confirmation</span>
               </label>
               <input
-                type='password'
-                id='password'
+                type='passwordConfirmation'
+                id='passwordConfirmation'
                 value={passwordConfirmation}
                 onChange={(e) => setPasswordConfirmation(e.target.value)}
                 placeholder='then, type it in again to be sure'

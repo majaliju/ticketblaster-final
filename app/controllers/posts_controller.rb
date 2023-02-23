@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-
-  before_action :authorize_user, only: [:update, :destroy]
+  before_action :authorize_user, only: [:update]
  
 
   def index
@@ -36,8 +35,12 @@ end
 
   def destroy
     post = find_post
+    if session[:user_id] === post[:user_id]
     post.destroy
     head :no_content
+    else
+      render json: {error: 'User not allowed to delete this; the post was made by someone else'}
+    end
   end
 
   private
