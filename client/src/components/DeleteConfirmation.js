@@ -8,6 +8,8 @@ function DeleteConfirmation({ currentUser, handleDelete }) {
 
   const [submitted, setSubmitted] = useState(false);
 
+  console.log('post: ', post);
+
   return (
     <div className='card w-96 bg-neutral text-neutral-content'>
       <div className='items-center text-center card-body'>
