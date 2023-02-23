@@ -87,7 +87,6 @@ function App() {
       .then((thisInfo) => setSessionInfo(thisInfo));
   }
 
-  // 401 (unauthorized) error on backend when a post is successfully deleted
   function handleDelete(post) {
     console.log('currentUser in top of handleDelete: ', currentUser);
     fetch(`/posts/${post.id}`, {
