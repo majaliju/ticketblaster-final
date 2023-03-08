@@ -15,16 +15,12 @@ class PostsController < ApplicationController
   
 posts = Post.all
 matches = posts.filter {|post| post.body.include?(params[:word])}
-matching_users = matches.each {|post| matching_users_array << post.user}
-byebug
-if matching_users_array
-  render json: matching_users_array, status: 200
-else
+users = matches.filter {|post| post.user}
+if users.any? 
+  render json: users, status: 200
+elsif users.blank?
   render json: "I'm sorry, no user has a comment with this word!"
-# if matching_users_array
-#   render json: matching_users, status: 201
-# else 
-#   render json: "I'm sorry, no user has this phrase in their comment!"
+
 end
 
   end
