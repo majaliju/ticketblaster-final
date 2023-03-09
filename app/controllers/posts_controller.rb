@@ -38,7 +38,7 @@ end
     post.destroy
     head :no_content
     else
-      render json: {error: 'User not allowed to delete this; the post was made by someone else'}
+      render json: {error: 'This is not your post! You cant delete this.'}
     end
   end
 

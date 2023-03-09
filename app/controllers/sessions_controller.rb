@@ -1,18 +1,6 @@
 class SessionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
-  ##  gets session info
-  def index
-    render json: session
-  end
-
-
-  def show_cookies
-    cookies[:cookies_tester] ||= 'Cookies work!'
-    cookies[:user_id] = session[:user_id]
-    render json: { cookies: cookies.to_hash }
-  end
-
  
   def create
     user = User.find_by!(username: params[:username])
