@@ -41,31 +41,32 @@ function App() {
       .then((info) => setConcerts(info));
   }, []);
 
-  useEffect(() => {
-    fetch('/users')
+  // this needs to be configured a bit as well
+  function getSession() {
+    fetch('/me')
       .then((r) => r.json())
-      .then((info) => setUsers(info));
-  }, []);
-
-  //? INITIAL FETCH BELOW FOR REGISTERING THE USER
-  useEffect(() => {
-    getUser();
-    getSession();
-  }, []);
-
-  //^ we get the currentUser
-  function getUser() {
-    fetch(`/users/${currentUser.id}`).then((response) => {
-      if (response.ok) {
-        response.json().then((user) => {
-          setCurrentUser(user);
-          setLoggedIn(true);
-        });
-      } else {
-        setLoggedIn(false);
-      }
-    });
+      .then((thisInfo) => setSessionInfo(thisInfo));
   }
+
+  // //? INITIAL FETCH BELOW FOR REGISTERING THE USER
+  // useEffect(() => {
+  //   getUser();
+  //   getSession();
+  // }, []);
+
+  // //^ we get the currentUser
+  // function getUser() {
+  //   fetch(`/users/${currentUser.id}`).then((response) => {
+  //     if (response.ok) {
+  //       response.json().then((user) => {
+  //         setCurrentUser(user);
+  //         setLoggedIn(true);
+  //       });
+  //     } else {
+  //       setLoggedIn(false);
+  //     }
+  //   });
+  // }
 
   //^ the onLogin function for SignUp & Login submissions
   function onLogin(username) {
@@ -81,33 +82,23 @@ function App() {
     setSessionInfo([]);
   }
 
-  function getSession() {
-    fetch('/sessions')
-      .then((r) => r.json())
-      .then((thisInfo) => setSessionInfo(thisInfo));
-  }
-
-  function handleDelete(post) {
-    console.log('currentUser in top of handleDelete: ', currentUser);
-    fetch(`/posts/${post.id}`, {
-      method: 'DELETE',
-    }).then(() => {
-      console.log('currentUser in .then() of handleDelete: ', currentUser);
-      const updatedPosts = currentUser.posts.filter(
-        (thisPost) => thisPost.id !== post.id
-      );
-      setCurrentUser({ ...currentUser, posts: updatedPosts });
-      const updatedUsers = users.filter((user) => {
-        if (user.id === currentUser.id) {
-          return currentUser;
-        } else {
-          return user;
-        }
-      });
-      setUsers(updatedUsers);
-      console.log('currentUser in end of handleDelete: ', currentUser);
-    });
-  }
+  // function handleDelete(post) {
+  //   fetch(`/posts/${post.id}`, {
+  //     method: 'DELETE',
+  //   }).then(() => {
+  //     const updatedPosts = currentUser.posts.filter(
+  //       (thisPost) => thisPost.id !== post.id
+  //     );
+  //     const updatedUsers = users.filter((user) => {
+  //       if (user.id === currentUser.id) {
+  //         return currentUser;
+  //       } else {
+  //         return user;
+  //       }
+  //     });
+  //     setUsers(updatedUsers);
+  //   });
+  // }
 
   return (
     <div>
@@ -125,37 +116,36 @@ function App() {
             />
           }
         />
-        <Route
-          path='/artists'
-          element={
-            <ArtistsDisplay
-              artists={artists}
-              concerts={concerts}
-              loggedIn={loggedIn}
-              searchTerm={searchTerm}
-              setSearchTerm={setSearchTerm}
-            />
-          }
-        />
-        <Route
-          path='/thisArtist'
-          element={<ThisArtist loggedIn={loggedIn} />}
-        />
-        <Route
-          path='/concerts'
-          element={
-            <ConcertsDisplay
-              concerts={concerts}
-              loggedIn={loggedIn}
-              searchTerm={searchTerm}
-              setSearchTerm={setSearchTerm}
-            />
-          }
-        />
-        <Route
-          path='/thisUser'
-          element={<ThisUser currentUser={currentUser} />}
-        />
+        <Route path='/artists'>
+          <Route
+            index
+            element={
+              <ArtistsDisplay
+                artists={artists}
+                concerts={concerts}
+                loggedIn={loggedIn}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+              />
+            }
+          />
+          <Route path=':id' element={<ArtistsPage />} />
+          <Route path='new' element={<CreateArtist />} />
+        </Route>
+        <Route path='/concerts'>
+          <index
+            element={
+              <ConcertsDisplay
+                concerts={concerts}
+                loggedIn={loggedIn}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+              />
+            }
+          />
+          <Route path=':id' element={<ConcertsPage />} />
+        </Route>
+        <Route path='/user' element={<ThisUser currentUser={currentUser} />} />
         {loggedIn === true ? (
           <Route>
             <Route
