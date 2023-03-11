@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
-import EachPostForUser from './EachUserPost';
 import EachUserPost from './EachUserPost';
 
 function HomePage({ currentUser, users, sessionInfo, loggedIn }) {

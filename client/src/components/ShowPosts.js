@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import EachUser from './ThisUser';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Loading from './Loading';
-import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
+
 import EachConcertPost from './EachConcertPost';
 
 function ShowPosts({ concerts, users, currentUser }) {

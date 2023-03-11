@@ -9,7 +9,8 @@ import Header from './Header';
 import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from './HomePage';
-import ThisArtist from './ArtistsPage';
+import ArtistsPage from './ArtistsPage';
+import ConcertsPage from './ConcertsPage';
 import CreateArtist from './CreateArtist';
 import CreateConcert from './CreateConcert';
 import CreateNewPost from './CreateNewPost';
@@ -20,9 +21,8 @@ import DeleteConfirmation from './DeleteConfirmation';
 
 function App() {
   const [currentUser, setCurrentUser] = useState('');
-  const [sessionInfo, setSessionInfo] = useState([]);
+
   const [loggedIn, setLoggedIn] = useState(false);
-  const [cookies, setCookies] = useState([]);
 
   const [searchTerm, setSearchTerm] = useState('');
   const [artists, setArtists] = useState([]);
@@ -41,12 +41,12 @@ function App() {
       .then((info) => setConcerts(info));
   }, []);
 
-  // this needs to be configured a bit as well
-  function getSession() {
-    fetch('/me')
-      .then((r) => r.json())
-      .then((thisInfo) => setSessionInfo(thisInfo));
-  }
+  // // this needs to be configured a bit as well
+  // function getSession() {
+  //   fetch('/me')
+  //     .then((r) => r.json())
+  //     .then((thisInfo) => setSessionInfo(thisInfo));
+  // }
 
   // //? INITIAL FETCH BELOW FOR REGISTERING THE USER
   // useEffect(() => {
@@ -68,19 +68,19 @@ function App() {
   //   });
   // }
 
-  //^ the onLogin function for SignUp & Login submissions
-  function onLogin(username) {
-    setCurrentUser(username);
-    setLoggedIn(true);
-    getSession();
-  }
+  // //^ the onLogin function for SignUp & Login submissions
+  // function onLogin(username) {
+  //   setCurrentUser(username);
+  //   setLoggedIn(true);
+  //   getSession();
+  // }
 
-  //^ to log the user out
-  function onLogout() {
-    setCurrentUser('');
-    setLoggedIn(false);
-    setSessionInfo([]);
-  }
+  // //^ to log the user out
+  // function onLogout() {
+  //   setCurrentUser('');
+  //   setLoggedIn(false);
+  //   setSessionInfo([]);
+  // }
 
   // function handleDelete(post) {
   //   fetch(`/posts/${post.id}`, {
@@ -104,16 +104,16 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Header />} />
-        <Route path='/artists'>
+        <Route path='artists/'>
           <Route index element={<ArtistsDisplay />} />
           <Route path=':id' element={<ArtistsPage />} />
           <Route path='new' element={<CreateArtist />} />
         </Route>
-        <Route path='/concerts'>
+        <Route path='concerts/'>
           <index element={<ConcertsDisplay />} />
           <Route path=':id' element={<ConcertsPage />} />
         </Route>
-        <Route path='/user' element={<ThisUser />} />
+        <Route path='user/' element={<ThisUser />} />
         {loggedIn === true ? (
           <Route>
             <Route
@@ -176,8 +176,8 @@ function App() {
           </Route>
         ) : null}
         )
-        <Route path='/login' element={<Login onLogin={onLogin} />} />
-        <Route path='/signup' element={<SignUp onLogin={onLogin} />} />
+        <Route path='login/' element={<Login />} />
+        <Route path='signup/' element={<SignUp />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
