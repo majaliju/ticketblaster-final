@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function Header({ currentUser, onLogout }) {
@@ -147,6 +147,7 @@ function Header({ currentUser, onLogout }) {
           </div>
         </div>
       </div>
+      <Outlet />
     </div>
   );
 }

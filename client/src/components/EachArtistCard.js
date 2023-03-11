@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
 import Loading from './Loading';
 import EachConcertCard from './EachConcertCard';
-import ArtistsPage from './ThisArtist';
+import ArtistsPage from './ArtistsPage';
 
 //* GOTTA ADJUST STYLING HERE TO FORM EVERYTHING IN THE CENTER CLEANLY
 

@@ -9,7 +9,7 @@ import Header from './Header';
 import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from './HomePage';
-import ThisArtist from './ArtistsPage';
+import ThisArtist from './ThisArtist';
 import CreateArtist from './CreateArtist';
 import CreateConcert from './CreateConcert';
 import CreateNewPost from './CreateNewPost';
@@ -102,18 +102,50 @@ function App() {
 
   return (
     <div>
+      <Header currentUser={currentUser} onLogout={onLogout} />
       <Routes>
-        <Route path='/' element={<Header />} />
+        <Route
+          path='/'
+          element={
+            <HomePage
+              currentUser={currentUser}
+              users={users}
+              cookies={cookies}
+              sessionInfo={sessionInfo}
+              loggedIn={loggedIn}
+            />
+          }
+        />
         <Route path='/artists'>
-          <Route index element={<ArtistsDisplay />} />
+          <Route
+            index
+            element={
+              <ArtistsDisplay
+                artists={artists}
+                concerts={concerts}
+                loggedIn={loggedIn}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+              />
+            }
+          />
           <Route path=':id' element={<ArtistsPage />} />
           <Route path='new' element={<CreateArtist />} />
         </Route>
         <Route path='/concerts'>
-          <index element={<ConcertsDisplay />} />
+          <index
+            element={
+              <ConcertsDisplay
+                concerts={concerts}
+                loggedIn={loggedIn}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+              />
+            }
+          />
           <Route path=':id' element={<ConcertsPage />} />
         </Route>
-        <Route path='/user' element={<ThisUser />} />
+        <Route path='/user' element={<ThisUser currentUser={currentUser} />} />
         {loggedIn === true ? (
           <Route>
             <Route
@@ -168,8 +200,8 @@ function App() {
               path='/deletePost'
               element={
                 <DeleteConfirmation
-                // handleDelete={handleDelete}
-                // currentUser={currentUser}
+                  handleDelete={handleDelete}
+                  currentUser={currentUser}
                 />
               }
             />
