@@ -1,10 +1,5 @@
 import '../../src/App.css';
-import ArtistsDisplay from './ArtistsDisplay';
-import ConcertsDisplay from './ConcertsDisplay';
 
-import Login from './Login';
-import SignUp from './SignUp';
-import NotFound from './NotFound';
 import Header from './Header';
 import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -37,16 +32,16 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Header />} />
-        <Route path='artists/'>
+        <Route path='artists'>
           <Route index element={<AllArtists />} />
           <Route path=':id' element={<ArtistPage />} />
           <Route path='new' element={<CreateArtist />} />
         </Route>
-        <Route path='concerts/'>
+        <Route path='concerts'>
           <index element={<AllConcerts />} />
           <Route path=':id' element={<ConcertPage />} />
         </Route>
-        <Route path='user/' element={<ThisUser />} />
+        {/* <Route path='user/' element={<ThisUser />} />
         {loggedIn === true ? (
           <Route>
             <Route
@@ -111,7 +106,7 @@ function App() {
         )
         <Route path='login/' element={<Login />} />
         <Route path='signup/' element={<SignUp />} />
-        <Route path='*' element={<NotFound />} />
+        <Route path='*' element={<NotFound />} /> */}
       </Routes>
     </div>
   );
