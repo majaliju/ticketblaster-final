@@ -36,12 +36,12 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Header />} />
-        <Route path='artists/'>
+        <Route path='artists'>
           <Route index element={<AllArtists />} />
           <Route path=':id' element={<ArtistPage />} />
           <Route path='new' element={<CreateArtist />} />
         </Route>
-        <Route path='concerts/'>
+        <Route path='concerts'>
           <Route index element={<AllConcerts />} />
           <Route path=':id' element={<ConcertPage />} />
         </Route>
