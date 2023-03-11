@@ -36,81 +36,15 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Header />} />
-        <Route path='artists'>
+        <Route path='artists/'>
           <Route index element={<AllArtists />} />
           <Route path=':id' element={<ArtistPage />} />
           <Route path='new' element={<CreateArtist />} />
         </Route>
-        <Route path='concerts'>
-          <index element={<AllConcerts />} />
+        <Route path='concerts/'>
+          <Route index element={<AllConcerts />} />
           <Route path=':id' element={<ConcertPage />} />
         </Route>
-        {/* <Route path='user/' element={<ThisUser />} />
-        {loggedIn === true ? (
-          <Route>
-            <Route
-              path='/showPosts'
-              element={
-                <ShowPosts
-                  currentUser={currentUser}
-                  users={users}
-                  concerts={concerts}
-                />
-              }
-            />
-            <Route
-              path='/createNewPost'
-              element={
-                <CreateNewPost
-                  currentUser={currentUser}
-                  setCurrentUser={setCurrentUser}
-                  users={users}
-                  setUsers={setUsers}
-                />
-              }
-            />
-            <Route
-              path='/editPost'
-              element={
-                <EditPost
-                  currentUser={currentUser}
-                  setCurrentUser={setCurrentUser}
-                  users={users}
-                  setUsers={setUsers}
-                />
-              }
-            />
-            <Route
-              path='/createArtist'
-              element={
-                <CreateArtist artists={artists} setArtists={setArtists} />
-              }
-            />
-            <Route
-              path='/createConcert'
-              element={
-                <CreateConcert
-                  concerts={concerts}
-                  artists={artists}
-                  setConcerts={setConcerts}
-                />
-              }
-            />
-            <Route
-              path='/deletePost'
-              element={
-                <DeleteConfirmation
-                // handleDelete={handleDelete}
-                // currentUser={currentUser}
-                />
-              }
-            />
-          </Route>
-        ) : null}
-        )
-        <Route path='login/' element={<Login />} />
-        <Route path='signup/' element={<SignUp />} />
-        <Route path='*' element={<NotFound />} /> */}
       </Routes>
     </div>
   );

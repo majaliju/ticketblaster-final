@@ -3,12 +3,12 @@
 import { NavLink, Link, Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function Header({ currentUser, onLogout }) {
-  function handleLogout() {
-    fetch(`/sessions/${currentUser.id}`, {
-      method: 'DELETE',
-    }).then(() => onLogout());
-  }
+function Header() {
+  // function handleLogout() {
+  //   fetch(`/sessions/${currentUser.id}`, {
+  //     method: 'DELETE',
+  //   }).then(() => onLogout());
+  // }
 
   return (
     <div>
@@ -44,39 +44,7 @@ function Header({ currentUser, onLogout }) {
                 </NavLink>
               </li>
 
-              {currentUser !== (null || '') ? (
-                <li>
-                  <NavLink
-                    to='/thisUser'
-                    state={{ thisUser: currentUser }}
-                    className='font-bold uppercase'>
-                    User's Page
-                  </NavLink>
-                </li>
-              ) : null}
-
-              <div>
-                {currentUser === (null || '') && (
-                  <li>
-                    <NavLink className='font-bold uppercase' to='/login'>
-                      login
-                    </NavLink>
-                  </li>
-                )}
-                {currentUser !== (null || '') && (
-                  <div>
-                    <li>
-                      <NavLink className='font-bold uppercase' to='/'>
-                        <button
-                          className='font-bold uppercase'
-                          onClick={handleLogout}>
-                          logout {currentUser.username}
-                        </button>
-                      </NavLink>
-                    </li>
-                  </div>
-                )}
-              </div>
+              <div></div>
             </ul>
           </div>
           <div className='navbar-start'>
@@ -107,43 +75,12 @@ function Header({ currentUser, onLogout }) {
                   <h3 className='font-bold uppercase'>concerts</h3>
                 </NavLink>
               </li>
-              {currentUser !== (null || '') ? (
-                <li>
-                  <NavLink
-                    to='/thisUser'
-                    state={{ thisUser: currentUser }}
-                    className='font-bold uppercase border-none btn btn-outline'>
-                    User's Page
-                  </NavLink>
-                </li>
-              ) : null}
             </ul>
           </div>
         </div>
         <div className='hidden navbar-end sm:flex'>
           <div className='flex-initial'>
-            <ul className='float-right p-0 menu menu-horizontal'>
-              {currentUser === (null || '') && (
-                <li>
-                  <NavLink
-                    className='font-bold uppercase border-none btn btn-outline'
-                    to='/login'>
-                    LOGIN
-                  </NavLink>
-                </li>
-              )}
-              {currentUser !== (null || '') && (
-                <div>
-                  <li>
-                    <button
-                      className='font-bold uppercase border-none btn btn-outline'
-                      onClick={handleLogout}>
-                      logout {currentUser.username}
-                    </button>
-                  </li>
-                </div>
-              )}
-            </ul>
+            <ul className='float-right p-0 menu menu-horizontal'></ul>
           </div>
         </div>
       </div>
