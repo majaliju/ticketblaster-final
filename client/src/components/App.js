@@ -5,6 +5,10 @@ import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import AllArtists from './AllArtists';
 import AllConcerts from './AllConcerts';
+import ArtistPage from './ArtistPage';
+import ConcertPage from './ConcertPage';
+import CreateArtist from './CreateArtist';
+import CreateConcert from './CreateConcert';
 
 function App() {
   const [currentUser, setCurrentUser] = useState('');
