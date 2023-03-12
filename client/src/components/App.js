@@ -35,7 +35,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Header />} />
+        <Route path='/' index element={<Header />} />
         <Route path='artists'>
           <Route index element={<AllArtists />} />
           <Route path=':id' element={<ArtistPage />} />
@@ -45,9 +45,28 @@ function App() {
           <Route index element={<AllConcerts />} />
           <Route path=':id' element={<ConcertPage />} />
         </Route>
+        <Route path='/login' index element={<Login />} />
+        <Route path='/signup' index element={<SignUp />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
+
+// return (
+//   <div>
+//     <Routes>
+//       <Route path='/' element={<Header />} />
+//       <Route path='artists'>
+//         <Route index element={<AllArtists />} />
+//         <Route path=':id' element={<ArtistPage />} />
+//         <Route path='new' element={<CreateArtist />} />
+//       </Route>
+//       <Route path='concerts'>
+//         <Route index element={<AllConcerts />} />
+//         <Route path=':id' element={<ConcertPage />} />
+//       </Route>
+//     </Routes>
+//   </div>
+// );

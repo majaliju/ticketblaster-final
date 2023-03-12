@@ -4,12 +4,6 @@ import { NavLink, Link, Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function Header() {
-  // function handleLogout() {
-  //   fetch(`/sessions/${currentUser.id}`, {
-  //     method: 'DELETE',
-  //   }).then(() => onLogout());
-  // }
-
   return (
     <div>
       <div className='bg-zinc-900 navbar text-primary-content'>
