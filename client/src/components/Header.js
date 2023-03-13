@@ -7,7 +7,9 @@ function Header({ currentUser, onLogout, loggedIn }) {
   function handleLogout() {
     fetch('/logout', {
       method: 'DELETE',
-    }).then(() => onLogout());
+    }).then(() => {
+      onLogout();
+    });
   }
 
   console.log('in Header, currentUser: ', currentUser);
