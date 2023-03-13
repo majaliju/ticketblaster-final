@@ -40,21 +40,6 @@ function App() {
       .then((info) => setConcerts(info));
   }, []);
 
-  //? INITIAL FETCH BELOW FOR REGISTERING THE USER
-  useEffect(() => {
-    fetch('/me').then((response) => {
-      if (response.ok) {
-        response.json().then((user) => {
-          console.log('within /me, the response is: ', user);
-          setCurrentUser(user);
-          setLoggedIn(true);
-        });
-      } else {
-        setLoggedIn(false);
-      }
-    });
-  }, []);
-
   //! IS THIS REDUNDANT SINCE THE SAME FUNCTIONS ARE BEING ENACTED WITHIN fetch /me?
   function onLogin(user) {
     console.log('user: ', user);
@@ -62,17 +47,34 @@ function App() {
     setLoggedIn(true);
   }
 
-  //! WHAT IS THE POINT OF SET SESSION INFO?? IS IT EVER USED??
-  //& THE ESSENTIALS ARE ONLY
-  //& -- SETTING currentUser
-  //& -- logging in whoever is logging in
-  //& -- signing out currentUser
-
   //^ to log the user out
   function onLogout() {
     setCurrentUser('');
     setLoggedIn(false);
   }
+
+  //? INITIAL FETCH BELOW FOR REGISTERING THE USER
+  useEffect(() => {
+    fetch('/me').then((response) => {
+      if (response.ok) {
+        response.json().then((user) => {
+          console.log('within /me, the response is: ', user);
+          onLogin(user);
+          // setCurrentUser(user);
+          // setLoggedIn(true);
+        });
+      } else {
+        onLogout();
+        // setLoggedIn(false);
+      }
+    });
+  }, []);
+
+  //! WHAT IS THE POINT OF SET SESSION INFO?? IS IT EVER USED??
+  //& THE ESSENTIALS ARE ONLY
+  //& -- SETTING currentUser
+  //& -- logging in whoever is logging in
+  //& -- signing out currentUser
 
   function handleDelete(post) {
     fetch(`/posts/${post.id}`, {
