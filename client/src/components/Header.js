@@ -10,10 +10,6 @@ function Header({ currentUser, onLogout }) {
     }).then(() => onLogout());
   }
 
-  // TODO
-  //^ dropdown should exit as soon as item is clicked
-  //^ create a sticky navbar that scrolls along with page
-
   return (
     <div>
       <div className='bg-zinc-900 navbar text-primary-content'>
@@ -47,7 +43,7 @@ function Header({ currentUser, onLogout }) {
                   concerts
                 </NavLink>
               </li>
-
+              {/* 
               {currentUser !== (null || '') ? (
                 <li>
                   <NavLink
@@ -57,17 +53,17 @@ function Header({ currentUser, onLogout }) {
                     User's Page
                   </NavLink>
                 </li>
-              ) : null}
+              ) : null} */}
 
               <div>
-                {currentUser === (null || '') && (
+                {/* {currentUser === (null || '') && (
                   <li>
                     <NavLink className='font-bold uppercase' to='/login'>
                       login
                     </NavLink>
                   </li>
-                )}
-                {currentUser !== (null || '') && (
+                )} */}
+                {/* {currentUser !== (null || '') && (
                   <div>
                     <li>
                       <NavLink className='font-bold uppercase' to='/'>
@@ -79,7 +75,7 @@ function Header({ currentUser, onLogout }) {
                       </NavLink>
                     </li>
                   </div>
-                )}
+                )} */}
               </div>
             </ul>
           </div>
@@ -111,7 +107,7 @@ function Header({ currentUser, onLogout }) {
                   <h3 className='font-bold uppercase'>concerts</h3>
                 </NavLink>
               </li>
-              {currentUser !== (null || '') ? (
+              {/* {currentUser !== (null || '') ? (
                 <li>
                   <NavLink
                     to='/thisUser'
@@ -120,14 +116,14 @@ function Header({ currentUser, onLogout }) {
                     User's Page
                   </NavLink>
                 </li>
-              ) : null}
+              ) : null} */}
             </ul>
           </div>
         </div>
         <div className='hidden navbar-end sm:flex'>
           <div className='flex-initial'>
             <ul className='float-right p-0 menu menu-horizontal'>
-              {currentUser === (null || '') && (
+              {/* {currentUser === (null || '') && (
                 <li>
                   <NavLink
                     className='font-bold uppercase border-none btn btn-outline'
@@ -135,8 +131,8 @@ function Header({ currentUser, onLogout }) {
                     LOGIN
                   </NavLink>
                 </li>
-              )}
-              {currentUser !== (null || '') && (
+              )} */}
+              {/* {currentUser !== (null || '') && (
                 <div>
                   <li>
                     <button
@@ -146,7 +142,7 @@ function Header({ currentUser, onLogout }) {
                     </button>
                   </li>
                 </div>
-              )}
+              )} */}
             </ul>
           </div>
         </div>
