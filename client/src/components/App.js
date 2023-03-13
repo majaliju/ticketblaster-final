@@ -42,16 +42,19 @@ function App() {
       .then((info) => setConcerts(info));
   }, []);
 
-  useEffect(() => {
-    fetch('/users')
-      .then((r) => r.json())
-      .then((info) => setUsers(info));
-  }, []);
-
   //? INITIAL FETCH BELOW FOR REGISTERING THE USER
   useEffect(() => {
-    getUser();
-    getSession();
+    fetch('/me').then((response) => {
+      if (response.ok) {
+        response.json().then((user) => {
+          console.log('within /me, the response is: ', user);
+          setCurrentUser(user);
+          setLoggedIn(true);
+        });
+      } else {
+        setLoggedIn(false);
+      }
+    });
   }, []);
 
   //! WHAT IS THE POINT OF SET SESSION INFO?? IS IT EVER USED??
@@ -60,46 +63,23 @@ function App() {
   //& -- logging in whoever is logging in
   //& -- signing out currentUser
 
-  //^ we get the currentUser
-  function getUser() {
-    fetch('/me').then((response) => {
-      if (response.ok) {
-        response.json().then((user) => {
-          setCurrentUser(user);
-          setLoggedIn(true);
-        });
-      } else {
-        setLoggedIn(false);
-      }
-    });
-  }
-
   //^ the onLogin function for SignUp & Login submissions
-  function onLogin(username) {
-    setCurrentUser(username);
+  function onLogin(user) {
+    console.log('user: ', user);
+    setCurrentUser(user);
     setLoggedIn(true);
-    getSession();
   }
 
   //^ to log the user out
   function onLogout() {
     setCurrentUser('');
     setLoggedIn(false);
-    setSessionInfo([]);
-  }
-
-  function getSession() {
-    fetch('/sessions')
-      .then((r) => r.json())
-      .then((thisInfo) => setSessionInfo(thisInfo));
   }
 
   function handleDelete(post) {
-    console.log('currentUser in top of handleDelete: ', currentUser);
     fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
-      console.log('currentUser in .then() of handleDelete: ', currentUser);
       const updatedPosts = currentUser.posts.filter(
         (thisPost) => thisPost.id !== post.id
       );
@@ -112,14 +92,21 @@ function App() {
         }
       });
       setUsers(updatedUsers);
-      console.log('currentUser in end of handleDelete: ', currentUser);
     });
   }
 
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route
+          path='/'
+          element={
+            <Layout
+              currentUser={currentUser}
+              onLogout={onLogout}
+              loggedIn={loggedIn}
+            />
+          }>
           <Route
             path='/artists'
             element={
@@ -214,7 +201,10 @@ function App() {
             </Route>
           ) : null}
 
-          <Route path='/login' element={<Login onLogin={onLogin} />} />
+          <Route
+            path='/login'
+            element={<Login onLogin={onLogin} setLoggedIn={setLoggedIn} />}
+          />
           <Route path='/signup' element={<SignUp onLogin={onLogin} />} />
           <Route path='*' element={<NotFound />} />
         </Route>

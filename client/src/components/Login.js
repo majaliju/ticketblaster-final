@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 
-function Login({ onLogin }) {
+function Login({ onLogin, setLoggedIn }) {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +12,7 @@ function Login({ onLogin }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch('/sessions', {
+    fetch('/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -26,6 +26,7 @@ function Login({ onLogin }) {
       if (response.status >= 200 && response.status <= 299) {
         response.json().then((info) => {
           onLogin(info);
+          setLoggedIn(true);
           setError('');
           setErrorsExist(false);
           setSuccess('success!');

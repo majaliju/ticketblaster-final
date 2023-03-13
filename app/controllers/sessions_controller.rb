@@ -1,22 +1,6 @@
 class SessionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
-  ##  gets session info
-  def index
-    render json: session
-  end
-
-
-  def show_cookies
-    cookies[:cookies_tester] ||= 'Cookies work!'
-    cookies[:user_id] = session[:user_id]
-    render json: { cookies: cookies.to_hash }
-  end
-
-  ## checks if the username exists
-  ## then authenticates that user
-  ## if successful, the user is logged in 
-  ## otherwise IDEALLY we handle error messages
 
   ### HERE IS WHERE WE MUST CROSS-CHECK, WITH 
   # find
