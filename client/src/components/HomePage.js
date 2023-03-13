@@ -16,26 +16,12 @@ function HomePage({ currentUser, users, sessionInfo, loggedIn }) {
             style={{
               backgroundImage: `url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80")`,
             }}>
-            <div className='bg-opacity-50 hero-overlay'>
-              {' '}
-              <div>
-                {homePosts.map((post) => {
-                  <EachUserPost
-                    post={post}
-                    users={users}
-                    currentUser={currentUser}
-                  />;
-                })}
-              </div>
-            </div>
+            <div className='bg-opacity-50 hero-overlay'> </div>
             <div className='text-center hero-content text-neutral-content'>
               <div className='max-w-md'>
                 <h1 className='mb-5 text-5xl font-bold'>
                   Welcome to TICKETBLASTER, {currentUser.username}!
                 </h1>
-                <p className='mb-5'>
-                  Your sessionID is {sessionInfo.session_id}
-                </p>
               </div>
             </div>
           </div>
