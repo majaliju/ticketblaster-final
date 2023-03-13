@@ -123,7 +123,7 @@ function Header({ currentUser, onLogout }) {
         <div className='hidden navbar-end sm:flex'>
           <div className='flex-initial'>
             <ul className='float-right p-0 menu menu-horizontal'>
-              {/* {currentUser === (null || '') && (
+              {currentUser === (null || '') && (
                 <li>
                   <NavLink
                     className='font-bold uppercase border-none btn btn-outline'
@@ -131,8 +131,8 @@ function Header({ currentUser, onLogout }) {
                     LOGIN
                   </NavLink>
                 </li>
-              )} */}
-              {/* {currentUser !== (null || '') && (
+              )}
+              {currentUser !== (null || '') && (
                 <div>
                   <li>
                     <button
@@ -142,7 +142,7 @@ function Header({ currentUser, onLogout }) {
                     </button>
                   </li>
                 </div>
-              )} */}
+              )}
             </ul>
           </div>
         </div>
