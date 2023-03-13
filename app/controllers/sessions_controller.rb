@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       render json: user
     else
-      render json: { error: 'Wrong password! Try again!' }, status: :unauthorized
+      render json: { error: 'Wrong password but no problem, try again!' }, status: :unauthorized
     end
   end
 
@@ -24,15 +24,14 @@ class SessionsController < ApplicationController
   def destroy
     session.delete :user_id
     head :no_content
-    byebug
   end
 
 
   private
 
-  ## gotta render the proper error message for this one SMH
+
   def user_doesnt_exist
-    render json: { error: "Looks like you don't have an account, sign up below and make one!"}
+    render json: { error: "Looks like you don't have an account but that's ok! Click the 'FIRST TIME HERE? SIGN UP!' button to get started!"}, status: 404
   end
 
 end
