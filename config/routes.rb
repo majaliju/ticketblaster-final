@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :artists, only: [:index, :create]
   resources :concerts, only: [:index, :create]
+  resources :users, only: [:create]
   resources :posts, only: [:index, :create, :update, :destroy]
 
 
