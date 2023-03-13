@@ -3,12 +3,12 @@
 import { NavLink, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function Header({ currentUser, onLogout }) {
-  function handleLogout() {
-    fetch(`/sessions/${currentUser.id}`, {
-      method: 'DELETE',
-    }).then(() => onLogout());
-  }
+function Header({}) {
+  // function handleLogout() {
+  //   fetch(`/sessions/${currentUser.id}`, {
+  //     method: 'DELETE',
+  //   }).then(() => onLogout());
+  // }
 
   return (
     <div>
@@ -55,15 +55,15 @@ function Header({ currentUser, onLogout }) {
                 </li>
               ) : null} */}
 
-              <div>
-                {/* {currentUser === (null || '') && (
+              {/* <div>
+                {currentUser === (null || '') && (
                   <li>
                     <NavLink className='font-bold uppercase' to='/login'>
                       login
                     </NavLink>
                   </li>
-                )} */}
-                {/* {currentUser !== (null || '') && (
+                )}
+                {currentUser !== (null || '') && (
                   <div>
                     <li>
                       <NavLink className='font-bold uppercase' to='/'>
@@ -75,8 +75,8 @@ function Header({ currentUser, onLogout }) {
                       </NavLink>
                     </li>
                   </div>
-                )} */}
-              </div>
+                )}
+              </div> */}
             </ul>
           </div>
           <div className='navbar-start'>
@@ -131,8 +131,8 @@ function Header({ currentUser, onLogout }) {
                     LOGIN
                   </NavLink>
                 </li>
-              )} */}
-              {/* {currentUser !== (null || '') && (
+              )}
+              {currentUser !== (null || '') && (
                 <div>
                   <li>
                     <button

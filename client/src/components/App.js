@@ -9,6 +9,7 @@ import Header from './Header';
 import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from './HomePage';
+import Layout from './Layout';
 import ThisArtist from './ThisArtist';
 import CreateArtist from './CreateArtist';
 import CreateConcert from './CreateConcert';
@@ -53,9 +54,15 @@ function App() {
     getSession();
   }, []);
 
+  //! WHAT IS THE POINT OF SET SESSION INFO?? IS IT EVER USED??
+  //& THE ESSENTIALS ARE ONLY
+  //& -- SETTING currentUser
+  //& -- logging in whoever is logging in
+  //& -- signing out currentUser
+
   //^ we get the currentUser
   function getUser() {
-    fetch(`/users/${currentUser.id}`).then((response) => {
+    fetch('/me').then((response) => {
       if (response.ok) {
         response.json().then((user) => {
           setCurrentUser(user);
@@ -111,116 +118,106 @@ function App() {
 
   return (
     <div>
-      <Header currentUser={currentUser} onLogout={onLogout} />
       <Routes>
-        <Route
-          path='/'
-          element={
-            <HomePage
-              currentUser={currentUser}
-              users={users}
-              cookies={cookies}
-              sessionInfo={sessionInfo}
-              loggedIn={loggedIn}
-            />
-          }
-        />
-        <Route
-          path='/artists'
-          element={
-            <ArtistsDisplay
-              artists={artists}
-              concerts={concerts}
-              loggedIn={loggedIn}
-              searchTerm={searchTerm}
-              setSearchTerm={setSearchTerm}
-            />
-          }
-        />
-        <Route
-          path='/thisArtist'
-          element={<ThisArtist loggedIn={loggedIn} />}
-        />
-        <Route
-          path='/concerts'
-          element={
-            <ConcertsDisplay
-              concerts={concerts}
-              loggedIn={loggedIn}
-              searchTerm={searchTerm}
-              setSearchTerm={setSearchTerm}
-            />
-          }
-        />
-        <Route
-          path='/thisUser'
-          element={<ThisUser currentUser={currentUser} />}
-        />
-        {loggedIn === true ? (
-          <Route>
-            <Route
-              path='/showPosts'
-              element={
-                <ShowPosts
-                  currentUser={currentUser}
-                  users={users}
-                  concerts={concerts}
-                />
-              }
-            />
-            <Route
-              path='/createNewPost'
-              element={
-                <CreateNewPost
-                  currentUser={currentUser}
-                  setCurrentUser={setCurrentUser}
-                  users={users}
-                  setUsers={setUsers}
-                />
-              }
-            />
-            <Route
-              path='/editPost'
-              element={
-                <EditPost
-                  currentUser={currentUser}
-                  setCurrentUser={setCurrentUser}
-                  users={users}
-                  setUsers={setUsers}
-                />
-              }
-            />
-            <Route
-              path='/createArtist'
-              element={
-                <CreateArtist artists={artists} setArtists={setArtists} />
-              }
-            />
-            <Route
-              path='/createConcert'
-              element={
-                <CreateConcert
-                  concerts={concerts}
-                  artists={artists}
-                  setConcerts={setConcerts}
-                />
-              }
-            />
-            <Route
-              path='/deletePost'
-              element={
-                <DeleteConfirmation
-                  handleDelete={handleDelete}
-                  currentUser={currentUser}
-                />
-              }
-            />
-          </Route>
-        ) : null}
-        )
-        <Route path='/login' element={<Login onLogin={onLogin} />} />
-        <Route path='/signup' element={<SignUp onLogin={onLogin} />} />
-        <Route path='*' element={<NotFound />} />
+        <Route path='/' element={<Layout />}>
+          <Route
+            path='/artists'
+            element={
+              <ArtistsDisplay
+                artists={artists}
+                concerts={concerts}
+                loggedIn={loggedIn}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+              />
+            }
+          />
+          <Route
+            path='/thisArtist'
+            element={<ThisArtist loggedIn={loggedIn} />}
+          />
+          <Route
+            path='/concerts'
+            element={
+              <ConcertsDisplay
+                concerts={concerts}
+                loggedIn={loggedIn}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+              />
+            }
+          />
+          <Route
+            path='/thisUser'
+            element={<ThisUser currentUser={currentUser} />}
+          />
+          {/* DOES THERE NEED TO BE A <ROUTE></ROUTE> TAG in 150 and 208?  */}
+          {loggedIn === true ? (
+            <Route>
+              <Route
+                path='/showPosts'
+                element={
+                  <ShowPosts
+                    currentUser={currentUser}
+                    users={users}
+                    concerts={concerts}
+                  />
+                }
+              />
+              <Route
+                path='/createNewPost'
+                element={
+                  <CreateNewPost
+                    currentUser={currentUser}
+                    setCurrentUser={setCurrentUser}
+                    users={users}
+                    setUsers={setUsers}
+                  />
+                }
+              />
+              <Route
+                path='/editPost'
+                element={
+                  <EditPost
+                    currentUser={currentUser}
+                    setCurrentUser={setCurrentUser}
+                    users={users}
+                    setUsers={setUsers}
+                  />
+                }
+              />
+              <Route
+                path='/createArtist'
+                element={
+                  <CreateArtist artists={artists} setArtists={setArtists} />
+                }
+              />
+              <Route
+                path='/createConcert'
+                element={
+                  <CreateConcert
+                    concerts={concerts}
+                    artists={artists}
+                    setConcerts={setConcerts}
+                  />
+                }
+              />
+              <Route
+                path='/deletePost'
+                element={
+                  <DeleteConfirmation
+                    handleDelete={handleDelete}
+                    currentUser={currentUser}
+                  />
+                }
+              />
+            </Route>
+          ) : null}
+
+          <Route path='/login' element={<Login onLogin={onLogin} />} />
+          <Route path='/signup' element={<SignUp onLogin={onLogin} />} />
+          <Route path='*' element={<NotFound />} />
+        </Route>
       </Routes>
     </div>
   );
