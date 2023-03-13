@@ -9,6 +9,7 @@ import Header from './Header';
 import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from './HomePage';
+import Layout from './Layout';
 import ThisArtist from './ThisArtist';
 import CreateArtist from './CreateArtist';
 import CreateConcert from './CreateConcert';
@@ -20,9 +21,7 @@ import DeleteConfirmation from './DeleteConfirmation';
 
 function App() {
   const [currentUser, setCurrentUser] = useState('');
-  const [sessionInfo, setSessionInfo] = useState([]);
   const [loggedIn, setLoggedIn] = useState(false);
-  const [cookies, setCookies] = useState([]);
 
   const [searchTerm, setSearchTerm] = useState('');
   const [artists, setArtists] = useState([]);
@@ -41,23 +40,12 @@ function App() {
       .then((info) => setConcerts(info));
   }, []);
 
-  useEffect(() => {
-    fetch('/users')
-      .then((r) => r.json())
-      .then((info) => setUsers(info));
-  }, []);
-
   //? INITIAL FETCH BELOW FOR REGISTERING THE USER
   useEffect(() => {
-    getUser();
-    getSession();
-  }, []);
-
-  //^ we get the currentUser
-  function getUser() {
-    fetch(`/users/${currentUser.id}`).then((response) => {
+    fetch('/me').then((response) => {
       if (response.ok) {
         response.json().then((user) => {
+          console.log('within /me, the response is: ', user);
           setCurrentUser(user);
           setLoggedIn(true);
         });
@@ -65,34 +53,31 @@ function App() {
         setLoggedIn(false);
       }
     });
+  }, []);
+
+  //! IS THIS REDUNDANT SINCE THE SAME FUNCTIONS ARE BEING ENACTED WITHIN fetch /me?
+  function onLogin(user) {
+    console.log('user: ', user);
+    setCurrentUser(user);
+    setLoggedIn(true);
   }
 
-  //^ the onLogin function for SignUp & Login submissions
-  function onLogin(username) {
-    setCurrentUser(username);
-    setLoggedIn(true);
-    getSession();
-  }
+  //! WHAT IS THE POINT OF SET SESSION INFO?? IS IT EVER USED??
+  //& THE ESSENTIALS ARE ONLY
+  //& -- SETTING currentUser
+  //& -- logging in whoever is logging in
+  //& -- signing out currentUser
 
   //^ to log the user out
   function onLogout() {
     setCurrentUser('');
     setLoggedIn(false);
-    setSessionInfo([]);
-  }
-
-  function getSession() {
-    fetch('/sessions')
-      .then((r) => r.json())
-      .then((thisInfo) => setSessionInfo(thisInfo));
   }
 
   function handleDelete(post) {
-    console.log('currentUser in top of handleDelete: ', currentUser);
     fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
-      console.log('currentUser in .then() of handleDelete: ', currentUser);
       const updatedPosts = currentUser.posts.filter(
         (thisPost) => thisPost.id !== post.id
       );
@@ -105,7 +90,6 @@ function App() {
         }
       });
       setUsers(updatedUsers);
-      console.log('currentUser in end of handleDelete: ', currentUser);
     });
   }
 
@@ -115,15 +99,7 @@ function App() {
       <Routes>
         <Route
           path='/'
-          element={
-            <HomePage
-              currentUser={currentUser}
-              users={users}
-              cookies={cookies}
-              sessionInfo={sessionInfo}
-              loggedIn={loggedIn}
-            />
-          }
+          element={<HomePage currentUser={currentUser} loggedIn={loggedIn} />}
         />
         <Route
           path='/artists'
@@ -161,11 +137,7 @@ function App() {
             <Route
               path='/showPosts'
               element={
-                <ShowPosts
-                  currentUser={currentUser}
-                  users={users}
-                  concerts={concerts}
-                />
+                <ShowPosts currentUser={currentUser} concerts={concerts} />
               }
             />
             <Route

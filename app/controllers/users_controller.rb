@@ -14,11 +14,6 @@ class UsersController < ApplicationController
     render json: user, status: 200
   end
 
-# ## traditional show method, to find any given user
-#   def show
-#     user = User.find_by!(id: params[:id])
-#     render json: user, status: 200
-#   end
 
   def create
     user = User.create!(signup_user_params)
