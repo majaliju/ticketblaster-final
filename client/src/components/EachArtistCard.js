@@ -27,8 +27,12 @@ function EachArtistCard({ artist, concerts }) {
           <h3>{artist.genre}</h3>
           <div className='justify-end card-actions'>
             <Link
-              to='/thisArtist'
-              state={{ artist: artist, artistsConcerts: artistsConcerts }}
+              to=':id'
+              state={{
+                id: artist.id,
+                artist: artist,
+                artistsConcerts: artistsConcerts,
+              }}
               replace={true}>
               <button className='btn btn-secondary btn-outline'>
                 Show More

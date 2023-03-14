@@ -115,12 +115,13 @@ function App() {
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
             />
-          }
-        />
-        <Route
-          path='/thisArtist'
-          element={<ThisArtist loggedIn={loggedIn} />}
-        />
+          }>
+          {/* might just go back to the old route system for this one */}
+          <Route
+            path=':id'
+            element={<ThisArtist artists={artists} loggedIn={loggedIn} />}
+          />
+        </Route>
         <Route
           path='/concerts'
           element={
