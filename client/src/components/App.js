@@ -76,22 +76,24 @@ function App() {
   //& -- logging in whoever is logging in
   //& -- signing out currentUser
 
+  //! handleDelete isn't running through users anymore so this needs handling
   function handleDelete(post) {
     fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
-      const updatedPosts = currentUser.posts.filter(
-        (thisPost) => thisPost.id !== post.id
-      );
-      setCurrentUser({ ...currentUser, posts: updatedPosts });
-      const updatedUsers = users.filter((user) => {
-        if (user.id === currentUser.id) {
-          return currentUser;
-        } else {
-          return user;
-        }
-      });
-      setUsers(updatedUsers);
+      console.log('post in handleDelete: ', post);
+      // const updatedPosts = currentUser.posts.filter(
+      //   (thisPost) => thisPost.id !== post.id
+      // );
+      // setCurrentUser({ ...currentUser, posts: updatedPosts });
+      // const updatedUsers = users.filter((user) => {
+      //   if (user.id === currentUser.id) {
+      //     return currentUser;
+      //   } else {
+      //     return user;
+      //   }
+      // });
+      // setUsers(updatedUsers);
     });
   }
 
