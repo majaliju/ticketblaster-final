@@ -54,6 +54,7 @@ function EachConcertCard({ loggedIn, concert }) {
                         I'M BUYING
                       </Link>
 
+                      {/* ON /showPosts, this will now link to ConcertsPage */}
                       <Link
                         to='/showPosts'
                         state={{

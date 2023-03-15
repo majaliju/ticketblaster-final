@@ -27,7 +27,7 @@ function EachArtistCard({ artist, concerts }) {
           <h3>{artist.genre}</h3>
           <div className='justify-end card-actions'>
             <Link
-              to=':id'
+              to='/thisArtist'
               state={{
                 id: artist.id,
                 artist: artist,

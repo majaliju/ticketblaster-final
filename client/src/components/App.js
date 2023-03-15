@@ -115,13 +115,13 @@ function App() {
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
             />
-          }>
-          {/* might just go back to the old route system for this one */}
-          <Route
-            path=':id'
-            element={<ThisArtist artists={artists} loggedIn={loggedIn} />}
-          />
-        </Route>
+          }
+        />
+        {/* might just go back to the old route system for this one */}
+        <Route
+          path='/thisArtist'
+          element={<ThisArtist artists={artists} loggedIn={loggedIn} />}
+        />
         <Route
           path='/concerts'
           element={
@@ -139,6 +139,7 @@ function App() {
         />
         {loggedIn === true ? (
           <Route>
+            {/* ON /showPosts, this will now link to ConcertsPage */}
             <Route
               path='/showPosts'
               element={
