@@ -28,6 +28,20 @@ function App() {
   const [concerts, setConcerts] = useState([]);
   const [users, setUsers] = useState([]);
 
+  //? INITIAL FETCH BELOW FOR REGISTERING THE USER
+  useEffect(() => {
+    fetch('/me').then((response) => {
+      if (response.ok) {
+        response.json().then((user) => {
+          console.log('within /me, the response is: ', user);
+          onLogin(user);
+        });
+      } else {
+        onLogout();
+      }
+    });
+  }, []);
+
   useEffect(() => {
     fetch('/artists')
       .then((r) => r.json())
@@ -50,20 +64,6 @@ function App() {
     setCurrentUser('');
     setLoggedIn(false);
   }
-
-  //? INITIAL FETCH BELOW FOR REGISTERING THE USER
-  useEffect(() => {
-    fetch('/me').then((response) => {
-      if (response.ok) {
-        response.json().then((user) => {
-          console.log('within /me, the response is: ', user);
-          onLogin(user);
-        });
-      } else {
-        onLogout();
-      }
-    });
-  }, []);
 
   //! WHAT IS THE POINT OF SET SESSION INFO?? IS IT EVER USED??
   //& THE ESSENTIALS ARE ONLY
@@ -168,8 +168,6 @@ function App() {
                 <CreateNewPost
                   currentUser={currentUser}
                   setCurrentUser={setCurrentUser}
-                  users={users}
-                  setUsers={setUsers}
                 />
               }
             />
@@ -179,8 +177,6 @@ function App() {
                 <EditPost
                   currentUser={currentUser}
                   setCurrentUser={setCurrentUser}
-                  users={users}
-                  setUsers={setUsers}
                 />
               }
             />
