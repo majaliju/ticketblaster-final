@@ -9,8 +9,8 @@ import Header from './Header';
 import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from './HomePage';
-import Layout from './Layout';
 import ThisArtist from './ThisArtist';
+import ThisConcert from './ThisConcert';
 import CreateArtist from './CreateArtist';
 import CreateConcert from './CreateConcert';
 import CreateNewPost from './CreateNewPost';
@@ -40,9 +40,7 @@ function App() {
       .then((info) => setConcerts(info));
   }, []);
 
-  //! IS THIS REDUNDANT SINCE THE SAME FUNCTIONS ARE BEING ENACTED WITHIN fetch /me?
   function onLogin(user) {
-    console.log('user: ', user);
     setCurrentUser(user);
     setLoggedIn(true);
   }
@@ -60,12 +58,9 @@ function App() {
         response.json().then((user) => {
           console.log('within /me, the response is: ', user);
           onLogin(user);
-          // setCurrentUser(user);
-          // setLoggedIn(true);
         });
       } else {
         onLogout();
-        // setLoggedIn(false);
       }
     });
   }, []);
@@ -82,6 +77,7 @@ function App() {
       method: 'DELETE',
     }).then(() => {
       console.log('post in handleDelete: ', post);
+      console.log('currentUsers posts:', currentUser.posts);
       // const updatedPosts = currentUser.posts.filter(
       //   (thisPost) => thisPost.id !== post.id
       // );
@@ -133,12 +129,32 @@ function App() {
             />
           }
         />
+        {/* <Route
+          path='/thisConcert'
+          element={
+            <ThisConcert
+              concerts={concerts}
+              currentUser={currentUser}
+              loggedIn={loggedIn}
+            />
+          }
+        /> */}
         <Route
           path='/thisUser'
           element={<ThisUser currentUser={currentUser} />}
         />
         {loggedIn === true ? (
           <Route>
+            <Route
+              path='/thisConcert'
+              element={
+                <ThisConcert
+                  concerts={concerts}
+                  currentUser={currentUser}
+                  loggedIn={loggedIn}
+                />
+              }
+            />
             {/* ON /showPosts, this will now link to ConcertsPage */}
             <Route
               path='/showPosts'
@@ -205,3 +221,25 @@ function App() {
 }
 
 export default App;
+
+// //! handleDelete isn't running through users anymore so this needs handling
+// function handleDelete(post) {
+//   fetch(`/posts/${post.id}`, {
+//     method: 'DELETE',
+//   }).then(() => {
+//     console.log('post in handleDelete: ', post);
+//     console.log('currentUsers posts:', currentUser.posts);
+//     // const updatedPosts = currentUser.posts.filter(
+//     //   (thisPost) => thisPost.id !== post.id
+//     // );
+//     // setCurrentUser({ ...currentUser, posts: updatedPosts });
+//     // const updatedUsers = users.filter((user) => {
+//     //   if (user.id === currentUser.id) {
+//     //     return currentUser;
+//     //   } else {
+//     //     return user;
+//     //   }
+//     // });
+//     // setUsers(updatedUsers);
+//   });
+// }
