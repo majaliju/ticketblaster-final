@@ -25,8 +25,7 @@ function EditPost({ currentUser, setCurrentUser }) {
       body: JSON.stringify({
         body: body,
         tickets: ticketAmount,
-        user_id: 22222,
-        // user_id: currentUser.id,
+        user_id: currentUser.id,
       }),
     }).then((response) => {
       if (response.status >= 200 && response.status <= 299) {

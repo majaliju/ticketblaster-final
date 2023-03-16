@@ -65,31 +65,16 @@ function App() {
     setLoggedIn(false);
   }
 
-  //! WHAT IS THE POINT OF SET SESSION INFO?? IS IT EVER USED??
-  //& THE ESSENTIALS ARE ONLY
-  //& -- SETTING currentUser
-  //& -- logging in whoever is logging in
-  //& -- signing out currentUser
-
-  //! handleDelete isn't running through users anymore so this needs handling
   function handleDelete(post) {
     fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
       console.log('post in handleDelete: ', post);
       console.log('currentUsers posts:', currentUser.posts);
-      // const updatedPosts = currentUser.posts.filter(
-      //   (thisPost) => thisPost.id !== post.id
-      // );
-      // setCurrentUser({ ...currentUser, posts: updatedPosts });
-      // const updatedUsers = users.filter((user) => {
-      //   if (user.id === currentUser.id) {
-      //     return currentUser;
-      //   } else {
-      //     return user;
-      //   }
-      // });
-      // setUsers(updatedUsers);
+      const updatedPosts = currentUser.posts.filter(
+        (thisPost) => thisPost.id !== post.id
+      );
+      setCurrentUser({ ...currentUser, posts: updatedPosts });
     });
   }
 

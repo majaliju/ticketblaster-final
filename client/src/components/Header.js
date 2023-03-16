@@ -107,16 +107,16 @@ function Header({ currentUser, onLogout }) {
                   <h3 className='font-bold uppercase'>concerts</h3>
                 </NavLink>
               </li>
-              {/* {currentUser !== (null || '') ? (
+              {currentUser !== (null || '') ? (
                 <li>
                   <NavLink
                     to='/thisUser'
                     state={{ thisUser: currentUser }}
                     className='font-bold uppercase border-none btn btn-outline'>
-                    User's Page
+                    Your Activity
                   </NavLink>
                 </li>
-              ) : null} */}
+              ) : null}
             </ul>
           </div>
         </div>
