@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
-function EditPost({ currentUser, setCurrentUser, users, setUsers }) {
+function EditPost({ currentUser, setCurrentUser }) {
   const location = useLocation();
   let currentBody = location.state.currentBody;
   let currentTickets = location.state.currentTickets;
@@ -9,7 +9,7 @@ function EditPost({ currentUser, setCurrentUser, users, setUsers }) {
 
   const [body, setBody] = useState(currentBody);
   const [ticketAmount, setTicketAmount] = useState(currentTickets);
-  const [errorArray, setErrorArray] = useState([]);
+  const [error, setError] = useState([]);
   const [errorsExist, setErrorsExist] = useState(false);
   const [success, setSuccess] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -38,24 +38,16 @@ function EditPost({ currentUser, setCurrentUser, users, setUsers }) {
             }
           });
           setCurrentUser({ ...currentUser, posts: updatedPosts });
-          const updatedUsers = users.map((user) => {
-            if (user.id === currentUser.id) {
-              return currentUser;
-            } else {
-              return user;
-            }
-          });
-          setUsers(updatedUsers);
-          setErrorArray([]);
+          setError('');
           setErrorsExist(false);
           setSuccess('Your post has been successfully updated!');
           setSubmitted(true);
         });
       } else {
         response.json().then((e) => {
-          console.log('e: ', e);
+          console.log('e.error: ', e.error);
           setErrorsExist(true);
-          setErrorArray(e.errors);
+          setError(e.error);
         });
       }
     });
@@ -99,9 +91,7 @@ function EditPost({ currentUser, setCurrentUser, users, setUsers }) {
                     d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'
                   />
                 </svg>
-                {errorArray.map((eachError) => (
-                  <span>{eachError}</span>
-                ))}
+                <span>{error}</span>
               </div>
             </div>
           ) : null}
@@ -163,6 +153,7 @@ function EditPost({ currentUser, setCurrentUser, users, setUsers }) {
               state={{
                 thisUser: currentUser,
               }}
+              replace={true}
               className='block w-full px-5 py-3 text-sm font-medium text-white rounded-lg btn bg-secondary'>
               VIEW YOUR POSTS
             </Link>

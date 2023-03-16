@@ -9,8 +9,8 @@ import Header from './Header';
 import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from './HomePage';
-import Layout from './Layout';
 import ThisArtist from './ThisArtist';
+import ThisConcert from './ThisConcert';
 import CreateArtist from './CreateArtist';
 import CreateConcert from './CreateConcert';
 import CreateNewPost from './CreateNewPost';
@@ -28,6 +28,20 @@ function App() {
   const [concerts, setConcerts] = useState([]);
   const [users, setUsers] = useState([]);
 
+  //? INITIAL FETCH BELOW FOR REGISTERING THE USER
+  useEffect(() => {
+    fetch('/me').then((response) => {
+      if (response.ok) {
+        response.json().then((user) => {
+          console.log('within /me, the response is: ', user);
+          onLogin(user);
+        });
+      } else {
+        onLogout();
+      }
+    });
+  }, []);
+
   useEffect(() => {
     fetch('/artists')
       .then((r) => r.json())
@@ -40,9 +54,7 @@ function App() {
       .then((info) => setConcerts(info));
   }, []);
 
-  //! IS THIS REDUNDANT SINCE THE SAME FUNCTIONS ARE BEING ENACTED WITHIN fetch /me?
   function onLogin(user) {
-    console.log('user: ', user);
     setCurrentUser(user);
     setLoggedIn(true);
   }
@@ -53,47 +65,16 @@ function App() {
     setLoggedIn(false);
   }
 
-  //? INITIAL FETCH BELOW FOR REGISTERING THE USER
-  useEffect(() => {
-    fetch('/me').then((response) => {
-      if (response.ok) {
-        response.json().then((user) => {
-          console.log('within /me, the response is: ', user);
-          onLogin(user);
-          // setCurrentUser(user);
-          // setLoggedIn(true);
-        });
-      } else {
-        onLogout();
-        // setLoggedIn(false);
-      }
-    });
-  }, []);
-
-  //! WHAT IS THE POINT OF SET SESSION INFO?? IS IT EVER USED??
-  //& THE ESSENTIALS ARE ONLY
-  //& -- SETTING currentUser
-  //& -- logging in whoever is logging in
-  //& -- signing out currentUser
-
-  //! handleDelete isn't running through users anymore so this needs handling
   function handleDelete(post) {
     fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
       console.log('post in handleDelete: ', post);
-      // const updatedPosts = currentUser.posts.filter(
-      //   (thisPost) => thisPost.id !== post.id
-      // );
-      // setCurrentUser({ ...currentUser, posts: updatedPosts });
-      // const updatedUsers = users.filter((user) => {
-      //   if (user.id === currentUser.id) {
-      //     return currentUser;
-      //   } else {
-      //     return user;
-      //   }
-      // });
-      // setUsers(updatedUsers);
+      console.log('currentUsers posts:', currentUser.posts);
+      const updatedPosts = currentUser.posts.filter(
+        (thisPost) => thisPost.id !== post.id
+      );
+      setCurrentUser({ ...currentUser, posts: updatedPosts });
     });
   }
 
@@ -117,9 +98,10 @@ function App() {
             />
           }
         />
+        {/* might just go back to the old route system for this one */}
         <Route
           path='/thisArtist'
-          element={<ThisArtist loggedIn={loggedIn} />}
+          element={<ThisArtist artists={artists} loggedIn={loggedIn} />}
         />
         <Route
           path='/concerts'
@@ -132,6 +114,16 @@ function App() {
             />
           }
         />
+        {/* <Route
+          path='/thisConcert'
+          element={
+            <ThisConcert
+              concerts={concerts}
+              currentUser={currentUser}
+              loggedIn={loggedIn}
+            />
+          }
+        /> */}
         <Route
           path='/thisUser'
           element={<ThisUser currentUser={currentUser} />}
@@ -139,10 +131,19 @@ function App() {
         {loggedIn === true ? (
           <Route>
             <Route
-              path='/showPosts'
+              path='/thisConcert'
               element={
-                <ShowPosts currentUser={currentUser} concerts={concerts} />
+                <ThisConcert
+                  concerts={concerts}
+                  currentUser={currentUser}
+                  loggedIn={loggedIn}
+                />
               }
+            />
+            {/* ON /showPosts, this will now link to ConcertsPage */}
+            <Route
+              path='/thisConcert'
+              element={<ThisConcert currentUser={currentUser} />}
             />
             <Route
               path='/createNewPost'
@@ -150,8 +151,6 @@ function App() {
                 <CreateNewPost
                   currentUser={currentUser}
                   setCurrentUser={setCurrentUser}
-                  users={users}
-                  setUsers={setUsers}
                 />
               }
             />
@@ -161,8 +160,6 @@ function App() {
                 <EditPost
                   currentUser={currentUser}
                   setCurrentUser={setCurrentUser}
-                  users={users}
-                  setUsers={setUsers}
                 />
               }
             />
@@ -203,3 +200,25 @@ function App() {
 }
 
 export default App;
+
+// //! handleDelete isn't running through users anymore so this needs handling
+// function handleDelete(post) {
+//   fetch(`/posts/${post.id}`, {
+//     method: 'DELETE',
+//   }).then(() => {
+//     console.log('post in handleDelete: ', post);
+//     console.log('currentUsers posts:', currentUser.posts);
+//     // const updatedPosts = currentUser.posts.filter(
+//     //   (thisPost) => thisPost.id !== post.id
+//     // );
+//     // setCurrentUser({ ...currentUser, posts: updatedPosts });
+//     // const updatedUsers = users.filter((user) => {
+//     //   if (user.id === currentUser.id) {
+//     //     return currentUser;
+//     //   } else {
+//     //     return user;
+//     //   }
+//     // });
+//     // setUsers(updatedUsers);
+//   });
+// }

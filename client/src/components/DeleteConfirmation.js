@@ -37,6 +37,7 @@ function DeleteConfirmation({ currentUser, handleDelete }) {
           <Link
             to='/thisUser'
             state={{ thisUser: currentUser }}
+            replace={true}
             className='w-full btn btn-primary'>
             GO VIEW YOUR POSTS
           </Link>

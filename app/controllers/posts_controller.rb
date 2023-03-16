@@ -19,9 +19,8 @@ class PostsController < ApplicationController
 
 def update
   post = find_post
-
-if post[:body] === params[:body] && post[:tickets] === params[:tickets]
-  render json: {errors: ['Nothing was edited! Make a change at least to one of the sections here']}, status: :unprocessable_entity
+if (post[:body] === params[:body]) && (post[:tickets] === params[:tickets])
+  render json: {errors: ['Nothing was edited! Make a change at least to one of the sections here.']}, status: :unprocessable_entity
 else
   post.update!(
     body: params[:body],
@@ -38,9 +37,10 @@ end
     post.destroy
     head :no_content
     else
-      render json: {error: 'User not allowed to delete this; the post was made by someone else'}
+      render json: {error: "You're not the original person who posted this, you can't delete this!"}
     end
   end
+
 
   private
 
@@ -50,8 +50,8 @@ end
 
   def authorize_user
     unless session[:user_id] === params[:user_id]
-      render json: { error: 'User not authorized to make edits!' },
-             status: :unauthorized
+      render json: { error: "You're not the original person who posted this, you can't edit or delete this!" },
+             status: 401
     end
   end
 

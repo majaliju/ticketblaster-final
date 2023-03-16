@@ -6,9 +6,15 @@ import Loading from './Loading';
 import EachConcertCard from './EachConcertCard';
 
 function ThisArtist({ loggedIn }) {
+  let { id } = useParams();
   const location = useLocation();
   const artist = location.state.artist;
+  // const id = location.state.id;
   const artistsConcerts = location.state.artistsConcerts;
+
+  console.log('thisArtist page renders!');
+
+  console.log('artistsConcerts :', artistsConcerts);
 
   return (
     <div>

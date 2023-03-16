@@ -2,14 +2,8 @@ import { useState, useEffect } from 'react';
 import EachUser from './ThisUser';
 import { Link, useNavigate } from 'react-router-dom';
 
-function EachConcertPost({ post, concert, currentUser, users }) {
+function EachConcertPost({ post, concert, currentUser }) {
   const [isOriginalPoster, setIsOriginalPoster] = useState(false);
-
-  // let matchingUser = users.find(
-  //   (user) => parseInt(post.user_id) === parseInt(user.id)
-  // );
-
-  let matchingUser = users.find((user) => post.poster_name === user.username);
 
   useEffect(() => {
     if (parseInt(post.user_id) === parseInt(currentUser.id)) {
@@ -28,52 +22,9 @@ function EachConcertPost({ post, concert, currentUser, users }) {
       ) : (
         <h3 className='text-4xl font'>BUYING: {post.tickets} TICKETS</h3>
       )}
-
-      {/* //& the concerts has_many users relationship through: post is demonstrated here below */}
-      {/* //& however, for routing purposes, I do use the total Users state so I can route it to /thisUser; I didn't want to run into render issues */}
-      {matchingUser !== undefined ? (
-        <div>
-          <Link
-            to='/thisUser'
-            state={{
-              thisUser: matchingUser,
-            }}
-            className='text-2xl font-thin btn btn-ghost text-secondary'>
-            {/* //* here I'm using concert.posts((post) => post.poster_name) as opposed to matchingUser.username */}
-            {/* //* to demonstrate the concerts has_many users through: posts relationship */}
-            {post.poster_name}
-          </Link>
-          <div
-            className='text-2xl font-thin btn btn-ghost text-accent'
-            onClick={() => {
-              window.location.href = `mailto:${matchingUser.email}`;
-            }}>
-            {/* //* here I'm using concert.posts((post) => post.poster_email) as opposed to matchingUser.email */}
-            {/* //* to demonstrate the concerts has_many users through: posts relationship */}
-            {post.poster_email}
-          </div>
-        </div>
-      ) : null}
-
-      {/* {matchingUser !== undefined ? (
-        <div>
-          <Link
-            to='/thisUser'
-            state={{
-              thisUser: matchingUser,
-            }}
-            className='text-2xl font-thin btn btn-ghost text-secondary'>
-            {post.poster_name}
-          </Link>
-          <div
-            className='text-2xl font-thin btn btn-ghost text-accent'
-            onClick={() => {
-              window.location.href = `mailto:${matchingUser.email}`;
-            }}>
-            {post.poster_email}
-          </div>
-        </div>
-      ) : null} */}
+      <h2 className='text-2xl font-thin'>
+        seller ({post.poster_name}) can be emailed at {post.poster_email}
+      </h2>
 
       <p className='mt-4 text-lg font-medium text-accent'>{post.body}</p>
       {isOriginalPoster === true ? (

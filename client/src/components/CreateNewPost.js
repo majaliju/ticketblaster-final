@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
-function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
+function CreateNewPost({ currentUser, setCurrentUser }) {
   const [body, setBody] = useState('');
   const [ticketAmount, setTicketAmount] = useState(0);
   const [errorArray, setErrorArray] = useState([]);
@@ -36,14 +36,6 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
             posts: [...currentUser.posts, createdPost],
           });
 
-          const updatedUsers = users.map((user) => {
-            if (user.id === currentUser.id) {
-              return currentUser;
-            } else {
-              return user;
-            }
-          });
-          setUsers(updatedUsers);
           setErrorArray([]);
           setErrorsExist(false);
           setSuccess('Your post has been created!');
@@ -160,6 +152,7 @@ function CreateNewPost({ currentUser, setCurrentUser, users, setUsers }) {
               state={{
                 thisUser: currentUser,
               }}
+              replace={true}
               className='block w-full px-5 py-3 text-sm font-medium text-white rounded-lg btn bg-secondary'>
               VIEW YOUR POSTS
             </Link>
