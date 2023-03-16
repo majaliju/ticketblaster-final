@@ -9,7 +9,7 @@ function EditPost({ currentUser, setCurrentUser }) {
 
   const [body, setBody] = useState(currentBody);
   const [ticketAmount, setTicketAmount] = useState(currentTickets);
-  const [errorArray, setErrorArray] = useState([]);
+  const [error, setErrors] = useState([]);
   const [errorsExist, setErrorsExist] = useState(false);
   const [success, setSuccess] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -25,7 +25,8 @@ function EditPost({ currentUser, setCurrentUser }) {
       body: JSON.stringify({
         body: body,
         tickets: ticketAmount,
-        user_id: currentUser.id,
+        user_id: 22222,
+        // user_id: currentUser.id,
       }),
     }).then((response) => {
       if (response.status >= 200 && response.status <= 299) {
@@ -38,15 +39,7 @@ function EditPost({ currentUser, setCurrentUser }) {
             }
           });
           setCurrentUser({ ...currentUser, posts: updatedPosts });
-          const updatedUsers = users.map((user) => {
-            if (user.id === currentUser.id) {
-              return currentUser;
-            } else {
-              return user;
-            }
-          });
-          setUsers(updatedUsers);
-          setErrorArray([]);
+          setErrors('');
           setErrorsExist(false);
           setSuccess('Your post has been successfully updated!');
           setSubmitted(true);
@@ -55,7 +48,7 @@ function EditPost({ currentUser, setCurrentUser }) {
         response.json().then((e) => {
           console.log('e: ', e);
           setErrorsExist(true);
-          setErrorArray(e.errors);
+          setErrors(e.error);
         });
       }
     });
@@ -99,9 +92,7 @@ function EditPost({ currentUser, setCurrentUser }) {
                     d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z'
                   />
                 </svg>
-                {errorArray.map((eachError) => (
-                  <span>{eachError}</span>
-                ))}
+                <span>{error}</span>
               </div>
             </div>
           ) : null}
