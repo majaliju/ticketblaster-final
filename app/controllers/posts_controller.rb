@@ -20,7 +20,7 @@ class PostsController < ApplicationController
 def update
   post = find_post
 if (post[:body] === params[:body]) && (post[:tickets] === params[:tickets])
-  render json: {errors: ['Nothing was edited! Make a change at least to one of the sections here.']}, status: :unprocessable_entity
+  render json: {error: "Nothing was edited! Make a change at least to one of the sections here."}, status: :unprocessable_entity
 else
   post.update!(
     body: params[:body],

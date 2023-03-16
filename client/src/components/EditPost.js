@@ -45,6 +45,7 @@ function EditPost({ currentUser, setCurrentUser }) {
         });
       } else {
         response.json().then((e) => {
+          console.log('e: ', e);
           console.log('e.error: ', e.error);
           setErrorsExist(true);
           setError(e.error);
