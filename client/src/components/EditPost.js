@@ -153,6 +153,7 @@ function EditPost({ currentUser, setCurrentUser }) {
               state={{
                 thisUser: currentUser,
               }}
+              replace={true}
               className='block w-full px-5 py-3 text-sm font-medium text-white rounded-lg btn bg-secondary'>
               VIEW YOUR POSTS
             </Link>
