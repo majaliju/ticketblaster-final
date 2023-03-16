@@ -16,17 +16,15 @@ import CreateConcert from './CreateConcert';
 import CreateNewPost from './CreateNewPost';
 import EditPost from './EditPost';
 import ThisUser from './ThisUser';
-import ShowPosts from './ShowPosts';
 import DeleteConfirmation from './DeleteConfirmation';
 
 function App() {
-  const [currentUser, setCurrentUser] = useState('');
+  const [currentUser, setCurrentUser] = useState({});
   const [loggedIn, setLoggedIn] = useState(false);
 
   const [searchTerm, setSearchTerm] = useState('');
   const [artists, setArtists] = useState([]);
   const [concerts, setConcerts] = useState([]);
-  const [users, setUsers] = useState([]);
 
   //? INITIAL FETCH BELOW FOR REGISTERING THE USER
   useEffect(() => {
@@ -52,7 +50,7 @@ function App() {
     fetch('/concerts')
       .then((r) => r.json())
       .then((info) => setConcerts(info));
-  }, [currentUser]);
+  }, []);
 
   function onLogin(user) {
     setCurrentUser(user);
@@ -61,7 +59,7 @@ function App() {
 
   //^ to log the user out
   function onLogout() {
-    setCurrentUser('');
+    setCurrentUser({});
     setLoggedIn(false);
   }
 
@@ -76,12 +74,22 @@ function App() {
       );
       setCurrentUser({ ...currentUser, posts: updatedPosts });
       console.log('currentUser: ', currentUser);
+
+      //  update concerts as well to remove them if they're associated with that post
     });
+  }
+
+  function removingFinalConcert() {
+    return 'test';
   }
 
   return (
     <div>
-      <Header currentUser={currentUser} onLogout={onLogout} />
+      <Header
+        currentUser={currentUser}
+        loggedIn={loggedIn}
+        onLogout={onLogout}
+      />
       <Routes>
         <Route
           path='/'

@@ -3,7 +3,7 @@
 import { NavLink, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function Header({ currentUser, onLogout }) {
+function Header({ loggedIn, currentUser, onLogout }) {
   function handleLogout() {
     fetch(`/logout`, {
       method: 'DELETE',
@@ -107,7 +107,7 @@ function Header({ currentUser, onLogout }) {
                   <h3 className='font-bold uppercase'>concerts</h3>
                 </NavLink>
               </li>
-              {currentUser !== (null || '') ? (
+              {loggedIn === true && (
                 <li>
                   <NavLink
                     to='/thisUser'
@@ -116,14 +116,14 @@ function Header({ currentUser, onLogout }) {
                     Your Activity
                   </NavLink>
                 </li>
-              ) : null}
+              )}
             </ul>
           </div>
         </div>
         <div className='hidden navbar-end sm:flex'>
           <div className='flex-initial'>
             <ul className='float-right p-0 menu menu-horizontal'>
-              {currentUser === (null || '') && (
+              {loggedIn === false && (
                 <li>
                   <NavLink
                     className='font-bold uppercase border-none btn btn-outline'
@@ -132,7 +132,7 @@ function Header({ currentUser, onLogout }) {
                   </NavLink>
                 </li>
               )}
-              {currentUser !== (null || '') && (
+              {loggedIn === true && (
                 <div>
                   <li>
                     <button
