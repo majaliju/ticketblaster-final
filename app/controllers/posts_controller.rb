@@ -37,9 +37,11 @@ end
     post.destroy
     head :no_content
     else
-      render json: {error: 'User not allowed to delete this; the post was made by someone else'}
+      render json: {error: "You're not the original person who posted this, you can't delete this!"}
     end
   end
+
+
 
   private
 
@@ -49,8 +51,8 @@ end
 
   def authorize_user
     unless session[:user_id] === params[:user_id]
-      render json: { error: `You're not the original person who posted this, you can't make or delete this!` },
-             status: :unauthorized
+      render json: { error: "You're not the original person who posted this, you can't edit or delete this!" },
+             status: 401
     end
   end
 

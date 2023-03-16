@@ -9,7 +9,7 @@ function EditPost({ currentUser, setCurrentUser }) {
 
   const [body, setBody] = useState(currentBody);
   const [ticketAmount, setTicketAmount] = useState(currentTickets);
-  const [error, setErrors] = useState([]);
+  const [error, setError] = useState([]);
   const [errorsExist, setErrorsExist] = useState(false);
   const [success, setSuccess] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -39,16 +39,16 @@ function EditPost({ currentUser, setCurrentUser }) {
             }
           });
           setCurrentUser({ ...currentUser, posts: updatedPosts });
-          setErrors('');
+          setError('');
           setErrorsExist(false);
           setSuccess('Your post has been successfully updated!');
           setSubmitted(true);
         });
       } else {
         response.json().then((e) => {
-          console.log('e: ', e);
+          console.log('e.error: ', e.error);
           setErrorsExist(true);
-          setErrors(e.error);
+          setError(e.error);
         });
       }
     });
