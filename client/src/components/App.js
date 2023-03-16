@@ -52,7 +52,7 @@ function App() {
     fetch('/concerts')
       .then((r) => r.json())
       .then((info) => setConcerts(info));
-  }, []);
+  }, [currentUser]);
 
   function onLogin(user) {
     setCurrentUser(user);
@@ -75,6 +75,7 @@ function App() {
         (thisPost) => thisPost.id !== post.id
       );
       setCurrentUser({ ...currentUser, posts: updatedPosts });
+      console.log('currentUser: ', currentUser);
     });
   }
 
@@ -126,7 +127,7 @@ function App() {
         /> */}
         <Route
           path='/thisUser'
-          element={<ThisUser currentUser={currentUser} />}
+          element={<ThisUser currentUser={currentUser} loggedIn={loggedIn} />}
         />
         {loggedIn === true ? (
           <Route>
@@ -141,10 +142,10 @@ function App() {
               }
             />
             {/* ON /showPosts, this will now link to ConcertsPage */}
-            <Route
+            {/* <Route
               path='/thisConcert'
               element={<ThisConcert currentUser={currentUser} />}
-            />
+            /> */}
             <Route
               path='/createNewPost'
               element={

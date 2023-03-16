@@ -5,14 +5,17 @@ import EachUserPost from './EachUserPost';
 import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
 import Loading from './Loading';
 import EachUserConcert from './EachUserConcert';
+import EachConcertCard from './EachConcertCard';
 
-function ThisUser({ currentUser }) {
+function ThisUser({ currentUser, loggedIn }) {
   const location = useLocation();
   // const thisUser = location.state.thisUser;
   const thisUser = currentUser;
 
   const thisUserPosts = thisUser.posts;
   const thisUserConcerts = thisUser.concerts;
+
+  console.log('currentUser in thisUser: ', currentUser);
 
   return (
     <div className='py-6 bg-base-900 sm:py-8 lg:py-12'>
@@ -30,7 +33,7 @@ function ThisUser({ currentUser }) {
             {currentUser !== (null || undefined || '') ? (
               <div className='grid gap-8 mx-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 '>
                 {currentUser.concerts.map((concert) => (
-                  <EachUserConcert concert={concert} />
+                  <EachUserConcert concert={concert} loggedIn={loggedIn} />
                 ))}
               </div>
             ) : null}
