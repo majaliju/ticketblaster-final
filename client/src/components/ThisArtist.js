@@ -14,7 +14,7 @@ function ThisArtist({ loggedIn }) {
 
   console.log('thisArtist page renders!');
 
-  console.log('id from params: ', id);
+  console.log('artistsConcerts :', artistsConcerts);
 
   return (
     <div>
@@ -48,12 +48,11 @@ function ThisArtist({ loggedIn }) {
                   </h1>
                   <p className='max-w-screen-md mx-auto text-center text-gray-500 uppercase text-secondary md:text-lg'></p>
                 </div>
-                {/* LINK TO <EachArtistConcert /> HERE */}
-                {/* <div className='grid gap-8 mx-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 '>
+                <div className='grid gap-8 mx-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 '>
                   {artistsConcerts.map((concert) => (
                     <EachConcertCard concert={concert} loggedIn={loggedIn} />
                   ))}
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

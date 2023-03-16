@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
-function EditPost({ currentUser, setCurrentUser, users, setUsers }) {
+function EditPost({ currentUser, setCurrentUser }) {
   const location = useLocation();
   let currentBody = location.state.currentBody;
   let currentTickets = location.state.currentTickets;

@@ -157,10 +157,8 @@ function App() {
             />
             {/* ON /showPosts, this will now link to ConcertsPage */}
             <Route
-              path='/showPosts'
-              element={
-                <ShowPosts currentUser={currentUser} concerts={concerts} />
-              }
+              path='/thisConcert'
+              element={<ThisConcert currentUser={currentUser} />}
             />
             <Route
               path='/createNewPost'
