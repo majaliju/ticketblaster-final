@@ -43,6 +43,7 @@ function Header({ loggedIn, currentUser, onLogout }) {
                   concerts
                 </NavLink>
               </li>
+
               {/* 
               {currentUser !== (null || '') ? (
                 <li>

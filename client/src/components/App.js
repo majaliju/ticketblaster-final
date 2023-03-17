@@ -31,7 +31,7 @@ function App() {
     fetch('/me').then((response) => {
       if (response.ok) {
         response.json().then((user) => {
-          console.log('within /me, the response is: ', user);
+          // console.log('within /me, the response is: ', user);
           onLogin(user);
         });
       } else {
@@ -67,20 +67,23 @@ function App() {
     fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
-      console.log('post in handleDelete: ', post);
-      console.log('currentUsers posts:', currentUser.posts);
+      // console.log('post in handleDelete: ', post);
+      // console.log('currentUsers posts:', currentUser.posts);
       const updatedPosts = currentUser.posts.filter(
-        (thisPost) => thisPost.id !== post.id
+        (eachPost) => eachPost.id !== post.id
       );
+      //! here one writes the steps to remove any associated concerts as well
       setCurrentUser({ ...currentUser, posts: updatedPosts });
-      console.log('currentUser: ', currentUser);
+      // console.log('currentUser: ', currentUser);
+      // const associatedConcert = currentUser.concerts.find(
+      //   (eachConcert) => eachConcert.id === post.concert_id
+      // );
+      // console.log('associatedConcert: ', associatedConcert);
 
-      //  update concerts as well to remove them if they're associated with that post
+      // find the concert that matches the post.concert_id
+      // if that concert doesnt exist (make sure n = 0) then update the updatedConcerts in the same way as updatedPosts, and update the remaining concerts
+      // if that concert still has remaining posts, then dont delete it
     });
-  }
-
-  function removingFinalConcert() {
-    return 'test';
   }
 
   return (
@@ -124,15 +127,15 @@ function App() {
           }
         />
         {/* <Route
-          path='/thisConcert'
-          element={
-            <ThisConcert
-              concerts={concerts}
-              currentUser={currentUser}
-              loggedIn={loggedIn}
-            />
-          }
-        /> */}
+              path='/thisConcert'
+              element={
+                <ThisConcert
+                  concerts={concerts}
+                  currentUser={currentUser}
+                  loggedIn={loggedIn}
+                />
+              }
+            /> */}
         <Route
           path='/thisUser'
           element={<ThisUser currentUser={currentUser} loggedIn={loggedIn} />}
@@ -151,9 +154,9 @@ function App() {
             />
             {/* ON /showPosts, this will now link to ConcertsPage */}
             {/* <Route
-              path='/thisConcert'
-              element={<ThisConcert currentUser={currentUser} />}
-            /> */}
+                  path='/thisConcert'
+                  element={<ThisConcert currentUser={currentUser} />}
+                /> */}
             <Route
               path='/createNewPost'
               element={

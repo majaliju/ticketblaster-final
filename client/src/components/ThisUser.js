@@ -8,9 +8,9 @@ import EachUserConcert from './EachUserConcert';
 import EachConcertCard from './EachConcertCard';
 
 function ThisUser({ currentUser, loggedIn }) {
-  const location = useLocation();
+  // const location = useLocation();
 
-  const thisUser = currentUser;
+  // const thisUser = currentUser;
 
   // const thisUserPosts = thisUser.posts;
   // const thisUserConcerts = thisUser.concerts;
@@ -45,11 +45,7 @@ function ThisUser({ currentUser, loggedIn }) {
               {loggedIn === true ? (
                 <div className='grid gap-8 mx-6 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 '>
                   {currentUser.posts.map((post) => (
-                    <EachUserPost
-                      currentUser={currentUser}
-                      post={post}
-                      thisUser={thisUser}
-                    />
+                    <EachUserPost currentUser={currentUser} post={post} />
                   ))}
                 </div>
               ) : null}
