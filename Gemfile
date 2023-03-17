@@ -55,6 +55,3 @@ gem 'faker'
 
 ## to validate emails, in the user model
 gem 'email_validator'
-
-## to validate dates, in the concert model
-gem 'date_validator'
