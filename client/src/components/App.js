@@ -67,22 +67,19 @@ function App() {
     fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
-      // console.log('post in handleDelete: ', post);
-      // console.log('currentUsers posts:', currentUser.posts);
       const updatedPosts = currentUser.posts.filter(
         (eachPost) => eachPost.id !== post.id
       );
-      //! here one writes the steps to remove any associated concerts as well
+
       setCurrentUser({ ...currentUser, posts: updatedPosts });
       const remainingPostsForConcert = currentUser.posts.filter(
-        (post) =>
-          post.concert_id === postToDelete.concert_id &&
-          post.id !== postToDelete.id
+        (eachPost) =>
+          eachPost.concert_id === post.concert_id && eachPost.id !== post.id
       );
 
       if (remainingPostsForConcert.length === 0) {
         const updatedConcerts = currentUser.concerts.filter(
-          (concert) => concert.id !== postToDelete.concert_id
+          (concert) => concert.id !== post.concert_id
         );
         setCurrentUser({ ...currentUser, concerts: updatedConcerts });
       }
@@ -216,24 +213,27 @@ function App() {
 
 export default App;
 
-// //! handleDelete isn't running through users anymore so this needs handling
+// // //! handleDelete isn't running through users anymore so this needs handling
+
 // function handleDelete(post) {
 //   fetch(`/posts/${post.id}`, {
 //     method: 'DELETE',
 //   }).then(() => {
-//     console.log('post in handleDelete: ', post);
-//     console.log('currentUsers posts:', currentUser.posts);
-//     // const updatedPosts = currentUser.posts.filter(
-//     //   (thisPost) => thisPost.id !== post.id
-//     // );
-//     // setCurrentUser({ ...currentUser, posts: updatedPosts });
-//     // const updatedUsers = users.filter((user) => {
-//     //   if (user.id === currentUser.id) {
-//     //     return currentUser;
-//     //   } else {
-//     //     return user;
-//     //   }
-//     // });
-//     // setUsers(updatedUsers);
+//     const updatedPosts = currentUser.posts.filter(
+//       (eachPost) => eachPost.id !== post.id
+//     );
+
+//     setCurrentUser({ ...currentUser, posts: updatedPosts });
+//     const remainingPostsForConcert = currentUser.posts.filter(
+//       (eachPost) =>
+//         eachPost.concert_id === post.concert_id && eachPost.id !== post.id
+//     );
+
+//     if (remainingPostsForConcert.length === 0) {
+//       const updatedConcerts = currentUser.concerts.filter(
+//         (concert) => concert.id !== post.concert_id
+//       );
+//       setCurrentUser({ ...currentUser, concerts: updatedConcerts });
+//     }
 //   });
 // }
