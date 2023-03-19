@@ -70,8 +70,6 @@ function App() {
       const updatedPosts = currentUser.posts.filter(
         (eachPost) => eachPost.id !== post.id
       );
-      // try updating currentUser in a single shot instead of two as such
-      setCurrentUser({ ...currentUser, posts: updatedPosts });
       const remainingPostsForConcert = currentUser.posts.filter(
         (eachPost) =>
           eachPost.concert_id === post.concert_id && eachPost.id !== post.id
@@ -81,7 +79,12 @@ function App() {
         const updatedConcerts = currentUser.concerts.filter(
           (concert) => concert.id !== post.concert_id
         );
-        setCurrentUser({ ...currentUser, concerts: updatedConcerts });
+
+        setCurrentUser({
+          ...currentUser,
+          posts: updatedPosts,
+          concerts: updatedConcerts,
+        });
       }
     });
   }
@@ -161,6 +164,7 @@ function App() {
               path='/createNewPost'
               element={
                 <CreateNewPost
+                  concerts={concerts}
                   currentUser={currentUser}
                   setCurrentUser={setCurrentUser}
                 />

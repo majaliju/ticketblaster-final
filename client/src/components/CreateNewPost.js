@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
-function CreateNewPost({ currentUser, setCurrentUser }) {
+function CreateNewPost({ concerts, currentUser, setCurrentUser }) {
   const [body, setBody] = useState('');
   const [ticketAmount, setTicketAmount] = useState(0);
   const [errorArray, setErrorArray] = useState([]);
@@ -36,10 +36,21 @@ function CreateNewPost({ currentUser, setCurrentUser }) {
             posts: [...currentUser.posts, createdPost],
           });
 
-          const concertExists = currentUser.concerts.some(concert => concert.id === createdPost.concert_id);
+          const concertExists = currentUser.concerts.some(
+            (concert) => concert.id === createdPost.concert_id
+          );
 
           if (!concertExists) {
-          const concertToAdd = /* Fetch the concert object using the createdPost.concert_id */;  setCurrentUser({    ...currentUser,    concerts: [...currentUser.concerts, concertToAdd]  });
+            // get concerts
+            // concerts.find((anyConcert) => anyConcert.id === createdPost.concert_id)
+            const concertToAdd = concerts.find(
+              (anyConcert) => anyConcert.id === createdPost.concert_id
+            );
+            console.log('concertToAdd: ', concertToAdd);
+            setCurrentUser({
+              ...currentUser,
+              concerts: [...currentUser.concerts, concertToAdd],
+            });
           }
 
           setErrorArray([]);
