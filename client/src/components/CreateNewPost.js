@@ -31,11 +31,6 @@ function CreateNewPost({ concerts, currentUser, setCurrentUser }) {
     }).then((response) => {
       if (response.status >= 200 && response.status <= 299) {
         response.json().then((createdPost) => {
-          setCurrentUser({
-            ...currentUser,
-            posts: [...currentUser.posts, createdPost],
-          });
-
           const concertExists = currentUser.concerts.some(
             (concert) => concert.id === createdPost.concert_id
           );
@@ -49,7 +44,13 @@ function CreateNewPost({ concerts, currentUser, setCurrentUser }) {
             console.log('concertToAdd: ', concertToAdd);
             setCurrentUser({
               ...currentUser,
+              posts: [...currentUser.posts, createdPost],
               concerts: [...currentUser.concerts, concertToAdd],
+            });
+          } else if (concertExists) {
+            setCurrentUser({
+              ...currentUser,
+              posts: [...currentUser.posts, createdPost],
             });
           }
 
