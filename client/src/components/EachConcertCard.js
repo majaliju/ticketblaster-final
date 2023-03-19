@@ -5,7 +5,6 @@ import IndividualPost from '../outOfUseComponents/og-components/IndividualPost';
 import Loading from './Loading';
 
 function EachConcertCard({ loggedIn, concert }) {
-  console.log('concert: ', concert);
   return (
     <div>
       <div className='py-6 bg-base-900 sm:py-8 lg:py-'>

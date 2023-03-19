@@ -16,24 +16,22 @@ import CreateConcert from './CreateConcert';
 import CreateNewPost from './CreateNewPost';
 import EditPost from './EditPost';
 import ThisUser from './ThisUser';
-import ShowPosts from './ShowPosts';
 import DeleteConfirmation from './DeleteConfirmation';
 
 function App() {
-  const [currentUser, setCurrentUser] = useState('');
+  const [currentUser, setCurrentUser] = useState({});
   const [loggedIn, setLoggedIn] = useState(false);
 
   const [searchTerm, setSearchTerm] = useState('');
   const [artists, setArtists] = useState([]);
   const [concerts, setConcerts] = useState([]);
-  const [users, setUsers] = useState([]);
 
   //? INITIAL FETCH BELOW FOR REGISTERING THE USER
   useEffect(() => {
     fetch('/me').then((response) => {
       if (response.ok) {
         response.json().then((user) => {
-          console.log('within /me, the response is: ', user);
+          // console.log('within /me, the response is: ', user);
           onLogin(user);
         });
       } else {
@@ -61,7 +59,7 @@ function App() {
 
   //^ to log the user out
   function onLogout() {
-    setCurrentUser('');
+    setCurrentUser({});
     setLoggedIn(false);
   }
 
@@ -69,18 +67,32 @@ function App() {
     fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
-      console.log('post in handleDelete: ', post);
-      console.log('currentUsers posts:', currentUser.posts);
+      // console.log('post in handleDelete: ', post);
+      // console.log('currentUsers posts:', currentUser.posts);
       const updatedPosts = currentUser.posts.filter(
-        (thisPost) => thisPost.id !== post.id
+        (eachPost) => eachPost.id !== post.id
       );
+      //! here one writes the steps to remove any associated concerts as well
       setCurrentUser({ ...currentUser, posts: updatedPosts });
+      // console.log('currentUser: ', currentUser);
+      // const associatedConcert = currentUser.concerts.find(
+      //   (eachConcert) => eachConcert.id === post.concert_id
+      // );
+      // console.log('associatedConcert: ', associatedConcert);
+
+      // find the concert that matches the post.concert_id
+      // if that concert doesnt exist (make sure n = 0) then update the updatedConcerts in the same way as updatedPosts, and update the remaining concerts
+      // if that concert still has remaining posts, then dont delete it
     });
   }
 
   return (
     <div>
-      <Header currentUser={currentUser} onLogout={onLogout} />
+      <Header
+        currentUser={currentUser}
+        loggedIn={loggedIn}
+        onLogout={onLogout}
+      />
       <Routes>
         <Route
           path='/'
@@ -115,18 +127,18 @@ function App() {
           }
         />
         {/* <Route
-          path='/thisConcert'
-          element={
-            <ThisConcert
-              concerts={concerts}
-              currentUser={currentUser}
-              loggedIn={loggedIn}
-            />
-          }
-        /> */}
+              path='/thisConcert'
+              element={
+                <ThisConcert
+                  concerts={concerts}
+                  currentUser={currentUser}
+                  loggedIn={loggedIn}
+                />
+              }
+            /> */}
         <Route
           path='/thisUser'
-          element={<ThisUser currentUser={currentUser} />}
+          element={<ThisUser currentUser={currentUser} loggedIn={loggedIn} />}
         />
         {loggedIn === true ? (
           <Route>
@@ -141,10 +153,10 @@ function App() {
               }
             />
             {/* ON /showPosts, this will now link to ConcertsPage */}
-            <Route
-              path='/thisConcert'
-              element={<ThisConcert currentUser={currentUser} />}
-            />
+            {/* <Route
+                  path='/thisConcert'
+                  element={<ThisConcert currentUser={currentUser} />}
+                /> */}
             <Route
               path='/createNewPost'
               element={

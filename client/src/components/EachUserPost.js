@@ -6,13 +6,13 @@ function EachUserPost({ thisUser, currentUser, post }) {
   let navigate = useNavigate();
   const location = useLocation();
 
-  const [isOriginalPoster, setIsOriginalPoster] = useState(false);
+  // const [isOriginalPoster, setIsOriginalPoster] = useState(false);
 
-  useEffect(() => {
-    if (parseInt(thisUser.id) === parseInt(currentUser.id)) {
-      setIsOriginalPoster(true);
-    }
-  });
+  // useEffect(() => {
+  //   if (parseInt(thisUser.id) === parseInt(currentUser.id)) {
+  //     setIsOriginalPoster(true);
+  //   }
+  // });
 
   return (
     <div className='relative block p-8 pb-24 border-t-4 rounded-sm shadow-xl border-secondary'>
@@ -43,34 +43,26 @@ function EachUserPost({ thisUser, currentUser, post }) {
         )}
       </div>
 
-      <div
-        className='w-full font-normal text-white text-md btn btn-secondary btn-outline'
-        onClick={() => {
-          window.location.href = `mailto:${thisUser.email}`;
-        }}>
-        {thisUser.email}
-      </div>
       <p className='my-6 text-lg font-medium text-accent'>{post.body}</p>
-      {isOriginalPoster === true ? (
-        <div>
-          <Link
-            to='/editPost'
-            state={{
-              postID: post.id,
-              currentBody: post.body,
-              currentTickets: post.tickets,
-            }}
-            className='w-full btn btn-secondary btn-outline'>
-            EDIT YOUR POST
-          </Link>
-          <Link
-            to='/deletePost'
-            state={{ thisUser: currentUser, post: post }}
-            className='w-full btn btn-accent btn-full'>
-            DELETE YOUR POST
-          </Link>
-        </div>
-      ) : null}
+
+      <div>
+        <Link
+          to='/editPost'
+          state={{
+            postID: post.id,
+            currentBody: post.body,
+            currentTickets: post.tickets,
+          }}
+          className='w-full btn btn-secondary btn-outline'>
+          EDIT YOUR POST
+        </Link>
+        <Link
+          to='/deletePost'
+          state={{ thisUser: currentUser, post: post }}
+          className='w-full btn btn-accent btn-full'>
+          DELETE YOUR POST
+        </Link>
+      </div>
 
       <span className='absolute bottom-8 right-8'>
         <svg

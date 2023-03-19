@@ -8,6 +8,9 @@ class Concert < ApplicationRecord
   validates :image, presence: true
   validates :date, presence: true
 
+  validate :date_must_be_in_the_future
+
+
   def artist_name
     artist.name
   end
@@ -15,4 +18,12 @@ class Concert < ApplicationRecord
   def artist_image
     artist.image
   end
+
+  private 
+
+def date_must_be_in_the_future
+  errors.add(:date, "can't be in the past!") unless date.future?
+end
+
+  
 end

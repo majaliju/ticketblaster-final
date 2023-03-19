@@ -53,7 +53,5 @@ gem 'active_model_serializers', '~> 0.10.12'
 ## faker is for seeding our DB -- email for users, dates for concerts
 gem 'faker'
 
-## to validate emails in the user model
+## to validate emails, in the user model
 gem 'email_validator'
-
-### test im so furious

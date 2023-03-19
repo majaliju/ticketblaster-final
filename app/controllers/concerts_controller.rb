@@ -20,7 +20,6 @@ class ConcertsController < ApplicationController
   private
 
 def find_concert
-
   concert = Concert.find_by!(id: params[:id])
 end
 
