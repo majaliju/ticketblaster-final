@@ -9,7 +9,7 @@ function EditPost({ currentUser, setCurrentUser }) {
 
   const [body, setBody] = useState(currentBody);
   const [ticketAmount, setTicketAmount] = useState(currentTickets);
-  const [error, setError] = useState([]);
+  const [error, setError] = useState('');
   const [errorsExist, setErrorsExist] = useState(false);
   const [success, setSuccess] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -48,7 +48,7 @@ function EditPost({ currentUser, setCurrentUser }) {
           console.log('e: ', e);
           console.log('e.error: ', e.error);
           setErrorsExist(true);
-          setError(e.error);
+          setError(e.errors);
         });
       }
     });
