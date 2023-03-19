@@ -70,7 +70,7 @@ function App() {
       const updatedPosts = currentUser.posts.filter(
         (eachPost) => eachPost.id !== post.id
       );
-
+      // try updating currentUser in a single shot instead of two as such
       setCurrentUser({ ...currentUser, posts: updatedPosts });
       const remainingPostsForConcert = currentUser.posts.filter(
         (eachPost) =>
