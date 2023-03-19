@@ -50,7 +50,7 @@ end
 
   def authorize_user
     unless session[:user_id] === params[:user_id]
-      render json: { error: "You're not the original person who posted this, you can't edit or delete this!" },
+      render json: { error: "You're not the original person who posted this, you can't edit this!" },
              status: 401
     end
   end

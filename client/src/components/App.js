@@ -74,15 +74,18 @@ function App() {
       );
       //! here one writes the steps to remove any associated concerts as well
       setCurrentUser({ ...currentUser, posts: updatedPosts });
-      // console.log('currentUser: ', currentUser);
-      // const associatedConcert = currentUser.concerts.find(
-      //   (eachConcert) => eachConcert.id === post.concert_id
-      // );
-      // console.log('associatedConcert: ', associatedConcert);
+      const remainingPostsForConcert = currentUser.posts.filter(
+        (post) =>
+          post.concert_id === postToDelete.concert_id &&
+          post.id !== postToDelete.id
+      );
 
-      // find the concert that matches the post.concert_id
-      // if that concert doesnt exist (make sure n = 0) then update the updatedConcerts in the same way as updatedPosts, and update the remaining concerts
-      // if that concert still has remaining posts, then dont delete it
+      if (remainingPostsForConcert.length === 0) {
+        const updatedConcerts = currentUser.concerts.filter(
+          (concert) => concert.id !== postToDelete.concert_id
+        );
+        setCurrentUser({ ...currentUser, concerts: updatedConcerts });
+      }
     });
   }
 

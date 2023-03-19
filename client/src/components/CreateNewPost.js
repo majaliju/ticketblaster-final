@@ -35,12 +35,12 @@ function CreateNewPost({ currentUser, setCurrentUser }) {
             ...currentUser,
             posts: [...currentUser.posts, createdPost],
           });
-          //  here is also where the associated concert must be added,
-          //  if it doesn't already exist
-          //  symmetric to the handleDelete problems
 
-          // first thought:
-          // find the concert in currentUser that matches the concert_id on createdPost; if that concert is empty
+          const concertExists = currentUser.concerts.some(concert => concert.id === createdPost.concert_id);
+
+          if (!concertExists) {
+          const concertToAdd = /* Fetch the concert object using the createdPost.concert_id */;  setCurrentUser({    ...currentUser,    concerts: [...currentUser.concerts, concertToAdd]  });
+          }
 
           setErrorArray([]);
           setErrorsExist(false);
