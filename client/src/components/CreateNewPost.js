@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
-function CreateNewPost({ currentUser, setCurrentUser }) {
+function CreateNewPost({ concerts, currentUser, setCurrentUser }) {
   const [body, setBody] = useState('');
   const [ticketAmount, setTicketAmount] = useState(0);
   const [errorArray, setErrorArray] = useState([]);
@@ -31,16 +31,28 @@ function CreateNewPost({ currentUser, setCurrentUser }) {
     }).then((response) => {
       if (response.status >= 200 && response.status <= 299) {
         response.json().then((createdPost) => {
-          setCurrentUser({
-            ...currentUser,
-            posts: [...currentUser.posts, createdPost],
-          });
-          //  here is also where the associated concert must be added,
-          //  if it doesn't already exist
-          //  symmetric to the handleDelete problems
+          const concertExists = currentUser.concerts.some(
+            (concert) => concert.id === createdPost.concert_id
+          );
 
-          // first thought:
-          // find the concert in currentUser that matches the concert_id on createdPost; if that concert is empty
+          if (!concertExists) {
+            // get concerts
+            // concerts.find((anyConcert) => anyConcert.id === createdPost.concert_id)
+            const concertToAdd = concerts.find(
+              (anyConcert) => anyConcert.id === createdPost.concert_id
+            );
+            console.log('concertToAdd: ', concertToAdd);
+            setCurrentUser({
+              ...currentUser,
+              posts: [...currentUser.posts, createdPost],
+              concerts: [...currentUser.concerts, concertToAdd],
+            });
+          } else if (concertExists) {
+            setCurrentUser({
+              ...currentUser,
+              posts: [...currentUser.posts, createdPost],
+            });
+          }
 
           setErrorArray([]);
           setErrorsExist(false);

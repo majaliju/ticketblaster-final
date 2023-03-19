@@ -33,6 +33,7 @@ end
 
   def destroy
     post = find_post
+    # using session[:user_id] and post[:user_id] here since there's no params coming in (afaik) -- double check with Ben on this front
     if session[:user_id] === post[:user_id]
     post.destroy
     head :no_content
@@ -50,7 +51,7 @@ end
 
   def authorize_user
     unless session[:user_id] === params[:user_id]
-      render json: { error: "You're not the original person who posted this, you can't edit or delete this!" },
+      render json: { error: "You're not the original person who posted this, you can't edit this!" },
              status: 401
     end
   end

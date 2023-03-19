@@ -67,22 +67,25 @@ function App() {
     fetch(`/posts/${post.id}`, {
       method: 'DELETE',
     }).then(() => {
-      // console.log('post in handleDelete: ', post);
-      // console.log('currentUsers posts:', currentUser.posts);
       const updatedPosts = currentUser.posts.filter(
         (eachPost) => eachPost.id !== post.id
       );
-      //! here one writes the steps to remove any associated concerts as well
-      setCurrentUser({ ...currentUser, posts: updatedPosts });
-      // console.log('currentUser: ', currentUser);
-      // const associatedConcert = currentUser.concerts.find(
-      //   (eachConcert) => eachConcert.id === post.concert_id
-      // );
-      // console.log('associatedConcert: ', associatedConcert);
+      const remainingPostsForConcert = currentUser.posts.filter(
+        (eachPost) =>
+          eachPost.concert_id === post.concert_id && eachPost.id !== post.id
+      );
 
-      // find the concert that matches the post.concert_id
-      // if that concert doesnt exist (make sure n = 0) then update the updatedConcerts in the same way as updatedPosts, and update the remaining concerts
-      // if that concert still has remaining posts, then dont delete it
+      if (remainingPostsForConcert.length === 0) {
+        const updatedConcerts = currentUser.concerts.filter(
+          (concert) => concert.id !== post.concert_id
+        );
+
+        setCurrentUser({
+          ...currentUser,
+          posts: updatedPosts,
+          concerts: updatedConcerts,
+        });
+      }
     });
   }
 
@@ -161,6 +164,7 @@ function App() {
               path='/createNewPost'
               element={
                 <CreateNewPost
+                  concerts={concerts}
                   currentUser={currentUser}
                   setCurrentUser={setCurrentUser}
                 />
@@ -213,24 +217,27 @@ function App() {
 
 export default App;
 
-// //! handleDelete isn't running through users anymore so this needs handling
+// // //! handleDelete isn't running through users anymore so this needs handling
+
 // function handleDelete(post) {
 //   fetch(`/posts/${post.id}`, {
 //     method: 'DELETE',
 //   }).then(() => {
-//     console.log('post in handleDelete: ', post);
-//     console.log('currentUsers posts:', currentUser.posts);
-//     // const updatedPosts = currentUser.posts.filter(
-//     //   (thisPost) => thisPost.id !== post.id
-//     // );
-//     // setCurrentUser({ ...currentUser, posts: updatedPosts });
-//     // const updatedUsers = users.filter((user) => {
-//     //   if (user.id === currentUser.id) {
-//     //     return currentUser;
-//     //   } else {
-//     //     return user;
-//     //   }
-//     // });
-//     // setUsers(updatedUsers);
+//     const updatedPosts = currentUser.posts.filter(
+//       (eachPost) => eachPost.id !== post.id
+//     );
+
+//     setCurrentUser({ ...currentUser, posts: updatedPosts });
+//     const remainingPostsForConcert = currentUser.posts.filter(
+//       (eachPost) =>
+//         eachPost.concert_id === post.concert_id && eachPost.id !== post.id
+//     );
+
+//     if (remainingPostsForConcert.length === 0) {
+//       const updatedConcerts = currentUser.concerts.filter(
+//         (concert) => concert.id !== post.concert_id
+//       );
+//       setCurrentUser({ ...currentUser, concerts: updatedConcerts });
+//     }
 //   });
 // }
