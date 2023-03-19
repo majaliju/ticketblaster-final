@@ -33,6 +33,7 @@ end
 
   def destroy
     post = find_post
+    # using session[:user_id] and post[:user_id] here since there's no params coming in (afaik) -- double check with Ben on this front
     if session[:user_id] === post[:user_id]
     post.destroy
     head :no_content
