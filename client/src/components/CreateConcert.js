@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 function CreateConcert({ artists, setConcerts, concerts }) {
-  const [artistID, setArtistID] = useState(-1);
+  const [artistID, setArtistID] = useState(0);
   const [dateSelect, setDateSelect] = useState('2023-05-01');
   const [imageLink, setImageLink] = useState('');
   const [locationName, setLocationName] = useState('');
