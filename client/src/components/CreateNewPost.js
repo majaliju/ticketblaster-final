@@ -36,12 +36,10 @@ function CreateNewPost({ concerts, currentUser, setCurrentUser }) {
           );
 
           if (!concertExists) {
-            // get concerts
-            // concerts.find((anyConcert) => anyConcert.id === createdPost.concert_id)
             const concertToAdd = concerts.find(
               (anyConcert) => anyConcert.id === createdPost.concert_id
             );
-            console.log('concertToAdd: ', concertToAdd);
+
             setCurrentUser({
               ...currentUser,
               posts: [...currentUser.posts, createdPost],
