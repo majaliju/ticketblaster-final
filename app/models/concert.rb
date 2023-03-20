@@ -8,7 +8,7 @@ class Concert < ApplicationRecord
   validates :image, presence: true
   validates :date, presence: true
 
-  validate :date_must_be_in_the_future
+  validate :date_must_be_in_the_future, on: :create
 
 
   def artist_name
