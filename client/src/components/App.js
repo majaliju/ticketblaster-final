@@ -113,7 +113,6 @@ function App() {
             />
           }
         />
-        {/* might just go back to the old route system for this one */}
         <Route
           path='/thisArtist'
           element={<ThisArtist artists={artists} loggedIn={loggedIn} />}
