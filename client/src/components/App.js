@@ -52,12 +52,13 @@ function App() {
       .then((info) => setConcerts(info));
   }, []);
 
+  //^ both for logging user in & updating values of LoggedIn & currentUser
   function onLogin(user) {
     setCurrentUser(user);
     setLoggedIn(true);
   }
 
-  //^ to log the user out
+  //^ to log the user out & also & updating values of LoggedIn & currentUser
   function onLogout() {
     setCurrentUser({});
     setLoggedIn(false);
@@ -128,16 +129,6 @@ function App() {
             />
           }
         />
-        {/* <Route
-              path='/thisConcert'
-              element={
-                <ThisConcert
-                  concerts={concerts}
-                  currentUser={currentUser}
-                  loggedIn={loggedIn}
-                />
-              }
-            /> */}
         <Route
           path='/thisUser'
           element={<ThisUser currentUser={currentUser} loggedIn={loggedIn} />}
@@ -154,11 +145,7 @@ function App() {
                 />
               }
             />
-            {/* ON /showPosts, this will now link to ConcertsPage */}
-            {/* <Route
-                  path='/thisConcert'
-                  element={<ThisConcert currentUser={currentUser} />}
-                /> */}
+
             <Route
               path='/createNewPost'
               element={
