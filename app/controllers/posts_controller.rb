@@ -15,6 +15,18 @@ elsif users.blank?
   render json: "I'm sorry, no user has a comment with this word!"
 
 end
+end
+
+def letter_match
+
+  letter = params[:letter]
+  matching = Post.where('body LIKE ?', "#{letter}%")
+   if matching.any?
+    render json: matching, status: 200
+   elsif matching.blank?
+    render json: "I'm sorry, nothing starts with that letter!"
+  
+  end
 
   end
 

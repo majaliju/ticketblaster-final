@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/session_cookies', to: 'sessions#show_cookies'
 
   get '/word_match/:word', to: 'posts#word_match'
-
+  get '/letter_match/:letter', to: 'posts#letter_match'
 
 
 
