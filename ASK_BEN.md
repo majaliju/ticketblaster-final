@@ -1,1 +1,0 @@
-- [ ] when making a post, but incrementing then decrementing the tickest counter by the same amount, the post registers as "changed" -- why?

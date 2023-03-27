@@ -31,7 +31,7 @@ function App() {
     fetch('/me').then((response) => {
       if (response.ok) {
         response.json().then((user) => {
-          // console.log('within /me, the response is: ', user);
+          console.log('within /me, the response is: ', user);
           onLogin(user);
         });
       } else {
