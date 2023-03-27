@@ -20,6 +20,7 @@ end
 def letter_match
 
   letter = params[:letter]
+  # params[:letter].to_s[0]
   matching = Post.where('body LIKE ?', "#{letter}%")
    if matching.any?
     render json: matching, status: 200
