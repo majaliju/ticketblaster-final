@@ -17,6 +17,14 @@ class ConcertsController < ApplicationController
     render json: concert, status: 201
   end
 
+  def popular_concerts
+    number = params[:number]
+    matching = Concert.all.filter {|concert| concert.posts.length >= number.to_i}
+    render json: matching
+    # if concerts.reviews has number or more
+    # return the group of concerts that match this
+  end
+
   private
 
 def find_concert
