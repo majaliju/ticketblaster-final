@@ -3,8 +3,6 @@ class SessionsController < ApplicationController
 
 
 
- ## VIA NANCY -- RENDER A PROPER USER error message
- ## not just "Couldn't find user!"
   def create
     user = User.find_by!(username: params[:username])
     if user&.authenticate(params[:password])
